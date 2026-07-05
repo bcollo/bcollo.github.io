@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bernardcollorafi.org/sitemap.xml

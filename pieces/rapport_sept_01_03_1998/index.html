@@ -103,7 +103,12 @@ tailwind.config = {
 
 <style>
   .wrap{ max-width:900px; }
-  .ocr{ white-space:pre-line; font-family:"Public Sans",sans-serif; font-size:14.5px; line-height:1.62; color:rgb(var(--ink-rgb)/.8); max-width:72ch; }
+  .ocr{ white-space:pre-line; font-family:"Public Sans",sans-serif; font-size:14.5px; line-height:1.62; color:rgb(var(--ink-rgb)/.82); }
+  .ocr-box{ position:relative; max-width:74ch; }
+  .ocr-box .ocr{ max-height:24em; overflow-y:auto; overscroll-behavior:contain; padding:20px 22px 46px; border:1px solid var(--line); border-radius:14px; scrollbar-width:thin; scrollbar-color:rgb(var(--ink2-rgb)/.35) transparent; }
+  .ocr-box .ocr::-webkit-scrollbar{ width:10px; }
+  .ocr-box .ocr::-webkit-scrollbar-thumb{ background:rgb(var(--ink2-rgb)/.32); border-radius:6px; border:3px solid transparent; background-clip:padding-box; }
+  .ocr-box::after{ content:""; position:absolute; left:1px; right:1px; bottom:1px; height:78px; border-radius:0 0 13px 13px; pointer-events:none; background:linear-gradient(to bottom, rgb(var(--bg-rgb)/0), rgb(var(--bg-rgb)/.98)); }
   .crumb a{ color:rgb(var(--ink2-rgb)); } .crumb a:hover{ color:rgb(var(--accent-rgb)); }
   .doc-frame{ border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--reader-scan-bg); }
 </style>
@@ -142,7 +147,7 @@ tailwind.config = {
 <p>Établi en réponse au rapport de M. Gandur du 4 février 1998, le document poursuit trois objectifs : réfuter certains éléments du rapport Gandur sur la forme et le fond, exposer l'économie de la franchise McDonald's et analyser le cas des sociétés dirigées par M. Collorafi. Une chronologie détaillée retrace la location-gérance d'Antibes depuis 1987, l'ouverture du Quick, la création de B & O et l'ouverture d'Antibes-Nord, les demandes pour Antibes-Ouest et Vallauris, la constitution de Les Pins et la résiliation des trois contrats le 2 janvier 1998. Le rapport critique les imprécisions et la globalisation des données du Var et des Alpes-Maritimes retenues par M. Gandur.</p>
 <ul>
 <li>En 1996 : Quick 16 270 620 F, Antibes Centre 18 305 795 F, Antibes-Nord 3 388 837 F.</li>
-<li>En 1997 : recul du Quick de 16 270 620 F à 13 912 380 F ; avec Les Pins, le total de M. Collorafi atteint 31 556 280 F, soit environ +17 % sur 1994.</li>
+<li>En 1997 : recul du Quick à 13 912 380 F ; avec Les Pins, le total de M. Collorafi atteint 31 556 280 F, soit environ +17 % sur 1994.</li>
 </ul>
 <h3>Portée</h3>
 <p>Contre-expertise produite par McDonald's pour combattre l'analyse économique adverse et soutenir que la stratégie d'implantation a profité à M. Collorafi.</p><p class="text-[12px] text-ink2 mt-5" style="font-style:italic">Fiche établie automatiquement à partir de la transcription du document.</p></div>
@@ -159,7 +164,7 @@ tailwind.config = {
     <section class="mt-14" id="transcription">
       <h2 class="font-display text-[26px] sm:text-[30px] font-bold text-ox mb-1">Transcription intégrale</h2>
       <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original, mise en page préservée. Reconnaissance automatique — des erreurs subsistent, surtout sur les fax dégradés. Le scan ci-dessus fait foi.</p>
-      <div class="ocr">Ce rapport de mission
+      <div class="ocr-box"><div class="ocr">Ce rapport de mission
 a ete réalisé par la société S E.P T.
 Sous la responsabilité de
 M Alain HUSSON DUMOUTIER
@@ -2268,7 +2273,8 @@ adaptée à la typologie des restaurants.
 Contrat selon lequel MeDONALD&#x27;S investit en immobilier et en
 construction. Le franchisé investit dans l&#x27;équipement.
 SEPT . Rappore de mission
-MADONALD&#x27;S contre M. COLLORAFI - Mars 1908</div>
+MADONALD&#x27;S contre M. COLLORAFI - Mars 1908</div></div>
+      <p class="text-[12px] text-ink2/70 mt-2.5">Faites défiler dans le cadre pour lire la transcription complète — le texte intégral reste présent sur la page.</p>
     </section>
 
   <section class="mt-16 pt-8 border-t" style="border-color:var(--line)">

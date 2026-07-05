@@ -103,7 +103,12 @@ tailwind.config = {
 
 <style>
   .wrap{ max-width:900px; }
-  .ocr{ white-space:pre-line; font-family:"Public Sans",sans-serif; font-size:14.5px; line-height:1.62; color:rgb(var(--ink-rgb)/.8); max-width:72ch; }
+  .ocr{ white-space:pre-line; font-family:"Public Sans",sans-serif; font-size:14.5px; line-height:1.62; color:rgb(var(--ink-rgb)/.82); }
+  .ocr-box{ position:relative; max-width:74ch; }
+  .ocr-box .ocr{ max-height:24em; overflow-y:auto; overscroll-behavior:contain; padding:20px 22px 46px; border:1px solid var(--line); border-radius:14px; scrollbar-width:thin; scrollbar-color:rgb(var(--ink2-rgb)/.35) transparent; }
+  .ocr-box .ocr::-webkit-scrollbar{ width:10px; }
+  .ocr-box .ocr::-webkit-scrollbar-thumb{ background:rgb(var(--ink2-rgb)/.32); border-radius:6px; border:3px solid transparent; background-clip:padding-box; }
+  .ocr-box::after{ content:""; position:absolute; left:1px; right:1px; bottom:1px; height:78px; border-radius:0 0 13px 13px; pointer-events:none; background:linear-gradient(to bottom, rgb(var(--bg-rgb)/0), rgb(var(--bg-rgb)/.98)); }
   .crumb a{ color:rgb(var(--ink2-rgb)); } .crumb a:hover{ color:rgb(var(--accent-rgb)); }
   .doc-frame{ border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--reader-scan-bg); }
 </style>
@@ -155,7 +160,7 @@ tailwind.config = {
     <section class="mt-14" id="transcription">
       <h2 class="font-display text-[26px] sm:text-[30px] font-bold text-ox mb-1">Transcription intégrale</h2>
       <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original, mise en page préservée. Reconnaissance automatique — des erreurs subsistent, surtout sur les fax dégradés. Le scan ci-dessus fait foi.</p>
-      <div class="ocr">Alain MARTIN
+      <div class="ocr-box"><div class="ocr">Alain MARTIN
 Expert financier près la Cour d&#x27;appel de Paris
 101, rue de Prony
 75017 PARIS
@@ -3192,7 +3197,8 @@ Liste de diffusion du présent rapport :
 •Maire LELOUP, avocal représentant l&#x27;intimée, un exemplaire.
 • Greffe de la Cour d&#x27;Appel de Paris, 2 exemplaires.
 Expertise SEBOI, C/ MAC DONALD&#x27;S FRANCE
-RISEBÖL/septembre 1999/Vl</div>
+RISEBÖL/septembre 1999/Vl</div></div>
+      <p class="text-[12px] text-ink2/70 mt-2.5">Faites défiler dans le cadre pour lire la transcription complète — le texte intégral reste présent sur la page.</p>
     </section>
 
   <section class="mt-16 pt-8 border-t" style="border-color:var(--line)">

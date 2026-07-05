@@ -81,6 +81,8 @@ tailwind.config = {
   .prose-synth table{ width:100%; border-collapse:collapse; margin:1rem 0; font-size:.92rem; }
   .prose-synth th{ text-align:left; background:rgb(var(--bg2-rgb)); font-family:"Hanken Grotesk",sans-serif; font-weight:600; text-transform:uppercase; letter-spacing:.1em; font-size:.66rem; padding:.5rem .7rem; }
   .prose-synth td{ padding:.5rem .7rem; border-top:1px solid var(--line2); }
+  .prose-synth ul{ margin:.6rem 0 .8rem 1.15rem; list-style:disc; }
+  .prose-synth li{ margin:.3rem 0; line-height:1.6; }
 </style>
 </head>
 
@@ -249,6 +251,64 @@ tailwind.config = {
       </div>
     </section>
 
+    <!-- ===== PRESSE 1995 (premières pièces numérisées) ===== -->
+    <section id="presse" class="mt-20">
+      <div class="flex items-end justify-between flex-wrap gap-4 mb-9">
+        <div>
+          <p class="eyebrow text-[11px] text-ox mb-3">Déjà en ligne</p>
+          <h2 class="font-display text-[42px] sm:text-[52px] font-semibold leading-none">La presse, 1995</h2>
+        </div>
+        <p class="max-w-sm text-[16px] text-ink2 italic">Le décor de l'affaire : la puissance de l'enseigne, l'année même où tout commence. Chaque coupure se lit en ligne, avec sa fiche.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+        <button type="button" class="card group block text-left rounded-2xl bg-panel border overflow-hidden" style="border-color:var(--line2)"
+          data-reader data-pdf="pdf/figaro_1995.pdf" data-title="Le Figaro Économie — 4 septembre 1995" data-synth="synth-figaro" data-tab="scan">
+          <div class="aspect-[5/4] overflow-hidden bg-cream2">
+            <img src="assets/figaro_1995_p1.png" alt="Le Figaro Économie, 4 septembre 1995" class="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-500">
+          </div>
+          <div class="p-5">
+            <p class="eyebrow text-[9.5px] text-ox">Le Figaro Économie · 4 sept. 1995</p>
+            <h3 class="font-display text-[20px] font-semibold leading-tight mt-2">Les ouvertures rythment les embauches</h3>
+          </div>
+        </button>
+
+        <button type="button" class="card group block text-left rounded-2xl bg-panel border overflow-hidden" style="border-color:var(--line2)"
+          data-reader data-pdf="pdf/tribune_1995.pdf" data-title="La Tribune — 26 octobre 1995" data-synth="synth-tribune" data-tab="scan">
+          <div class="aspect-[5/4] overflow-hidden bg-cream2">
+            <img src="assets/tribune_1995_p1.png" alt="La Tribune, 26 octobre 1995" class="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-500">
+          </div>
+          <div class="p-5">
+            <p class="eyebrow text-[9.5px] text-ox">La Tribune · 26 oct. 1995</p>
+            <h3 class="font-display text-[20px] font-semibold leading-tight mt-2">Bénéfice net par action&nbsp;: +17&nbsp;%</h3>
+          </div>
+        </button>
+
+        <button type="button" class="card group block text-left rounded-2xl bg-panel border overflow-hidden" style="border-color:var(--line2)"
+          data-reader data-pdf="pdf/echos_1995.pdf" data-title="Les Échos — 3 novembre 1995" data-synth="synth-echos" data-tab="scan">
+          <div class="aspect-[5/4] overflow-hidden bg-cream2">
+            <img src="assets/echos_1995_p1.png" alt="Les Échos, 3 novembre 1995" class="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-500">
+          </div>
+          <div class="p-5">
+            <p class="eyebrow text-[9.5px] text-ox">Les Échos · 3 nov. 1995</p>
+            <h3 class="font-display text-[20px] font-semibold leading-tight mt-2">McDonald's fait toujours recette en Bourse</h3>
+          </div>
+        </button>
+
+        <button type="button" class="card group block text-left rounded-2xl bg-panel border overflow-hidden" style="border-color:var(--line2)"
+          data-reader data-pdf="pdf/investir_1995.pdf" data-title="Investir — 4 au 10 novembre 1995" data-synth="synth-investir" data-tab="scan">
+          <div class="aspect-[5/4] overflow-hidden bg-cream2">
+            <img src="assets/investir_1995_p1.png" alt="Investir, 4 au 10 novembre 1995" class="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-500">
+          </div>
+          <div class="p-5">
+            <p class="eyebrow text-[9.5px] text-ox">Investir · 4–10 nov. 1995</p>
+            <h3 class="font-display text-[20px] font-semibold leading-tight mt-2">Rude concurrence aux États-Unis</h3>
+          </div>
+        </button>
+
+      </div>
+    </section>
+
   </main>
 </div>
 
@@ -317,6 +377,70 @@ tailwind.config = {
   <p><strong>Dépens</strong> : trois quarts à la charge de McDonald's, un quart à Collorafi. Article 700 : chaque partie garde ses frais.</p>
   <h3>Portée</h3>
   <p>Contrôle de la bonne foi dans la mise en œuvre d'une clause résolutoire : la tête de réseau qui a suscité les difficultés du locataire-gérant ne peut invoquer de mauvaise foi l'acquisition de la clause. Obligation de loyauté du franchiseur en période de crise — sans garantie de résultat.</p>
+</template>
+
+<template id="synth-figaro">
+  <p class="eyebrow text-[10px] text-gold" style="letter-spacing:.16em">Fiche de presse</p>
+  <h3 style="margin-top:.4rem">Le Figaro Économie — 4 septembre 1995</h3>
+  <p><strong>« Restauration : les ouvertures rythment les embauches »</strong> · article sectoriel (restauration rapide / emploi).</p>
+  <h3>Résumé</h3>
+  <p>Panorama de rentrée sur l'emploi dans la restauration rapide : les enseignes embauchent au rythme de leurs ouvertures. <strong>McDonald's domine largement</strong> — plus de 60 inaugurations en France sur l'année, une trentaine encore prévues d'ici décembre, d'où le recrutement d'une centaine d'assistants de direction. Burger King (8 restaurants) et Pizza Hut (une trentaine) suivent loin derrière.</p>
+  <h3>Chiffres clés</h3>
+  <ul>
+    <li>McDonald's : plus de 60 ouvertures en France en 1995, ~30 de plus avant la fin de l'année.</li>
+    <li>~100 postes d'assistants de direction à pourvoir.</li>
+    <li>Burger King : 8 restaurants ouverts ; Pizza Hut : ~30.</li>
+  </ul>
+  <h3>Portée pour le dossier</h3>
+  <p>Document de contexte : il établit, en pleine presse nationale, la <strong>cadence d'implantation</strong> de McDonald's en France en 1995 — l'année même où le concurrent Quick s'installe à Antibes et où la « guerre économique » commence pour Collorafi.</p>
+</template>
+
+<template id="synth-tribune">
+  <p class="eyebrow text-[10px] text-gold" style="letter-spacing:.16em">Fiche de presse</p>
+  <h3 style="margin-top:.4rem">La Tribune — 26 octobre 1995</h3>
+  <p><strong>« 3<sup>e</sup> trimestre 1995 — Le bénéfice net par action : +17 % »</strong> · brève de résultats / Bourse.</p>
+  <h3>Résumé</h3>
+  <p>Résultats du 3<sup>e</sup> trimestre 1995 de McDonald's Corporation : chiffre d'affaires <strong>+16 %</strong> sur le trimestre, <strong>+19 %</strong> sur neuf mois ; bénéfice net par action <strong>+17 %</strong>. La croissance vient surtout de l'international (ventes sous enseigne +24 % sur le trimestre), qui pèse désormais plus de la moitié du bénéfice d'exploitation.</p>
+  <h3>Chiffres clés</h3>
+  <ul>
+    <li>CA : +16 % (trimestre), +19 % (9 mois) ; BNPA : +17 %.</li>
+    <li>Ventes sous enseigne : +8 % aux USA, +24 % à l'international.</li>
+    <li>Réseau : 17 406 restaurants dans 84 pays ; 1 453 ouvertures depuis janvier.</li>
+  </ul>
+  <h3>Portée pour le dossier</h3>
+  <p>Document de contexte : il chiffre la <strong>puissance financière</strong> du groupe au moment des faits. À rapprocher de la situation d'un locataire-gérant isolé d'Antibes, sommé d'honorer ses redevances pendant que la tête de réseau engrange des résultats records — le déséquilibre de forces au cœur de l'affaire.</p>
+</template>
+
+<template id="synth-echos">
+  <p class="eyebrow text-[10px] text-gold" style="letter-spacing:.16em">Fiche de presse</p>
+  <h3 style="margin-top:.4rem">Les Échos — 3 novembre 1995</h3>
+  <p><strong>« McDonald's fait toujours recette en Bourse »</strong> · par Laurence Boccara — article Bourse / stratégie.</p>
+  <h3>Résumé</h3>
+  <p>Portrait boursier flatteur de McDonald's, <strong>« titre défensif par excellence »</strong> : action +41 % aux États-Unis et +28,7 % à Paris depuis janvier. Résultats des neuf mois en hausse (CA 7,2 Md$, soit 35,1 Md F, +19 % ; bénéfice net 1 Md$, +16 %), tirés par l'international. L'article détaille la stratégie mondiale exposée par Philippe Labbé (directeur financier de McDonald's France).</p>
+  <h3>Chiffres clés</h3>
+  <ul>
+    <li>Action : +41 % (USA), +28,7 % (Paris) depuis le 1<sup>er</sup> janvier.</li>
+    <li>9 mois : CA 7,2 Md$ (+19 %) ; bénéfice net 1 Md$ (+16 %).</li>
+    <li>France : cap des 400 restaurants franchi ; ~60 ouvertures prévues sur 4-5 ans.</li>
+  </ul>
+  <h3>Portée pour le dossier</h3>
+  <p>Il documente, source de référence à l'appui, la <strong>stratégie d'implantation</strong> revendiquée par McDonald's France — la même logique de maillage qui, à Antibes, se traduira par l'ouverture de restaurants concurrents dans la zone de chalandise de Collorafi. La mention de tensions sociales éclaire le rapport de force de l'époque.</p>
+</template>
+
+<template id="synth-investir">
+  <p class="eyebrow text-[10px] text-gold" style="letter-spacing:.16em">Fiche de presse</p>
+  <h3 style="margin-top:.4rem">Investir — 4 au 10 novembre 1995</h3>
+  <p><strong>« McDonald's — Rude concurrence aux États-Unis »</strong> · analyse et conseil boursier.</p>
+  <h3>Résumé</h3>
+  <p>Recommandation sur l'action McDonald's (+28 % à Paris depuis janvier). Bons résultats du 3<sup>e</sup> trimestre (bénéfice net +14 %, à 400 M$), portés par l'international (+34 % de bénéfice d'exploitation sur neuf mois). <strong>Aux États-Unis en revanche, croissance au ralenti (+2 %)</strong> : sous « rude concurrence », le groupe rogne ses marges et <strong>réduit son rythme d'ouvertures de 1 000 à 700</strong> restaurants « satellites » par an.</p>
+  <h3>Chiffres clés</h3>
+  <ul>
+    <li>Action : +28 % à Paris depuis janvier ; cours 202 F / 41,1 $.</li>
+    <li>T3 : bénéfice net +14 % (400 M$) ; ventes sous enseigne +13 % (7,8 Md$).</li>
+    <li>Ouvertures annuelles ramenées de 1 000 à 700 (formats « satellites »).</li>
+  </ul>
+  <h3>Portée pour le dossier</h3>
+  <p>Il montre le <strong>revers de la stratégie d'ouvertures</strong> : sur un marché mûr, la multiplication des points de vente comprime les marges, au point que le groupe freine ses ouvertures. Cet aveu de saturation fait écho, à l'échelle d'une ville, à ce que vivra Collorafi à Antibes.</p>
 </template>
 
 <script>

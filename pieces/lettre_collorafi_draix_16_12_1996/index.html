@@ -103,8 +103,7 @@ tailwind.config = {
 
 <style>
   .wrap{ max-width:900px; }
-  .ocr{ font-family:"Public Sans",sans-serif; font-size:15px; line-height:1.75; color:rgb(var(--ink-rgb)/.82); }
-  .ocr p{ margin:.5rem 0; }
+  .ocr{ white-space:pre-line; font-family:"Public Sans",sans-serif; font-size:14.5px; line-height:1.62; color:rgb(var(--ink-rgb)/.8); max-width:72ch; }
   .crumb a{ color:rgb(var(--ink2-rgb)); } .crumb a:hover{ color:rgb(var(--accent-rgb)); }
   .doc-frame{ border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--reader-scan-bg); }
 </style>
@@ -145,8 +144,41 @@ tailwind.config = {
 
     <section class="mt-14" id="transcription">
       <h2 class="font-display text-[26px] sm:text-[30px] font-bold text-ox mb-1">Transcription intégrale</h2>
-      <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original. Reconnaissance automatique — des erreurs subsistent, en particulier sur les fax les plus dégradés. Fait foi : le scan ci-dessus.</p>
-      <div class="ocr"><p>Bernard COLLORAFI 21 B Chemin de l&#x27;Estelle 06110 LE CANNET Antibes, Le 16 décembre 1996 Isabelle KUSTER Direction Régionale McDonald&#x27;s France BP 309 13798 AIX EN PROVENCE CEDEX 03 Chère Isabelle, Je te remercie pour l&#x27;excellent accueil que tu m&#x27;as réservé le vendredi 13 décembre à AIX EN PROVENCE. Je te confirme ma candidature pour le Restaurant d&#x27;ANTIBES OUEST qui doit ouvrir dans quelques mois. Je me permets d&#x27;insister sur l&#x27;inpact qu&#x27;il aura à la fois sur le Restaurant du Centre Commercial et sur le Drive route de Grasse. En effet, le Restaurant d&#x27;ANTIBES OUEST se trouve dans la ville d&#x27;Antibes d&#x27;où vient la majorité de notre clientèle que nous travaillons depuis 10 ans. De plus, il est situé sur la voie rapide qui doit ouvrir prochainement et sera à moins de 5 minutes. Les chiffres d&#x27;affaires prévisionnels sont pour 1997 de 13 MF pour le centre commercial et 16 MF pour le drive. Le Restaurant du Centre Commercial a été impacté depuis deux ans par les ouvertures des Restaurants dans les villes environnantes CAGNES PLAGE CANNES, GRASSE, et surtout par l&#x27;ouverture du drive situé à 300 mêtres : - 35 %. Pour mémoire, le chiffre d&#x27;affaires prévisionnel annoncé lors de la présentation financière en 1987 était de 19 MF. Par ailleurs, compte tenu des ouvertures de VALLAURIS et MOUGINS, le drive n&#x27;atteindra certainement pas le chiffre d&#x27;affaires escompté de 20 MF. Comme je te l&#x27;ai indiqué, je transmets un dossier à Denis HENNEQUIN et demande à le rencontrer pour discuter avec lui de vive voix, de l&#x27;expansion à ANTIBES. Je t&#x27;adresse, Chère Isabelle, mes meilleures salutations. Bernard</p></div>
+      <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original, mise en page préservée. Reconnaissance automatique — des erreurs subsistent, surtout sur les fax dégradés. Le scan ci-dessus fait foi.</p>
+      <div class="ocr">Bernard COLLORAFI
+21 B Chemin de l&#x27;Estelle
+06110 LE CANNET
+Antibes,
+Le 16 décembre 1996
+Isabelle KUSTER
+Direction Régionale
+McDonald&#x27;s France
+BP 309
+13798 AIX EN PROVENCE CEDEX 03
+Chère Isabelle,
+Je te remercie pour l&#x27;excellent accueil que tu m&#x27;as réservé le vendredi 13 décembre
+à AIX EN PROVENCE.
+Je te confirme ma candidature pour le Restaurant d&#x27;ANTIBES OUEST qui doit ouvrir
+dans quelques mois.
+Je me permets d&#x27;insister sur l&#x27;inpact qu&#x27;il aura à la fois sur le Restaurant du Centre
+Commercial et sur le Drive route de Grasse.
+En effet, le Restaurant d&#x27;ANTIBES OUEST se trouve dans la ville d&#x27;Antibes d&#x27;où
+vient la majorité de notre clientèle que nous travaillons depuis 10 ans.
+De plus, il est situé sur la voie rapide qui doit ouvrir prochainement et sera à moins
+de 5 minutes.
+Les chiffres d&#x27;affaires prévisionnels sont pour 1997 de 13 MF pour le centre
+commercial et 16 MF pour le drive.
+Le Restaurant du Centre Commercial a été impacté depuis deux ans par les
+ouvertures des Restaurants dans les villes environnantes CAGNES PLAGE
+CANNES, GRASSE, et surtout par l&#x27;ouverture du drive situé à 300 mêtres : - 35 %.
+Pour mémoire, le chiffre d&#x27;affaires prévisionnel annoncé lors de la présentation
+financière en 1987 était de 19 MF.
+Par ailleurs, compte tenu des ouvertures de VALLAURIS et MOUGINS, le drive
+n&#x27;atteindra certainement pas le chiffre d&#x27;affaires escompté de 20 MF.
+Comme je te l&#x27;ai indiqué, je transmets un dossier à Denis HENNEQUIN et demande
+à le rencontrer pour discuter avec lui de vive voix, de l&#x27;expansion à ANTIBES.
+Je t&#x27;adresse, Chère Isabelle, mes meilleures salutations.
+Bernard</div>
     </section>
 
   <section class="mt-16 pt-8 border-t" style="border-color:var(--line)">

@@ -103,8 +103,7 @@ tailwind.config = {
 
 <style>
   .wrap{ max-width:900px; }
-  .ocr{ font-family:"Public Sans",sans-serif; font-size:15px; line-height:1.75; color:rgb(var(--ink-rgb)/.82); }
-  .ocr p{ margin:.5rem 0; }
+  .ocr{ white-space:pre-line; font-family:"Public Sans",sans-serif; font-size:14.5px; line-height:1.62; color:rgb(var(--ink-rgb)/.8); max-width:72ch; }
   .crumb a{ color:rgb(var(--ink2-rgb)); } .crumb a:hover{ color:rgb(var(--accent-rgb)); }
   .doc-frame{ border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--reader-scan-bg); }
 </style>
@@ -145,9 +144,57 @@ tailwind.config = {
 
     <section class="mt-14" id="transcription">
       <h2 class="font-display text-[26px] sm:text-[30px] font-bold text-ox mb-1">Transcription intégrale</h2>
-      <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original. Reconnaissance automatique — des erreurs subsistent, en particulier sur les fax les plus dégradés. Fait foi : le scan ci-dessus.</p>
-      <div class="ocr"><p>COMM. CH.B COUR DE CASSATION Audience publique du 6 mai 2002 Non-admission M. DUMAS, président Pourvoi n° X 00-14.487 Arrêt n° 10131 F REPUBLIQUE FRANCAISE AU NOM DU PEUPLE FRANCAIS - FINANCIERE E COUNOMIQUE, REnON aCHA SURE COMMERCIALE. Sur le pourvoi formé par : 1% M. Bernard Collorafi, demeurant 21 B, chemin de l&#x27;Estelle, 06110 Le Cannet, ... - 2 1 la societe Les Pins, societe a responsabilité limitée, dont le siège est 32, avenue de Cannes, 06160 Juan-les-Pins, 3°% la société Sebol, société anonyme, dont le siege est centre commercial Carrefour, chemin de Saint-Claude, 06600 Antibes, 4°% la société B et O, société à responsabilité limitée, dont le siège est rond-point Weiseller, route de Grasse, 06600 Antibes,</p>
-<p>2 10131 en cassation de deux arrêts rendus le 9 décembre 1998 et le 8 mars 2000 par la cour d&#x27;appel de Paris (16e chambre - section A), au profit de la société Mac Donald&#x27;s France, dont le siège est 1, rue Gustave Eiffel, 78041 Guyancourt Cedex France, défenderesse à la cassation ; Vu la communication faite au Procureur général ; LA COUR, en l&#x27;audience publique du 12 mars 2002, où étaient présents : M. Dumas, président, Mme Mouillard, conseiller référendaire rapporteur, M. Métivet, conseiller, M. Feuillard, avocat général, Mme Arnoux, greffier de chambre ; Sur le rapport de Mme Mouillard, conseiller référendaire, les observations de la SCP Bouzidi, avocat de M. Collorafi, des sociétés Les Pins, Sebol, B et O, de la SCP Delaporte et Briard, avocat de la société Mac Donald&#x27;s France, les conclusions de M. Feuillard, avocat général, et après en avoir délibéré conformément à la loi ; Vu l&#x27;article L. 131-6 du Code de l&#x27;organisation judiciaire ; Donne acte à M. Gauthier, mandataire liquidateur des liquidations judiciaires des sociétés Les Pins et B et O, de sa reprise d&#x27;instance ; Attendu que les moyens de cassation annexés à la présente décision, invoqués à l&#x27;encontre de la décision attaquée, ne sont pas de nature à permettre l&#x27;admission du pourvoi ; DECLARE non admis le pourvoi ; Condamne les demandeurs aux dépens ; Vu l&#x27;article 700 du nouveau Code de procédure civile, les condamne à payer à la société Mac Donald&#x27;s la somme de 2 250 euros ; Ainsi décidé par la Cour de cassation, Chambre commerciale, financière et économique, et prononcé par le président en son audience publique du six mai deux mille deux.</p></div>
+      <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original, mise en page préservée. Reconnaissance automatique — des erreurs subsistent, surtout sur les fax dégradés. Le scan ci-dessus fait foi.</p>
+      <div class="ocr">COMM.
+CH.B
+COUR DE CASSATION
+Audience publique du 6 mai 2002
+Non-admission
+M. DUMAS, président
+Pourvoi n° X 00-14.487
+Arrêt n° 10131 F
+REPUBLIQUE FRANCAISE
+AU NOM DU PEUPLE FRANCAIS
+FINANCIERE E COUNOMIQUE, REnON aCHA SURE COMMERCIALE.
+Sur le pourvoi formé par :
+1% M. Bernard Collorafi, demeurant 21 B, chemin de l&#x27;Estelle,
+06110 Le Cannet,
+2 1 la societe Les Pins, societe a responsabilité limitée, dont le
+siège est 32, avenue de Cannes, 06160 Juan-les-Pins,
+3°% la société Sebol, société anonyme, dont le siege est centre
+commercial Carrefour, chemin de Saint-Claude, 06600 Antibes,
+4°% la société B et O, société à responsabilité limitée, dont le
+siège est rond-point Weiseller, route de Grasse, 06600 Antibes,
+
+en cassation de deux arrêts rendus le 9 décembre 1998 et le 8 mars 2000
+par la cour d&#x27;appel de Paris (16e chambre - section A), au profit de la
+société Mac Donald&#x27;s France, dont le siège est 1, rue Gustave Eiffel,
+78041 Guyancourt Cedex France,
+défenderesse à la cassation ;
+Vu la communication faite au Procureur général ;
+LA COUR, en l&#x27;audience publique du 12 mars 2002, où étaient
+présents : M. Dumas, président, Mme Mouillard, conseiller référendaire
+rapporteur, M. Métivet, conseiller, M. Feuillard, avocat général, Mme Arnoux,
+greffier de chambre ;
+Sur le rapport de Mme Mouillard, conseiller référendaire, les
+observations de la SCP Bouzidi, avocat de M. Collorafi, des
+sociétés Les Pins, Sebol, B et O, de la SCP Delaporte et Briard, avocat
+de la société Mac Donald&#x27;s France, les conclusions de M. Feuillard, avocat
+général, et après en avoir délibéré conformément à la loi ;
+Vu l&#x27;article L. 131-6 du Code de l&#x27;organisation judiciaire ;
+Donne acte à M. Gauthier, mandataire liquidateur des
+liquidations judiciaires des sociétés Les Pins et B et O, de sa reprise
+d&#x27;instance ;
+Attendu que les moyens de cassation annexés à la présente
+décision, invoqués à l&#x27;encontre de la décision attaquée, ne sont pas de
+nature à permettre l&#x27;admission du pourvoi ;
+DECLARE non admis le pourvoi ;
+Condamne les demandeurs aux dépens ;
+Vu l&#x27;article 700 du nouveau Code de procédure civile, les
+condamne à payer à la société Mac Donald&#x27;s la somme de 2 250 euros ;
+Ainsi décidé par la Cour de cassation, Chambre commerciale,
+financière et économique, et prononcé par le président en son audience
+publique du six mai deux mille deux.</div>
     </section>
 
   <section class="mt-16 pt-8 border-t" style="border-color:var(--line)">

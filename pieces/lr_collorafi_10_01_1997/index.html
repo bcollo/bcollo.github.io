@@ -103,8 +103,7 @@ tailwind.config = {
 
 <style>
   .wrap{ max-width:900px; }
-  .ocr{ font-family:"Public Sans",sans-serif; font-size:15px; line-height:1.75; color:rgb(var(--ink-rgb)/.82); }
-  .ocr p{ margin:.5rem 0; }
+  .ocr{ white-space:pre-line; font-family:"Public Sans",sans-serif; font-size:14.5px; line-height:1.62; color:rgb(var(--ink-rgb)/.8); max-width:72ch; }
   .crumb a{ color:rgb(var(--ink2-rgb)); } .crumb a:hover{ color:rgb(var(--accent-rgb)); }
   .doc-frame{ border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--reader-scan-bg); }
 </style>
@@ -145,9 +144,73 @@ tailwind.config = {
 
     <section class="mt-14" id="transcription">
       <h2 class="font-display text-[26px] sm:text-[30px] font-bold text-ox mb-1">Transcription intégrale</h2>
-      <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original. Reconnaissance automatique — des erreurs subsistent, en particulier sur les fax les plus dégradés. Fait foi : le scan ci-dessus.</p>
-      <div class="ocr"><p>Bernard COLLORAFI 21B Chemin de l&#x27;Estelle 06110 LE CANNET Le Cannet, Le 10 janvier 1997 Monsieur Denis HENNEQUIN résident Directeur Génér IcDonald&#x27;s France S 1, Rue Gustave Eiffel 78045 GUYANCOURT CEDEX Cher Denis, Je te remercie d&#x27;avoir bien voulu me recevoir en présence d&#x27;isabelle KUSTER au sujet de l&#x27;ouverture prochaine des deux restaurants d&#x27;ANTIBES Ouest et de VALLAURIS pour lesquels McDonald&#x27;s a obtenu un permis de construire et pour J&#x27;ai noté ton refus formel de m&#x27;attribuer ces deux restaurants, malgré les arguments écrasants que j&#x27;ai pu faire valoir. Je te rappelle tout d&#x27;abord que dès avant ces projets d&#x27;ouverture, j&#x27;ai subi un grave préjudice du fait de l&#x27;obligation dans laquelle je me suis trouvé d&#x27;ouvrir à proximité de mon restaurant du centre commercial CARREFOUR, un restaurant En effet, vous aviez décidé, pour contrer l&#x27;ouverture d&#x27;un QUICK, d&#x27;installer au rond point Weisweller ce restaurant DRIVE. étais donc dans l&#x27;obligation absolue d&#x27;ouvrir moi-même car il était impensabl u&#x27;un autre Franchise McDonald&#x27;s vienne s&#x27;installer en plein cœur de ma zon primaire de chalandise. Cette ouverture qui a eu lieu il y a trois mois, a déjà fait chuter le chiffre d&#x27;affaires de mon premier restaurant de 35 %. Compte tenu des charges nouvelles de fonctionnement, la rentabilité de mes deux restaurants est considérablement inférieure à celle que j&#x27;avais avec mon restaurant initial, même si l&#x27;on peut noter que le chiffre d&#x27;affaires total est à peu près équivalent. Il est donc certain que nonobstant l&#x27;ouverture de ces deux nouveaux restaurants et en tout état de cause ma rentabilité pour 1996 est déjà en péril, et en tous cas, très largement inférieure à celle des années précédentes.</p>
-<p>3. Dans cette situation déjà difficile pour moi, je vais donc affronter dans quelques mois, si tu persistes dans ta décision, la concurrence interne de deux restaurants McDonald&#x27;s qui vont faire chuter ma part de marché d&#x27;une façon très importante. Je ne pourrais ainsi ni réaliser les objectifs qui m&#x27;ont été fixés pour ces deux restaurants, ni arriver à la rentabilité précédente, et de loin. 4. Les études de marché démontrent qu&#x27;une partie importante de ma clientèle provient de la future zone de chalandise de ces restaurants. Ils vont donc récupérer indûment une partie de ma clientèle. La solution qui aurait consisté, à la suite de votre décision d&#x27;implanter deux restaurants à ANTIBES Ouest et à VALLAURIS, à me confier ces restaurants, m&#x27;aurait permis, grâce à mon expérience et à mes équipes, d&#x27;absorber ce choc et de conquérir de nouvelles parts de marché pour McDonald&#x27;s. La plupart des parts de marché que vont conquérir des deux nouveaux restaurants viendra de ma propre clientèle, plus que de clients nouveaux. Si la décision que vous m&#x27;avez notifiée de ne pas m&#x27;attribuer ces deux restaurants était confirmée, je considérerais qu&#x27;il s&#x27;agit là d&#x27;un véritable casus belli, d&#x27;autant plus grave que je suis franchisé depuis dix ans (18ème franchisé et 46 ème restaurant en France). Je conteste formellement cette politique qui consiste, non seulement à avantager un autre Franchisé, mais à vous avantager vous-mêmes dans la mesure où vous êtes en joint venture avec Patrick GILARSKI. Vous pouvez en effet employer des moyens publicitaires et promotionnels ainsi que de gestion incommensurablement supérieurs aux miens. Vous pouvez vider mes restaurants de la majeure partie de leur substance, et me réduire à un niveau tel que je n&#x27;aie plus comme solution de m&#x27;en aller. Je ne peux penser un instant que cela soit votre projet, mais cela risque d&#x27;être le résultat 6. En conséquence, je te demande une dernière fois mais avec beaucoup de fermeté, de réfléchir à ta décision définitive. Son maintien m&#x27;obligerait à défendre mes intérêts avec l&#x27;acharnement qui a été le mien au service du développement de mes restaurants McDonald&#x27;s. En souhaitant instamment que tu me répondes dans les prochains jours, je te prie de recevoir, cher Denis, mes meilleures salutations.</p></div>
+      <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original, mise en page préservée. Reconnaissance automatique — des erreurs subsistent, surtout sur les fax dégradés. Le scan ci-dessus fait foi.</p>
+      <div class="ocr">Bernard COLLORAFI
+21B Chemin de l&#x27;Estelle
+06110 LE CANNET
+Le Cannet,
+Le 10 janvier 1997
+Monsieur Denis HENNEQUIN
+résident Directeur Génér
+IcDonald&#x27;s France S
+1, Rue Gustave Eiffel
+78045 GUYANCOURT CEDEX
+Cher Denis,
+Je te remercie d&#x27;avoir bien voulu me recevoir en présence d&#x27;isabelle KUSTER au
+sujet de l&#x27;ouverture prochaine des deux restaurants d&#x27;ANTIBES Ouest et de
+VALLAURIS pour lesquels McDonald&#x27;s a obtenu un permis de construire et pour
+J&#x27;ai noté ton refus formel de m&#x27;attribuer ces deux restaurants, malgré les
+arguments écrasants que j&#x27;ai pu faire valoir.
+Je te rappelle tout d&#x27;abord que dès avant ces projets d&#x27;ouverture, j&#x27;ai subi un
+grave préjudice du fait de l&#x27;obligation dans laquelle je me suis trouvé d&#x27;ouvrir à
+proximité de mon restaurant du centre commercial CARREFOUR, un restaurant
+En effet, vous aviez décidé, pour contrer l&#x27;ouverture d&#x27;un QUICK, d&#x27;installer au rond
+point Weisweller ce restaurant DRIVE.
+étais donc dans l&#x27;obligation absolue d&#x27;ouvrir moi-même car il était impensabl
+u&#x27;un autre Franchise McDonald&#x27;s vienne s&#x27;installer en plein cœur de ma zon
+primaire de chalandise.
+Cette ouverture qui a eu lieu il y a trois mois, a déjà fait chuter le chiffre d&#x27;affaires de
+mon premier restaurant de 35 %. Compte tenu des charges nouvelles de
+fonctionnement, la rentabilité de mes deux restaurants est considérablement
+inférieure à celle que j&#x27;avais avec mon restaurant initial, même si l&#x27;on peut noter que
+le chiffre d&#x27;affaires total est à peu près équivalent.
+Il est donc certain que nonobstant l&#x27;ouverture de ces deux nouveaux restaurants et
+en tout état de cause ma rentabilité pour 1996 est déjà en péril, et en tous cas, très
+largement inférieure à celle des années précédentes.
+
+Dans cette situation déjà difficile pour moi, je vais donc affronter dans quelques
+mois, si tu persistes dans ta décision, la concurrence interne de deux restaurants
+McDonald&#x27;s qui vont faire chuter ma part de marché d&#x27;une façon très importante.
+Je ne pourrais ainsi ni réaliser les objectifs qui m&#x27;ont été fixés pour ces deux
+restaurants, ni arriver à la rentabilité précédente, et de loin.
+4. Les études de marché démontrent qu&#x27;une partie importante de ma clientèle
+provient de la future zone de chalandise de ces restaurants. Ils vont donc récupérer
+indûment une partie de ma clientèle.
+La solution qui aurait consisté, à la suite de votre décision d&#x27;implanter deux
+restaurants à ANTIBES Ouest et à VALLAURIS, à me confier ces restaurants,
+m&#x27;aurait permis, grâce à mon expérience et à mes équipes, d&#x27;absorber ce choc et de
+conquérir de nouvelles parts de marché pour McDonald&#x27;s.
+La plupart des parts de marché que vont conquérir des deux nouveaux restaurants
+viendra de ma propre clientèle, plus que de clients nouveaux.
+Si la décision que vous m&#x27;avez notifiée de ne pas m&#x27;attribuer ces deux
+restaurants était confirmée, je considérerais qu&#x27;il s&#x27;agit là d&#x27;un véritable casus belli,
+d&#x27;autant plus grave que je suis franchisé depuis dix ans (18ème franchisé et 46 ème
+restaurant en France).
+Je conteste formellement cette politique qui consiste, non seulement à avantager un
+autre Franchisé, mais à vous avantager vous-mêmes dans la mesure où vous êtes
+en joint venture avec Patrick GILARSKI.
+Vous pouvez en effet employer des moyens publicitaires et promotionnels ainsi que
+de gestion incommensurablement supérieurs aux miens.
+Vous pouvez vider mes restaurants de la majeure partie de leur substance, et me
+réduire à un niveau tel que je n&#x27;aie plus comme solution de m&#x27;en aller.
+Je ne peux penser un instant que cela soit votre projet, mais cela risque d&#x27;être le
+résultat
+6. En conséquence, je te demande une dernière fois mais avec beaucoup de
+fermeté, de réfléchir à ta décision définitive.
+Son maintien m&#x27;obligerait à défendre mes intérêts avec l&#x27;acharnement qui a été le
+mien au service du développement de mes restaurants McDonald&#x27;s.
+En souhaitant instamment que tu me répondes dans les prochains jours, je te prie de
+recevoir, cher Denis, mes meilleures salutations.</div>
     </section>
 
   <section class="mt-16 pt-8 border-t" style="border-color:var(--line)">

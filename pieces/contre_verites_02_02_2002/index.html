@@ -103,8 +103,7 @@ tailwind.config = {
 
 <style>
   .wrap{ max-width:900px; }
-  .ocr{ font-family:"Public Sans",sans-serif; font-size:15px; line-height:1.75; color:rgb(var(--ink-rgb)/.82); }
-  .ocr p{ margin:.5rem 0; }
+  .ocr{ white-space:pre-line; font-family:"Public Sans",sans-serif; font-size:14.5px; line-height:1.62; color:rgb(var(--ink-rgb)/.8); max-width:72ch; }
   .crumb a{ color:rgb(var(--ink2-rgb)); } .crumb a:hover{ color:rgb(var(--accent-rgb)); }
   .doc-frame{ border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--reader-scan-bg); }
 </style>
@@ -145,8 +144,25 @@ tailwind.config = {
 
     <section class="mt-14" id="transcription">
       <h2 class="font-display text-[26px] sm:text-[30px] font-bold text-ox mb-1">Transcription intégrale</h2>
-      <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original. Reconnaissance automatique — des erreurs subsistent, en particulier sur les fax les plus dégradés. Fait foi : le scan ci-dessus.</p>
-      <div class="ocr"><p>CONTRE - VERITES Les Magistrats de la Cour d&#x27;Appel de Paris ont écrit dans l&#x27;Arrêt du 08 mars 2000 : Page 15 Que les Experts DUMONT et MARTIN ont conclu à une bonne gestion des sociétés par Monsieur COLLORAFI (Le rapport d&#x27;expertise souligne que la gestion de Monsieur COLLORAFI n&#x27;était pas moins bonne que celle des autres franchisés et meilleure que celle de la Société McDonal&#x27;S). Page 18 Que Monsieur COLLORAFI n&#x27;a donc perdu aucune chance de voir dans les dix huit mois ses sociétés redevenir bénéficiaires. La société MAR filiale de MCDONALD&#x27;S qui a repris les 3 unités de restauration à Antibes présente le 31 decembre 1999 (soit 9 semaines avant la publication de l&#x27;Arrêt) le bilan ci-après de sa filiale MAR : bénéfice 475 000 francs</p></div>
+      <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original, mise en page préservée. Reconnaissance automatique — des erreurs subsistent, surtout sur les fax dégradés. Le scan ci-dessus fait foi.</p>
+      <div class="ocr">CONTRE - VERITES
+Les Magistrats de la Cour d&#x27;Appel de Paris ont écrit dans
+l&#x27;Arrêt du 08 mars 2000 :
+Page 15
+Que les Experts DUMONT et MARTIN ont conclu à une bonne
+gestion des sociétés par Monsieur COLLORAFI
+(Le rapport d&#x27;expertise souligne que la gestion de Monsieur
+COLLORAFI n&#x27;était pas moins bonne que celle des autres
+franchisés et meilleure que celle de la Société McDonal&#x27;S).
+Page 18
+Que Monsieur COLLORAFI n&#x27;a donc perdu aucune chance de voir
+dans les dix huit mois ses sociétés redevenir bénéficiaires.
+La société MAR filiale de MCDONALD&#x27;S qui
+a repris les 3 unités de restauration à
+Antibes présente le 31 decembre 1999 (soit
+9 semaines avant la publication de l&#x27;Arrêt)
+le bilan ci-après de sa filiale MAR :
+bénéfice 475 000 francs</div>
     </section>
 
   <section class="mt-16 pt-8 border-t" style="border-color:var(--line)">

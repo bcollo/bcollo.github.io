@@ -103,8 +103,7 @@ tailwind.config = {
 
 <style>
   .wrap{ max-width:900px; }
-  .ocr{ font-family:"Public Sans",sans-serif; font-size:15px; line-height:1.75; color:rgb(var(--ink-rgb)/.82); }
-  .ocr p{ margin:.5rem 0; }
+  .ocr{ white-space:pre-line; font-family:"Public Sans",sans-serif; font-size:14.5px; line-height:1.62; color:rgb(var(--ink-rgb)/.8); max-width:72ch; }
   .crumb a{ color:rgb(var(--ink2-rgb)); } .crumb a:hover{ color:rgb(var(--accent-rgb)); }
   .doc-frame{ border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--reader-scan-bg); }
 </style>
@@ -145,8 +144,37 @@ tailwind.config = {
 
     <section class="mt-14" id="transcription">
       <h2 class="font-display text-[26px] sm:text-[30px] font-bold text-ox mb-1">Transcription intégrale</h2>
-      <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original. Reconnaissance automatique — des erreurs subsistent, en particulier sur les fax les plus dégradés. Fait foi : le scan ci-dessus.</p>
-      <div class="ocr"><p>..! McDonalds SEBEOL SA 2721 Chemin de Saint Claude Immeuble Keria 06600 ANTIBES A l&#x27;attention de Bernard COLLORAFI Guyancourt, le 12 février 1997 Lettre recommandée «vec A.R. OBJET : Notre entretien du 08/01/97 Mon cher Bernard, J&#x27;ai bien reçu ton courrier du 10/01/97 relatant notre entretien du 08/01/97 ainsi que ta lettre recommandée avec accusé de réception du 31/01/97. de n&#x27;ai pas répondu directement à la première lettre car Isabelle souhaitait, comple lenu des changements arrivés sur le marché du Sud, en discuter directement avec toi, ce que j&#x27;ai trouvé plus ouvert et allant dans le sens d&#x27;une meilleure communication. Isabelle t&#x27;a également confirmé l&#x27;attribution de Vallauris à Patrick GILARSKI. L&#x27;atribution d&#x27;un site est une décision régionale hasée sur les critères d&#x27;expansion que tu connais. Lorsque plusieurs de nos partenaires &quot;éligibles&quot; opèrent sur une même région, il n&#x27;est pas possible de définir de façon cartésienne où sont les limites territoriales de chacun. Par ailleurs nous ne donnons jumais de concession territoriale à nos Franchisés et dans tous les cas notre engagement initial ne porte que sur l&#x27;exploitation d&#x27;un restaurant. En ce qui concerne tes inquiétudes de renubilité, les difficulés du marché de lu resiuuration combinées x problèmes économiques rencontrés sur 96 et à notre propre développement nous amènent, dans des cas hien spécifiques, à revoir les niveaux de redevances applicables au restaurant. A ce litre, Isahelle te proposera prochainement des nouvelles conditions financières adaptées aux conditions d&#x27;exploitation actuelles de ton restaurant d&#x27;Antibes Nord. En te souhaitant une honne ouverture pour ton nouveau restaurant d&#x27;Antibes Ouest, je te prie de recevoir. Mon cher Bernard, mes salutations les plus sincères. DA- Denis HENNEQUIN</p></div>
+      <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original, mise en page préservée. Reconnaissance automatique — des erreurs subsistent, surtout sur les fax dégradés. Le scan ci-dessus fait foi.</p>
+      <div class="ocr">McDonalds
+SEBEOL SA
+2721 Chemin de Saint Claude
+Immeuble Keria
+06600 ANTIBES
+A l&#x27;attention de Bernard COLLORAFI
+Guyancourt, le 12 février 1997
+Lettre recommandée «vec A.R.
+OBJET : Notre entretien du 08/01/97
+Mon cher Bernard,
+J&#x27;ai bien reçu ton courrier du 10/01/97 relatant notre entretien du 08/01/97 ainsi que ta lettre
+recommandée avec accusé de réception du 31/01/97.
+de n&#x27;ai pas répondu directement à la première lettre car Isabelle souhaitait, comple lenu des
+changements arrivés sur le marché du Sud, en discuter directement avec toi, ce que j&#x27;ai trouvé plus
+ouvert et allant dans le sens d&#x27;une meilleure communication.
+Isabelle t&#x27;a également confirmé l&#x27;attribution de Vallauris à Patrick GILARSKI. L&#x27;atribution d&#x27;un site est
+une décision régionale hasée sur les critères d&#x27;expansion que tu connais.
+Lorsque plusieurs de nos partenaires &quot;éligibles&quot; opèrent sur une même région, il n&#x27;est pas possible de
+définir de façon cartésienne où sont les limites territoriales de chacun. Par ailleurs nous ne donnons
+jumais de concession territoriale à nos Franchisés et dans tous les cas notre engagement initial ne porte
+que sur l&#x27;exploitation d&#x27;un restaurant.
+En ce qui concerne tes inquiétudes de renubilité, les difficulés du marché de lu resiuuration combinées
+x problèmes économiques rencontrés sur 96 et à notre propre développement nous amènent, dans des
+cas hien spécifiques, à revoir les niveaux de redevances applicables au restaurant.
+A ce litre, Isahelle te proposera prochainement des nouvelles conditions financières adaptées aux
+conditions d&#x27;exploitation actuelles de ton restaurant d&#x27;Antibes Nord.
+En te souhaitant une honne ouverture pour ton nouveau restaurant d&#x27;Antibes Ouest, je te prie de
+recevoir. Mon cher Bernard, mes salutations les plus sincères.
+DA-
+Denis HENNEQUIN</div>
     </section>
 
   <section class="mt-16 pt-8 border-t" style="border-color:var(--line)">

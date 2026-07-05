@@ -103,8 +103,7 @@ tailwind.config = {
 
 <style>
   .wrap{ max-width:900px; }
-  .ocr{ font-family:"Public Sans",sans-serif; font-size:15px; line-height:1.75; color:rgb(var(--ink-rgb)/.82); }
-  .ocr p{ margin:.5rem 0; }
+  .ocr{ white-space:pre-line; font-family:"Public Sans",sans-serif; font-size:14.5px; line-height:1.62; color:rgb(var(--ink-rgb)/.8); max-width:72ch; }
   .crumb a{ color:rgb(var(--ink2-rgb)); } .crumb a:hover{ color:rgb(var(--accent-rgb)); }
   .doc-frame{ border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--reader-scan-bg); }
 </style>
@@ -145,10 +144,99 @@ tailwind.config = {
 
     <section class="mt-14" id="transcription">
       <h2 class="font-display text-[26px] sm:text-[30px] font-bold text-ox mb-1">Transcription intégrale</h2>
-      <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original. Reconnaissance automatique — des erreurs subsistent, en particulier sur les fax les plus dégradés. Fait foi : le scan ci-dessus.</p>
-      <div class="ocr"><p>NUMERO D&#x27;INSCRIPTION AU REPERTOIRE GENERAL : 2001 001962 N° 1138 Enalument_132,00 Dibours, forf Total Greffe T.V.A496% Total TIC_/ A fine katé Le - TRIBUNAL DE COMMERCE D&#x27;ANTIBES PREMIERE CHAMBRE JUGEMENT DU 14/09/2001 DEMANDEUR (S) : ME GAUTHIER / REP DES CREANCIERS DE SA SEBOL OPHIRA II - 630 ROUTE DES DOLINES VALBONNE 06560 SOPHIA ANTIPOLIS REPRESENTANT (S) : COMPARAISSANT EN PERSONNE ** ******** DEFENDEUR (S) : SEBOL (SA) CHEMIN DE ST CLAUDE CENTRE COMMERCIAL CARREFOUR 06600 ANTIBES REPRESENTANT (S) : COMPARAISSANT EN PERSONNE *** ********** COMPOSITION DU TRIBUNAL LORS DES DEBATS ET DU DELIBERE: PRESIDENT : MONSIEUR PERUGINI GERARD JUGE(S) TIT. : MONSIEUR SALON MADAME ELBAZ ***** ***** **** • GREFFIER LORS DES DEBATS : MAITRE Francoise REES DEBATS A L&#x27;AUDIENCE DU 12/09/2001 ** **** *A ******** LE SCEAU CI-DESSUS DE COULEUR BISTRE SONINE QUE VOUS BrES EN PRÉBENCE OUR ORIONAL MANANT DU CREPPE</p>
-<p>PAR JUGEMENT en date du 18/05/2001, le Tribunal de Commerce d&#x27;ANTIBES a ouvert une procédure de redressement judiciaire à l&#x27;encontre de la SA SEBOL, # l&#x27;enseigne MAC DONALD&#x27;S, Restaurant alimentaire, Cherin de Saint Claude, Centre Commercial Carrefour - 06600 ANTIBES; Qu&#x27;a l&#x27;issue de la période d&#x27;observation fixée, le Représentant des créanciers a fait rapport à Monsieur le Juge-Commissaire désigné sur le déroulement de la procédure et la situation de l&#x27;entreprise ; Qu&#x27;en suite, Monsieur le Juge-Commissaire a fait rapport afn de voir convoquer le débiteur en Chambre du Conseil et l&#x27;entendre en ses observations sur le suivi de la procédure; Que les intéressés à la procédure ont été convoqués d&#x27;avoir à comparaitre pardevant Messieurs les Président et Juges du Tribunal siógcant en Chambre du Conseil pour T&#x27;audience du 12/09/2001, date à laquelle le débiteur a comparu et l&#x27;affaire a été mise en délibéré; Le Ministère Public a été avisé conformément à la Loi; DISCUSSION Attendu que Maitre GAUTHİ ER déclare Que le passif s&#x27;élève à 2.774.638,69 Frs; Que seule la liquidation judiciaire de la société peut être envisagée; En conséquence, Il échet de prononcer la liquidation judiciaire de ladite entreprise et de désigner le représentant des créanciers en qualité de liquidateur aux fins de procéder aux opérations de liquidation, achever la vérification des créances et établir l&#x27;ordre des créanciers, conformément à l&#x27;Article L 622-5 du Code de Commerce ; PAR CES MOTIES LE TRIBUNAL, après en avoir délibéré conformément à la loi, Statuant par jugement contradictoire et en premier ressort ; VU les dispositions de l&#x27;Article I. 622-5 du Code de Commerce, VU le rapport de Monsieur le Juge Commissaire ; Le Ministère Public entendu en ses réquisitions, PRONONCE. la liquidation judiciaire de la SA SEBOL, Enseigne : MAC DONALD&#x27;S, Chemin de Saint Claude Centre Commercial Carrefour - 06600 ANTIBES; MAINTIENT Monsieur RENAUDI, l&#x27;un des Membres du Tribunal, en qualité de Juge Commissaire et Madame PETIT, suppléant; NOMME Maître Gilles GAUTHIER, OPHIRA II, 630, Route des Dolines SOPHIA ANTIPOLIS - 06560 VALBONNE, en qualité de liquidateur aux fins de procéder aux opérations de liquidation du débiteur ; Page - 1</p>
-<p>ORDONNE par les soins du Greffier, toutes les mesures prévues en pareille matière en application du DECRET du 27 DECEMBRE 1985 ; Dit les dépens en frais privilégiés ; AINSI JUGE PAR Monsieur Gérard PERUGINI, Président de Chambre, Madame ELBAZ, Monsieur SALON, Juges assesseurs, ET PRONONCE PAR LUN D&#x27;EUX EN AUDIENCE PUBLIQUE DU TRIBUNAL DE COMMERCE D&#x27;ANTIBES LE VENDREDI QUATORZE SEPTEMBRE DEUX MILLE UN, ASSISTES DE MAITRE REES, GREFFIER ASSOCIE. Page - 2</p></div>
+      <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original, mise en page préservée. Reconnaissance automatique — des erreurs subsistent, surtout sur les fax dégradés. Le scan ci-dessus fait foi.</p>
+      <div class="ocr">NUMERO D&#x27;INSCRIPTION AU REPERTOIRE GENERAL : 2001 001962
+Enalument_132,00
+Dibours, forf
+Total Greffe
+T.V.A496%
+Total TIC_/
+A
+fine katé
+Le -
+TRIBUNAL DE COMMERCE D&#x27;ANTIBES
+PREMIERE CHAMBRE
+JUGEMENT DU 14/09/2001
+DEMANDEUR (S)
+: ME GAUTHIER / REP DES CREANCIERS DE SA SEBOL
+OPHIRA II - 630 ROUTE DES DOLINES
+VALBONNE
+06560 SOPHIA ANTIPOLIS
+REPRESENTANT (S) : COMPARAISSANT EN PERSONNE
+********
+DEFENDEUR (S)
+: SEBOL (SA)
+CHEMIN DE ST CLAUDE CENTRE COMMERCIAL CARREFOUR
+06600 ANTIBES
+REPRESENTANT (S) : COMPARAISSANT EN PERSONNE
+**********
+COMPOSITION DU TRIBUNAL LORS DES DEBATS ET DU DELIBERE:
+PRESIDENT
+: MONSIEUR PERUGINI GERARD
+JUGE(S) TIT.
+: MONSIEUR SALON
+MADAME ELBAZ
+*****
+*****
+****
+• GREFFIER
+LORS DES DEBATS : MAITRE Francoise REES
+DEBATS A L&#x27;AUDIENCE DU 12/09/2001
+****
+*A
+********
+LE SCEAU CI-DESSUS DE COULEUR BISTRE SONINE QUE VOUS
+BrES EN PRÉBENCE
+OUR ORIONAL MANANT DU CREPPE
+
+PAR JUGEMENT en date du 18/05/2001, le Tribunal de Commerce d&#x27;ANTIBES a ouvert
+une procédure de redressement judiciaire à l&#x27;encontre de la SA SEBOL, # l&#x27;enseigne MAC
+DONALD&#x27;S, Restaurant alimentaire, Cherin de Saint Claude, Centre Commercial
+Carrefour - 06600 ANTIBES;
+Qu&#x27;a l&#x27;issue de la période d&#x27;observation fixée, le Représentant des créanciers a fait rapport à
+Monsieur le Juge-Commissaire désigné sur le déroulement de la procédure et la situation de
+l&#x27;entreprise ;
+Qu&#x27;en suite, Monsieur le Juge-Commissaire a fait rapport afn de voir convoquer le
+débiteur en Chambre du Conseil et l&#x27;entendre en ses observations sur le suivi de la
+procédure;
+Que les intéressés à la procédure ont été convoqués d&#x27;avoir à comparaitre pardevant
+Messieurs les Président et Juges du Tribunal siógcant en Chambre du Conseil pour
+T&#x27;audience du 12/09/2001, date à laquelle le débiteur a comparu et l&#x27;affaire a été mise en
+délibéré;
+Le Ministère Public a été avisé conformément à la Loi;
+DISCUSSION
+Attendu que Maitre GAUTHİ ER déclare
+Que le passif s&#x27;élève à 2.774.638,69 Frs;
+Que seule la liquidation judiciaire de la société peut être envisagée;
+En conséquence,
+Il échet de prononcer la liquidation judiciaire de ladite entreprise et de désigner le
+représentant des créanciers en qualité de liquidateur aux fins de procéder aux opérations de
+liquidation, achever la vérification des créances et établir l&#x27;ordre des créanciers,
+conformément à l&#x27;Article L 622-5 du Code de Commerce ;
+PAR CES MOTIES
+LE TRIBUNAL, après en avoir délibéré conformément à la loi,
+Statuant par jugement contradictoire et en premier ressort ;
+VU les dispositions de l&#x27;Article I. 622-5 du Code de Commerce,
+VU le rapport de Monsieur le Juge Commissaire ;
+Le Ministère Public entendu en ses réquisitions,
+PRONONCE. la liquidation judiciaire de la SA SEBOL, Enseigne : MAC DONALD&#x27;S,
+Chemin de Saint Claude Centre Commercial Carrefour - 06600 ANTIBES;
+MAINTIENT Monsieur RENAUDI, l&#x27;un des Membres du Tribunal, en qualité de Juge
+Commissaire et Madame PETIT, suppléant;
+NOMME Maître Gilles GAUTHIER, OPHIRA II, 630, Route des Dolines SOPHIA
+ANTIPOLIS - 06560 VALBONNE, en qualité de liquidateur aux fins de procéder aux
+opérations de liquidation du débiteur ;
+Page - 1
+
+ORDONNE par les soins du Greffier, toutes les mesures prévues en pareille matière en
+application du DECRET du 27 DECEMBRE 1985 ;
+Dit les dépens en frais privilégiés ;
+AINSI JUGE PAR Monsieur Gérard PERUGINI, Président de Chambre,
+Madame ELBAZ, Monsieur SALON, Juges assesseurs,
+ET PRONONCE PAR LUN D&#x27;EUX EN AUDIENCE PUBLIQUE DU TRIBUNAL DE
+COMMERCE D&#x27;ANTIBES LE VENDREDI QUATORZE SEPTEMBRE DEUX MILLE
+UN, ASSISTES DE MAITRE REES, GREFFIER ASSOCIE.
+Page - 2</div>
     </section>
 
   <section class="mt-16 pt-8 border-t" style="border-color:var(--line)">

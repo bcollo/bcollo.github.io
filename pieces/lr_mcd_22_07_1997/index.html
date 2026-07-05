@@ -103,8 +103,7 @@ tailwind.config = {
 
 <style>
   .wrap{ max-width:900px; }
-  .ocr{ font-family:"Public Sans",sans-serif; font-size:15px; line-height:1.75; color:rgb(var(--ink-rgb)/.82); }
-  .ocr p{ margin:.5rem 0; }
+  .ocr{ white-space:pre-line; font-family:"Public Sans",sans-serif; font-size:14.5px; line-height:1.62; color:rgb(var(--ink-rgb)/.8); max-width:72ch; }
   .crumb a{ color:rgb(var(--ink2-rgb)); } .crumb a:hover{ color:rgb(var(--accent-rgb)); }
   .doc-frame{ border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--reader-scan-bg); }
 </style>
@@ -145,9 +144,79 @@ tailwind.config = {
 
     <section class="mt-14" id="transcription">
       <h2 class="font-display text-[26px] sm:text-[30px] font-bold text-ox mb-1">Transcription intégrale</h2>
-      <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original. Reconnaissance automatique — des erreurs subsistent, en particulier sur les fax les plus dégradés. Fait foi : le scan ci-dessus.</p>
-      <div class="ocr"><p>McDonald&#x27;s France s. a. Drect on Régionale Sud-Est Actmat-&#x27;lore Amaère B. =. 309 3798 Aix-en-Proverce sedex 03 - tance ₴ 04.42.34 3U 4) # 01.12.39.76.33 Lettre en recommandé AR &quot;°+881 +8810H15 FR B et O SART &amp; SEBOL SA 2721: chemin de Saint Claude Immeuble Kéria 06600 ANTIBES Aix, le 22/07/97 A l&#x27;attention de Monsieur Bernard COLLORAFI, dirigeant des Stés SEBOL SA &amp; B et O SARL Cher Bernard. Nos services comptables m&#x27;indiquent que l&#x27;ensemble des sommes dues par les sociétés dont tu es le dirigeant. exploitantes des deux restaurants d&#x27;ANTIBES et ANTIBES NORD, s&#x27;élèvent au 01.07.1997 à la somne totale de 2.610.152,27 li. Les detles des sociétés concernées se décomposent de la façon suivante : - Société SEBOL SA (ANTIBES) 1.266.300 F. correspondant à la somme des redevances minimum mensuelles non payées par la société SEBOL SA depuis le 01.01.1997 - Société B et O SARL (ANTIBES NORD) : 1.343.852,27 F. correspondant également i. au non paiemont des redevances minimum et standard depuis le 03.02.1997 pour la plus ancienne, selon répartition détaillée ci-après, ainsi qu&#x27;au non paiement de la facture n°0492716 de 411.807,09 F. correspondant à des frais d&#x27;aménagements mobiliers engagés pour l&#x27;ouverture du restaurant d&#x27;ANTIBES NORD. N° facture Date Montant HT TVA TTC Description S145424 03/02/1997 235 000.00 48 410.00 283 410.00 BR 02/97 S149359 03/03/1997 235 000.00 48 410,00 283 410.00 BR 03/97 S153001 01/04/1997 180 000.00 37 080.00 $153742 31/03/1997 217 080.00 BR 04/97 70 827.75 14 590.51 85 418.26 PR ET SF 03/97 491632 03/04/1997 -123 846.41 -25 512.36 -149 358.77 REAJ REDEVANCES 01 A 03/97 491854 31/03/1997 -4 190.97 -863.34 -5 054.31 EXONERATION HAPPY MEAL 03/97 492716 07/04/1997 341 515.00 70 352.09 411 867.09 CPLMT DECO S160926 02/06/1997 180 000.00 37 080.00 217 080.00 BR 06/97 TOTAL IMPAYES CHEZ MSA 1 114 305.37 229 546.90 1 343 852.27 Sage cociol: incUorald&#x27;s -ance su rue Gustave Tit Tel a cedes -Gori RCa Versail es 3 722 303435 * 1048.60.00 $ 01.30 48.63.00</p>
-<p>Donald s Je te rappelle que le bon paiement de ces sommes fait partie des obligations contractuelles des Sociétés SEBOL SA et B et O SARL, jele demande donc, en ta qualité de dirigcant desdites Societes, de leur donner les instructions nécessaires à l&#x27;effet de procéder au réglement de l&#x27;intégralité des sommes ci-dessus sous un délai de huit jours depuis la réception de la présente. Cordialement, Poid Isabelle KÜSTER CC: Denis HENNEQUIN Philippe LABBE Jean-Dominique DANES Jeröme TAFANI</p></div>
+      <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original, mise en page préservée. Reconnaissance automatique — des erreurs subsistent, surtout sur les fax dégradés. Le scan ci-dessus fait foi.</p>
+      <div class="ocr">McDonald&#x27;s France s. a.
+Drect on Régionale Sud-Est
+Actmat-&#x27;lore Amaère
+B. =. 309
+3798 Aix-en-Proverce
+sedex 03 - tance
+₴ 04.42.34 3U 4)
+# 01.12.39.76.33
+Lettre en recommandé AR
+&quot;°+881 +8810H15 FR
+B et O SART &amp; SEBOL SA
+2721: chemin de Saint Claude
+Immeuble Kéria
+06600 ANTIBES
+Aix, le 22/07/97
+A l&#x27;attention de Monsieur Bernard COLLORAFI,
+dirigeant des Stés SEBOL SA &amp; B et O SARL
+Cher Bernard.
+Nos services comptables m&#x27;indiquent que l&#x27;ensemble des sommes dues par les sociétés dont tu
+es le dirigeant. exploitantes des deux restaurants d&#x27;ANTIBES et ANTIBES NORD, s&#x27;élèvent
+au 01.07.1997 à la somne totale de 2.610.152,27 li.
+Les detles des sociétés concernées se décomposent de la façon suivante :
+- Société SEBOL SA (ANTIBES) 1.266.300 F. correspondant à la somme des
+redevances minimum mensuelles non payées par la société SEBOL SA depuis le 01.01.1997
+- Société B et O SARL (ANTIBES NORD) : 1.343.852,27 F. correspondant également i.
+au non paiemont des redevances minimum et standard depuis le 03.02.1997 pour la plus
+ancienne, selon répartition détaillée ci-après, ainsi qu&#x27;au non paiement de la facture n°0492716
+de 411.807,09 F. correspondant à des frais d&#x27;aménagements mobiliers engagés pour l&#x27;ouverture
+du restaurant d&#x27;ANTIBES NORD.
+N° facture
+Date
+Montant HT TVA
+TTC
+Description
+S145424
+283 410.00 BR 02/97
+S149359
+48 410,00
+283 410.00 BR 03/97
+S153001
+$153742
+217 080.00 BR 04/97
+85 418.26 PR ET SF 03/97
+-123 846.41
+-149 358.77 REAJ REDEVANCES 01 A 03/97
+-5 054.31 EXONERATION HAPPY MEAL 03/97
+411 867.09 CPLMT DECO
+S160926
+217 080.00 BR 06/97
+TOTAL IMPAYES CHEZ MSA 1 114 305.37
+229 546.90 1 343 852.27
+Sage cociol:
+incUorald&#x27;s -ance su
+rue Gustave Tit
+Tel a cedes -Gori
+RCa Versail es 3 722 303435
+* 1048.60.00
+$ 01.30 48.63.00
+
+Donald s
+Je te rappelle que le bon paiement de ces sommes fait partie des obligations contractuelles des
+Sociétés SEBOL SA et B et O SARL, jele demande donc, en ta qualité de dirigcant desdites
+Societes, de leur donner les instructions nécessaires à l&#x27;effet de procéder au réglement de
+l&#x27;intégralité des sommes ci-dessus sous un délai de huit jours depuis la réception de la présente.
+Cordialement,
+Poid
+Isabelle KÜSTER
+CC:
+Denis HENNEQUIN
+Philippe LABBE
+Jean-Dominique DANES
+Jeröme TAFANI</div>
     </section>
 
   <section class="mt-16 pt-8 border-t" style="border-color:var(--line)">

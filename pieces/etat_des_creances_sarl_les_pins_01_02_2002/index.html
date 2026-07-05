@@ -103,8 +103,7 @@ tailwind.config = {
 
 <style>
   .wrap{ max-width:900px; }
-  .ocr{ font-family:"Public Sans",sans-serif; font-size:15px; line-height:1.75; color:rgb(var(--ink-rgb)/.82); }
-  .ocr p{ margin:.5rem 0; }
+  .ocr{ white-space:pre-line; font-family:"Public Sans",sans-serif; font-size:14.5px; line-height:1.62; color:rgb(var(--ink-rgb)/.8); max-width:72ch; }
   .crumb a{ color:rgb(var(--ink2-rgb)); } .crumb a:hover{ color:rgb(var(--accent-rgb)); }
   .doc-frame{ border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--reader-scan-bg); }
 </style>
@@ -145,8 +144,34 @@ tailwind.config = {
 
     <section class="mt-14" id="transcription">
       <h2 class="font-display text-[26px] sm:text-[30px] font-bold text-ox mb-1">Transcription intégrale</h2>
-      <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original. Reconnaissance automatique — des erreurs subsistent, en particulier sur les fax les plus dégradés. Fait foi : le scan ci-dessus.</p>
-      <div class="ocr"><p>Maitre Gilles GAUTHIER vientants en EUROS Dossier : 1608 Juge Com : Mme PETIT ETAT SUCCINCT DES CREANCES Art. 621-103 au 29 Janvier 2002 PINS (LES) SARL 32 Avenue de Cannes 06160 - JUAN LES PINS Page 1 29/01/82 18:08 N° Créancier 1 CLEMENT JEAN-PAUL 2 MC DONALD&#x27;S FRANCH Totaux Frigibilite Total dédand 20,522,00 276.248,18 297.170,18 Privilégié Chirographaite 20.922,00 276248,18 297.070,18 Frovisionnel A échoir Contesté / Ricice Ordre Fax regu de : 0493654431</p></div>
+      <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original, mise en page préservée. Reconnaissance automatique — des erreurs subsistent, surtout sur les fax dégradés. Le scan ci-dessus fait foi.</p>
+      <div class="ocr">Maitre Gilles GAUTHIER
+vientants en EUROS
+Dossier : 1608 Juge Com : Mme PETIT
+ETAT SUCCINCT DES CREANCES Art. 621-103 au 29 Janvier 2002
+PINS (LES) SARL
+32 Avenue de Cannes
+06160 - JUAN LES PINS
+Page 1
+N° Créancier
+1 CLEMENT JEAN-PAUL
+2 MC DONALD&#x27;S FRANCH
+Totaux
+Frigibilite
+Total dédand
+20,522,00
+276.248,18
+297.170,18
+Privilégié
+Chirographaite
+20.922,00
+276248,18
+297.070,18
+Frovisionnel
+A échoir
+Contesté / Ricice
+Ordre
+Fax regu de : 0493654431</div>
     </section>
 
   <section class="mt-16 pt-8 border-t" style="border-color:var(--line)">

@@ -103,8 +103,7 @@ tailwind.config = {
 
 <style>
   .wrap{ max-width:900px; }
-  .ocr{ font-family:"Public Sans",sans-serif; font-size:15px; line-height:1.75; color:rgb(var(--ink-rgb)/.82); }
-  .ocr p{ margin:.5rem 0; }
+  .ocr{ white-space:pre-line; font-family:"Public Sans",sans-serif; font-size:14.5px; line-height:1.62; color:rgb(var(--ink-rgb)/.8); max-width:72ch; }
   .crumb a{ color:rgb(var(--ink2-rgb)); } .crumb a:hover{ color:rgb(var(--accent-rgb)); }
   .doc-frame{ border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--reader-scan-bg); }
 </style>
@@ -145,9 +144,51 @@ tailwind.config = {
 
     <section class="mt-14" id="transcription">
       <h2 class="font-display text-[26px] sm:text-[30px] font-bold text-ox mb-1">Transcription intégrale</h2>
-      <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original. Reconnaissance automatique — des erreurs subsistent, en particulier sur les fax les plus dégradés. Fait foi : le scan ci-dessus.</p>
-      <div class="ocr"><p>Antibes, Le 17 janvier 1997 McDonald&#x27;s France Guy DUPUY BP 309 13798 AIX EN PROVENCE CEDEX 03 Cher Guy, Faisant suite aux différentes conversations que nous avons eues au sujet des chiffres d&#x27;affaires prévisionnels de 1997: je te prie de bien vouloir me faire connaitre le plan d&#x27;action que tu comptes mettre en place pour que mes deux restaurants atteignent les objectifs qui avaient été fixés lors des présentations financières ; à savoir : pour le restaurant du centre commercial : 19 M.F. pour le DRIVE: 20 M.F. Tu trouveras mois par mois les prévisions de chiffres d&#x27;affaires. Tu peux être assuré que mes équipes et moi-même mettront tout en œuvre pour réaliser ces objectifs. Je reste à ta disposition pour tous renseignements complémentaires. Bien cordialement. BERNARD</p>
-<p>CHIFFRES D&#x27;AFFAIRES Etablis sur les bases de 19 et 20 M.F. MOIS Janvier Février mars Avril Mai juin Juillet Août Septembre Octobre Novembre Décembre TOTAL Restaurant Centre Commercial 1450 1450 1600 1 550 1600 1 650 1800 1900 1 700 1 450 1400 1 450 19 000 il Restaurant &quot;2 ME DRIVE. 1 500 1 500 1650 1650 1700 1750 2 000 2100 1 700 1450 1 500 1 500 20 000 .i.</p></div>
+      <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original, mise en page préservée. Reconnaissance automatique — des erreurs subsistent, surtout sur les fax dégradés. Le scan ci-dessus fait foi.</p>
+      <div class="ocr">Antibes,
+Le 17 janvier 1997
+McDonald&#x27;s France
+Guy DUPUY
+BP 309
+13798 AIX EN PROVENCE CEDEX 03
+Cher Guy,
+Faisant suite aux différentes conversations que nous avons eues au sujet des
+chiffres d&#x27;affaires prévisionnels de 1997: je te prie de bien vouloir me faire connaitre
+le plan d&#x27;action que tu comptes mettre en place pour que mes deux restaurants
+atteignent les objectifs qui avaient été fixés lors des présentations financières ; à
+savoir :
+pour le restaurant du centre commercial : 19 M.F.
+pour le DRIVE:
+20 M.F.
+Tu trouveras mois par mois les prévisions de chiffres d&#x27;affaires.
+Tu peux être assuré que mes équipes et moi-même mettront tout en œuvre pour
+réaliser ces objectifs.
+Je reste à ta disposition pour tous renseignements complémentaires.
+Bien cordialement.
+BERNARD
+
+CHIFFRES D&#x27;AFFAIRES
+Etablis sur les bases de 19 et 20 M.F.
+MOIS
+Janvier
+Février
+mars
+Avril
+Mai
+juin
+Juillet
+Août
+Septembre
+Octobre
+Novembre
+Décembre
+TOTAL
+Restaurant
+Centre Commercial
+il Restaurant
+&quot;2
+ME DRIVE.
+.i.</div>
     </section>
 
   <section class="mt-16 pt-8 border-t" style="border-color:var(--line)">

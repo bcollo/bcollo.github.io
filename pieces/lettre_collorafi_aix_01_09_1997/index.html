@@ -103,8 +103,7 @@ tailwind.config = {
 
 <style>
   .wrap{ max-width:900px; }
-  .ocr{ font-family:"Public Sans",sans-serif; font-size:15px; line-height:1.75; color:rgb(var(--ink-rgb)/.82); }
-  .ocr p{ margin:.5rem 0; }
+  .ocr{ white-space:pre-line; font-family:"Public Sans",sans-serif; font-size:14.5px; line-height:1.62; color:rgb(var(--ink-rgb)/.8); max-width:72ch; }
   .crumb a{ color:rgb(var(--ink2-rgb)); } .crumb a:hover{ color:rgb(var(--accent-rgb)); }
   .doc-frame{ border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--reader-scan-bg); }
 </style>
@@ -145,8 +144,32 @@ tailwind.config = {
 
     <section class="mt-14" id="transcription">
       <h2 class="font-display text-[26px] sm:text-[30px] font-bold text-ox mb-1">Transcription intégrale</h2>
-      <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original. Reconnaissance automatique — des erreurs subsistent, en particulier sur les fax les plus dégradés. Fait foi : le scan ci-dessus.</p>
-      <div class="ocr"><p>Bemard COLLORAFI GIE SODEVA 2721 , chemin de Saint Claude 06 600 ANTIBES ANTIBES LE 1° Septembre 1997 Isabelle KUSTER MCDONALD&#x27;S FRANCE ACTI MART 1140 rue Ampère BP 309 13798 AIX-en-Provence OBJET : S.A. SEBOL SARL Beto Chère Isabelle. Le montant des chiffres d&#x27;affaires réalisés au 31 Août 1997 pour ces 2 restaurants sont : Reute de Grasial SAR 0: 9550775 15. Route de Grasse Compte tenu des projections financières qui avaient été établies avant leur ouverture ( 19 et 20 MF il nous reste à réaliser d&#x27;ici la fin de l&#x27;année soit en 4 mais Pour S.A. SEBOL: 11 040 205 Pour SARL Beto : 10 489 324 réaliser ces objectifs. Je te remercie par avance de toute l&#x27;aide que tu peux m&#x27;apporter et je reste à ta disposition pour tous renseignements complémentaires. Reçois, chère Isabelle, mes sincères salutations.</p></div>
+      <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original, mise en page préservée. Reconnaissance automatique — des erreurs subsistent, surtout sur les fax dégradés. Le scan ci-dessus fait foi.</p>
+      <div class="ocr">Bemard COLLORAFI
+GIE SODEVA
+2721 , chemin de Saint Claude
+06 600 ANTIBES
+ANTIBES LE 1° Septembre 1997
+Isabelle KUSTER
+MCDONALD&#x27;S FRANCE
+ACTI MART
+1140 rue Ampère
+BP 309
+13798 AIX-en-Provence
+OBJET : S.A. SEBOL
+SARL Beto
+Chère Isabelle.
+Le montant des chiffres d&#x27;affaires réalisés au 31 Août 1997 pour ces 2 restaurants sont :
+Reute de Grasial SAR 0: 9550775 15.
+Route de Grasse
+Compte tenu des projections financières qui avaient été établies avant leur ouverture ( 19 et 20 MF
+il nous reste à réaliser d&#x27;ici la fin de l&#x27;année soit en 4 mais
+Pour S.A. SEBOL:
+Pour SARL Beto :
+réaliser ces objectifs.
+Je te remercie par avance de toute l&#x27;aide que tu peux m&#x27;apporter et je reste à ta disposition pour tous
+renseignements complémentaires.
+Reçois, chère Isabelle, mes sincères salutations.</div>
     </section>
 
   <section class="mt-16 pt-8 border-t" style="border-color:var(--line)">

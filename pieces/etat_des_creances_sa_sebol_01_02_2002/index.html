@@ -103,8 +103,7 @@ tailwind.config = {
 
 <style>
   .wrap{ max-width:900px; }
-  .ocr{ font-family:"Public Sans",sans-serif; font-size:15px; line-height:1.75; color:rgb(var(--ink-rgb)/.82); }
-  .ocr p{ margin:.5rem 0; }
+  .ocr{ white-space:pre-line; font-family:"Public Sans",sans-serif; font-size:14.5px; line-height:1.62; color:rgb(var(--ink-rgb)/.8); max-width:72ch; }
   .crumb a{ color:rgb(var(--ink2-rgb)); } .crumb a:hover{ color:rgb(var(--accent-rgb)); }
   .doc-frame{ border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--reader-scan-bg); }
 </style>
@@ -145,8 +144,50 @@ tailwind.config = {
 
     <section class="mt-14" id="transcription">
       <h2 class="font-display text-[26px] sm:text-[30px] font-bold text-ox mb-1">Transcription intégrale</h2>
-      <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original. Reconnaissance automatique — des erreurs subsistent, en particulier sur les fax les plus dégradés. Fait foi : le scan ci-dessus.</p>
-      <div class="ocr"><p>Mate Gilles GAUTHIER Montants en EUROS Dossier : Juge Juge ComME RENAUDI N° Crancier 1 TRESORENIE LORGANIC KELOOYREMENT - ORGANIC RELOOTREMENT З GHOUPE MORNAYIOGIS LO MODORALOSFRANCE Э ORGANIC RECOUVREMENT BE URSSAF DIES ALV. Tolana ETAT SUCCINCT DES CREANCES AIt. 621-103 au 15 Octobre 2OL SEBOL sa Chemin de Saint Claude 06600 - ANTIBES Total déclaré 24.313,94 13.922,56 1.0710 504,92 1.409,68 2349,19 309.001,31 515,28 19.434,06 10.0000,1HP 422.994,94 Privilegie 24.003,94 13.922,50 1.080,10 1.409,65 Chirographane Provisionnel 564,M2 2.149.19 109.00L.31 515,28 39.814.00 40.726,28 351.699,84 30.000,00 30.000,00 504.52 Page 1 Contexte : Rejet Orie 10</p></div>
+      <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original, mise en page préservée. Reconnaissance automatique — des erreurs subsistent, surtout sur les fax dégradés. Le scan ci-dessus fait foi.</p>
+      <div class="ocr">Mate Gilles GAUTHIER
+Montants en EUROS
+Dossier : Juge Juge ComME RENAUDI
+N° Crancier
+1 TRESORENIE
+LORGANIC KELOOYREMENT
+- ORGANIC RELOOTREMENT
+З GHOUPE MORNAYIOGIS
+LO MODORALOSFRANCE
+Э ORGANIC RECOUVREMENT
+BE URSSAF DIES ALV.
+Tolana
+ETAT SUCCINCT DES CREANCES AIt. 621-103 au 15 Octobre 2OL
+SEBOL sa
+Chemin de Saint Claude
+06600 - ANTIBES
+Total déclaré
+24.313,94
+13.922,56
+504,92
+1.409,68
+2349,19
+309.001,31
+515,28
+19.434,06
+10.0000,1HP
+422.994,94
+Privilegie
+24.003,94
+13.922,50
+1.080,10
+1.409,65
+Chirographane
+Provisionnel
+564,M2
+109.00L.31
+515,28
+40.726,28
+351.699,84
+30.000,00
+30.000,00
+Page 1
+Contexte : Rejet Orie</div>
     </section>
 
   <section class="mt-16 pt-8 border-t" style="border-color:var(--line)">

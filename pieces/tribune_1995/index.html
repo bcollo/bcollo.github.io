@@ -103,8 +103,7 @@ tailwind.config = {
 
 <style>
   .wrap{ max-width:900px; }
-  .ocr{ font-family:"Public Sans",sans-serif; font-size:15px; line-height:1.75; color:rgb(var(--ink-rgb)/.82); }
-  .ocr p{ margin:.5rem 0; }
+  .ocr{ white-space:pre-line; font-family:"Public Sans",sans-serif; font-size:14.5px; line-height:1.62; color:rgb(var(--ink-rgb)/.8); max-width:72ch; }
   .crumb a{ color:rgb(var(--ink2-rgb)); } .crumb a:hover{ color:rgb(var(--accent-rgb)); }
   .doc-frame{ border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--reader-scan-bg); }
 </style>
@@ -163,8 +162,54 @@ tailwind.config = {
 
     <section class="mt-14" id="transcription">
       <h2 class="font-display text-[26px] sm:text-[30px] font-bold text-ox mb-1">Transcription intégrale</h2>
-      <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original. Reconnaissance automatique — des erreurs subsistent, en particulier sur les fax les plus dégradés. Fait foi : le scan ci-dessus.</p>
-      <div class="ocr"><p>McDonald&#x27;s La Tribune Jeudi 26 octobre 1995 McDonalors Total des ventes* en millions de dollats 95 94 Chiffre d&#x27;affaires* en millions de dallars 95 94 22 179,5 19 023,4 7209,0 6 050.7 Bénéfice net* en millions de dollars 95 94 95 94 1960,5 915,5 Bénéfice net par action* en dollar 1,46 1,25 * 9 mois au 30 septembre 1995 McDonald&#x27;s Corporation est cotée à Paris ou RM 3° trimestre 1995 Le bénéfice net par action : + 17% McDonald&#x27;s Corporation annonce un chiffre d&#x27;affaires en progression de 16% sur le troisième trimestre 1995 el de 19% sur les neuf premiers mois de l&#x27;année, par rapport aux périodes équivalentes de l&#x27;année 1994. Le bénéfice net par action augmente de 17%c sur les deux périodes. Aux Etats-Unis, les ventes sous enseigne progressent de 5% sur le trimestre. McDonald&#x27;s maintient ses efforts pour renforcer sa présence sur un marché américain particulie. rement concurrentie. Sa stratégie qui repose sur l&#x27;amélio- ration du rapport qualité/prix, les programmes de promo cion et la satisfaction du client, privilégie l&#x27;intéret à long verme du groupe par rapport aux marges à cour terme. A l&#x27;intemational, les ventes sous enseigne progressent de 24% sur le trimestre et de 30% sur les neuf premiers mois Le défice d&#x27;exploitation bors USA contribue à phis de 50% de bénéfice d&#x27;exploitation total. Grâce à cette perfor- mance, les excédents de trésorerie du marché américain, antrefois consacrés en partie an développement internatio nal, permettront de renforcer la présence de la société aux Etats-Unis. Au 30 septembre, McDonald&#x27;s compte 17 403 restaurants en activité dans 84 pays et a ouvert 1 453 restaurants depuis le début de l&#x27;année.</p></div>
+      <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original, mise en page préservée. Reconnaissance automatique — des erreurs subsistent, surtout sur les fax dégradés. Le scan ci-dessus fait foi.</p>
+      <div class="ocr">McDonald&#x27;s
+La Tribune
+Jeudi 26 octobre 1995
+McDonalors
+Total des ventes*
+en millions de dollats
+Chiffre d&#x27;affaires*
+en millions de dallars
+22 179,5
+19 023,4
+7209,0
+Bénéfice net*
+en millions de dollars
+1960,5
+915,5
+Bénéfice net par action*
+en dollar
+1,46
+1,25
+* 9 mois au 30 septembre 1995
+McDonald&#x27;s Corporation
+est cotée à Paris ou RM
+3° trimestre 1995
+Le bénéfice net par action : + 17%
+McDonald&#x27;s Corporation annonce un chiffre d&#x27;affaires en
+progression de 16% sur le troisième trimestre 1995 el de
+19% sur les neuf premiers mois de l&#x27;année, par rapport
+aux périodes équivalentes de l&#x27;année 1994. Le bénéfice
+net par action augmente de 17%c sur les deux périodes.
+Aux Etats-Unis, les ventes sous enseigne progressent de
+5% sur le trimestre. McDonald&#x27;s maintient ses efforts pour
+renforcer sa présence sur un marché américain particulie.
+rement concurrentie. Sa stratégie qui repose sur l&#x27;amélio-
+ration du rapport qualité/prix, les programmes de promo
+cion et la satisfaction du client, privilégie l&#x27;intéret à long
+verme du groupe par rapport aux marges à cour terme.
+A l&#x27;intemational, les ventes sous enseigne progressent de
+24% sur le trimestre et de 30% sur les neuf premiers mois
+Le défice d&#x27;exploitation bors USA contribue à phis de
+50% de bénéfice d&#x27;exploitation total. Grâce à cette perfor-
+mance, les excédents de trésorerie du marché américain,
+antrefois consacrés en partie an développement internatio
+nal, permettront de renforcer la présence de la société aux
+Etats-Unis.
+Au 30 septembre, McDonald&#x27;s compte 17 403 restaurants
+en activité dans 84 pays et a ouvert 1 453 restaurants
+depuis le début de l&#x27;année.</div>
     </section>
 
   <section class="mt-16 pt-8 border-t" style="border-color:var(--line)">

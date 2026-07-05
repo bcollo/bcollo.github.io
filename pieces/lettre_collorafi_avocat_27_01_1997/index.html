@@ -103,8 +103,7 @@ tailwind.config = {
 
 <style>
   .wrap{ max-width:900px; }
-  .ocr{ font-family:"Public Sans",sans-serif; font-size:15px; line-height:1.75; color:rgb(var(--ink-rgb)/.82); }
-  .ocr p{ margin:.5rem 0; }
+  .ocr{ white-space:pre-line; font-family:"Public Sans",sans-serif; font-size:14.5px; line-height:1.62; color:rgb(var(--ink-rgb)/.8); max-width:72ch; }
   .crumb a{ color:rgb(var(--ink2-rgb)); } .crumb a:hover{ color:rgb(var(--accent-rgb)); }
   .doc-frame{ border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--reader-scan-bg); }
 </style>
@@ -145,11 +144,138 @@ tailwind.config = {
 
     <section class="mt-14" id="transcription">
       <h2 class="font-display text-[26px] sm:text-[30px] font-bold text-ox mb-1">Transcription intégrale</h2>
-      <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original. Reconnaissance automatique — des erreurs subsistent, en particulier sur les fax les plus dégradés. Fait foi : le scan ci-dessus.</p>
-      <div class="ocr"><p>Bernard COLLORAFI 21 B chemin de l&#x27;Estelle 06110 LE CANNET Le Cannet, Le 27 janvier 1997 Maître Jean Paul CLEMENT 78 Rue Mozart 75016 PARIS Cher Maitre: Dans le déroulement de cette affaire, je vous mets au courant d&#x27;un fait qui vient de survenir. Je reçois du Franchiseur McDonald&#x27;s Paris une facture de 310 000.00 Francs T.T.C., postée le vendredi 10 janvier 1997, soit après que j&#x27;aie eu mon entretien avec le PDG Denis HENNEQUIN, et reçue le samedi 11 janvier 1997. Cette facture est datée du 20/12/96 et concerne la SARL B et O (restaurant DRIVE). Il s&#x27;agit de la refacturation d&#x27;une facture réglée par McDonald&#x27;s à l&#x27;Olympique d&#x27;Antibes (basket): datée du 18/12/1995 et probablement réglée par McDonald&#x27;s courant janvier 1996 (soit il y a un an). Je n&#x27;ai pour ma part jamais assisté à une négociation avec l&#x27;Olympique d&#x27;Antibes ni signé quelque bon de commande que ce soit. Rappelons que la Société B et O a été créée le 21 août 1996, que son exploitation commerciale a débuté le 9 octobre 1996 et que je n&#x27;ai pas pu prendre d&#x27;engagement pour celle-ci avant sa création. Par contre, il est certain que McDonald&#x27;s pour obtenir des permis de construire dans une ville sportive, sponsorise des associations. Par ailleurs, le détail des frais d&#x27;ouverture du restaurant DRIVE figurant dans la plaquette d&#x27;information pré-contractuelle ne fait pas apparaître une quelconque facture de l&#x27;Olympique d&#x27;Antibes. Je tiens à vous faire part de cette manceuvre qui semble être une pression d&#x27;intimidation voire même une escroquerie. J&#x27;ai immédiatement fait opposition auprès de ma banque pour ce règlement ; et s&#x27;il se présente, je vous tiens au courant et vous fais parvenir sa date d&#x27;émission.</p>
-<p>Je vous demande de conserver ces pièces dans le dossier pour un éventuel usage ultérieur. Je vous adresse, cher Maître, mes salutations les meilleures. pièces jointes : Ý facture McDanald&#x27;s du 20/12/96 r lettre du 19/11/96 reprenant les frais d&#x27;ouverture du restaurant observation : vila banque a une autorisation permanente de prélèvements McDonald&#x27;s or, celui de 301 500.00 n&#x27;a toujours pas été présenté en date du 27/01/97</p>
-<p>i : McDonald&#x27;s France S.A. FACTITE !! 20313 5ir d 1190 R0 : ::9 1: 0r01. : # : 300 FOrS 12:44 DATE DE LA FACTURE: 20/12/96 87081 E ET O SAEL 2721 CHEMIN DE SAINT CLALDE 06E00 FRANCE ANTIBES - DECIGHATION LOCATIN LOGES 1996 B STE! POLRCENTAGE 30 MONTANT HT 250.000,00 250.000,00 CODE TAUX TVA TVA 30 20,60 MONTANT IVA 51.500,00 51.500,00 MONTANT TTC 501.500,00 501.500,00 ....... 250.000, 00 NE id PAYER CET N. B., No 51.500,00 301.500,00 carte facture. DU GORD Le nortant de sera prélevé sur votre compte: McDonald&#x27;s France S.A. - 1, rue Gustave-Eiffel - 74045 Guyancourt Cedex, France ; Société Алопуте au Capital de 180:000 000 Francs R.C.S. Versailles B 722 003 936 Téléphone : (1) 3D 48 60 00 - Téléfax: (1),50 49433 00 - Télex : 699 519 F 4</p>
-<p>ANTIBES LE 18 DECEMBRE 1995 ANTIBES PINS FACTURE : 27 - 95/96 Antibes Nud 516. 1 Mr DONALD&#x27;S RESTAURANT SARD 1 avenue Gustave Eiffel 78045 GUYANCOURT CEDEX i LOCATION DE Janvier LOGES NUMERO L2 LIV L20 pour la période duler matchs 1996 donnant accès à l&#x27;ensemble disputés à domicile pol:r l&#x27;équipe profesaionnelle de L&#x27;OLYMPIQUE D&#x27;ANTIBES BASKET BALI.. 458+13. TOTAL H.T. T.V.A. 20,67 250 000 FRS 51 500 FRS TOTAL T.T.C. 301 500 FR$ EN VOTRE AIMABLE REGLEMENT. .... 300, AV. JULES GREC 06600 ANTIBES TÉL. 93 33 32 32 FAX 93 33 19 19 1/2 Finaliste Coupe Korac Fanaises Champ. de Fronce Finiste Champ Sosiélé Arcryme d Cejetsperif Olymoique d&#x27;Arlives JugniesPis Cale d&#x27;Azur au copital de 250 000 F. SIRET 402 308 936 CCG10 - ARE 770 6. ..i.</p></div>
+      <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original, mise en page préservée. Reconnaissance automatique — des erreurs subsistent, surtout sur les fax dégradés. Le scan ci-dessus fait foi.</p>
+      <div class="ocr">Bernard COLLORAFI
+21 B chemin de l&#x27;Estelle
+06110 LE CANNET
+Le Cannet,
+Le 27 janvier 1997
+Maître Jean Paul CLEMENT
+78 Rue Mozart
+75016 PARIS
+Cher Maitre:
+Dans le déroulement de cette affaire, je vous mets au courant d&#x27;un fait qui vient de
+survenir.
+Je reçois du Franchiseur McDonald&#x27;s Paris une facture de 310 000.00 Francs
+T.T.C., postée le vendredi 10 janvier 1997, soit après que j&#x27;aie eu mon entretien
+avec le PDG Denis HENNEQUIN, et reçue le samedi 11 janvier 1997.
+Cette facture est datée du 20/12/96 et concerne la SARL B et O (restaurant DRIVE).
+Il s&#x27;agit de la refacturation d&#x27;une facture réglée par McDonald&#x27;s à l&#x27;Olympique
+d&#x27;Antibes (basket): datée du 18/12/1995 et probablement réglée par McDonald&#x27;s
+courant janvier 1996 (soit il y a un an).
+Je n&#x27;ai pour ma part jamais assisté à une négociation avec l&#x27;Olympique d&#x27;Antibes ni
+signé quelque bon de commande que ce soit.
+Rappelons que la Société B et O a été créée le 21 août 1996, que son exploitation
+commerciale a débuté le 9 octobre 1996 et que je n&#x27;ai pas pu prendre d&#x27;engagement
+pour celle-ci avant sa création.
+Par contre, il est certain que McDonald&#x27;s pour obtenir des permis de construire dans
+une ville sportive, sponsorise des associations.
+Par ailleurs, le détail des frais d&#x27;ouverture du restaurant DRIVE figurant dans la
+plaquette d&#x27;information pré-contractuelle ne fait pas apparaître une quelconque
+facture de l&#x27;Olympique d&#x27;Antibes.
+Je tiens à vous faire part de cette manceuvre qui semble être une pression
+d&#x27;intimidation voire même une escroquerie.
+J&#x27;ai immédiatement fait opposition auprès de ma banque pour ce règlement ;
+et s&#x27;il se présente, je vous tiens au courant et vous fais parvenir sa date d&#x27;émission.
+
+Je vous demande de conserver ces pièces dans le dossier pour un éventuel usage
+ultérieur.
+Je vous adresse, cher Maître, mes salutations les meilleures.
+pièces jointes :
+Ý facture McDanald&#x27;s du 20/12/96
+r lettre du 19/11/96 reprenant les frais d&#x27;ouverture du restaurant
+observation :
+vila banque a une autorisation permanente de prélèvements
+McDonald&#x27;s
+or, celui de 301 500.00 n&#x27;a toujours pas été présenté en date du
+
+i
+McDonald&#x27;s France S.A.
+FACTITE !!
+5ir d
+1190 R0 : ::9
+1: 0r01. : #
+FOrS 12:44
+DATE DE LA FACTURE: 20/12/96
+E ET O SAEL
+2721 CHEMIN DE SAINT CLALDE
+06E00
+FRANCE
+ANTIBES
+DECIGHATION
+LOCATIN LOGES 1996 B STE!
+POLRCENTAGE
+MONTANT HT
+250.000,00
+250.000,00
+CODE TAUX
+TVA
+TVA
+30 20,60
+MONTANT IVA
+51.500,00
+51.500,00
+MONTANT TTC
+501.500,00
+501.500,00
+250.000, 00
+NE
+id
+PAYER
+CET
+N. B., No
+51.500,00
+301.500,00
+carte facture.
+DU GORD
+Le nortant de
+sera prélevé sur votre compte:
+McDonald&#x27;s France S.A. - 1, rue Gustave-Eiffel - 74045 Guyancourt Cedex, France ;
+Société Алопуте au Capital de 180:000 000 Francs
+R.C.S. Versailles B 722 003 936
+Téléphone : (1) 3D 48 60 00 - Téléfax: (1),50 49433 00 - Télex : 699 519 F
+
+ANTIBES LE 18
+DECEMBRE
+ANTIBES
+PINS
+FACTURE : 27 - 95/96
+Antibes Nud
+Mr DONALD&#x27;S RESTAURANT SARD
+avenue Gustave Eiffel
+78045 GUYANCOURT CEDEX
+i
+LOCATION
+DE
+Janvier
+LOGES NUMERO L2 LIV L20 pour la période
+duler
+matchs
+donnant accès à l&#x27;ensemble
+disputés
+à
+domicile
+pol:r
+l&#x27;équipe
+profesaionnelle
+de
+L&#x27;OLYMPIQUE D&#x27;ANTIBES BASKET BALI..
+458+13.
+TOTAL H.T.
+T.V.A. 20,67
+250 000 FRS
+FRS
+TOTAL T.T.C. 301 500 FR$
+EN VOTRE AIMABLE REGLEMENT.
+300, AV. JULES GREC
+06600 ANTIBES
+TÉL. 93 33 32 32
+FAX 93 33 19 19
+1/2 Finaliste Coupe Korac
+Fanaises Champ. de Fronce
+Finiste Champ
+Sosiélé Arcryme d Cejetsperif Olymoique d&#x27;Arlives JugniesPis Cale d&#x27;Azur au copital de 250 000 F. SIRET 402 308 936 CCG10 - ARE 770 6.
+..i.</div>
     </section>
 
   <section class="mt-16 pt-8 border-t" style="border-color:var(--line)">

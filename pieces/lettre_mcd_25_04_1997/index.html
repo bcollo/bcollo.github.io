@@ -103,8 +103,7 @@ tailwind.config = {
 
 <style>
   .wrap{ max-width:900px; }
-  .ocr{ font-family:"Public Sans",sans-serif; font-size:15px; line-height:1.75; color:rgb(var(--ink-rgb)/.82); }
-  .ocr p{ margin:.5rem 0; }
+  .ocr{ white-space:pre-line; font-family:"Public Sans",sans-serif; font-size:14.5px; line-height:1.62; color:rgb(var(--ink-rgb)/.8); max-width:72ch; }
   .crumb a{ color:rgb(var(--ink2-rgb)); } .crumb a:hover{ color:rgb(var(--accent-rgb)); }
   .doc-frame{ border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--reader-scan-bg); }
 </style>
@@ -145,8 +144,27 @@ tailwind.config = {
 
     <section class="mt-14" id="transcription">
       <h2 class="font-display text-[26px] sm:text-[30px] font-bold text-ox mb-1">Transcription intégrale</h2>
-      <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original. Reconnaissance automatique — des erreurs subsistent, en particulier sur les fax les plus dégradés. Fait foi : le scan ci-dessus.</p>
-      <div class="ocr"><p>Restaurant McDonald&#x27;s d&#x27;Antibes Rond Point Antibes les Pins 32, avenue de Cannes 06600 ANTIBES A l&#x27;attention de M. et Mme Collorali N/Ref : McDF/Dir-DH/tc-LR/970410 Guyancourt, le 25 avril 1997 Chère Oiga, Cher Bernard, Tout d&#x27;abord, je souhaitais vous remercier de votre invitation à l&#x27;inauguration de votre restaurant d&#x27;Antibes. Je suis vraiment navré que mes obligations professionnelles ne me permettent. pas d&#x27;être des vôtres pour cet évènement. Néanmoins, je tenais à vous souhaiter à tous les deux ainsi qu&#x27;à toute votre équipe : BONNE CHANCE TOUS MES VOEUX DE FRANCHE ET PLEINE REUSSITE DANS CE NOUVEAU DEFI !!! Des que possibie, je ne manquerai pas de vous rendre visit ei die discuier aver vous de cette nouvelle ouverture. Bien Cordialement, Denis HENNEQUIN</p></div>
+      <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original, mise en page préservée. Reconnaissance automatique — des erreurs subsistent, surtout sur les fax dégradés. Le scan ci-dessus fait foi.</p>
+      <div class="ocr">Restaurant McDonald&#x27;s d&#x27;Antibes
+Rond Point Antibes les Pins
+32, avenue de Cannes
+06600 ANTIBES
+A l&#x27;attention de M. et Mme Collorali
+N/Ref : McDF/Dir-DH/tc-LR/970410
+Guyancourt, le 25 avril 1997
+Chère Oiga, Cher Bernard,
+Tout d&#x27;abord, je souhaitais vous remercier de votre invitation à l&#x27;inauguration de
+votre restaurant d&#x27;Antibes.
+Je suis vraiment navré que mes obligations professionnelles ne me permettent. pas
+d&#x27;être des vôtres pour cet évènement. Néanmoins, je tenais à vous souhaiter à tous
+les deux ainsi qu&#x27;à toute votre équipe :
+BONNE CHANCE
+TOUS MES VOEUX DE FRANCHE ET PLEINE REUSSITE
+DANS CE NOUVEAU DEFI !!!
+Des que possibie, je ne manquerai pas de vous rendre visit ei die discuier aver
+vous de cette nouvelle ouverture.
+Bien Cordialement,
+Denis HENNEQUIN</div>
     </section>
 
   <section class="mt-16 pt-8 border-t" style="border-color:var(--line)">

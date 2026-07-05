@@ -103,8 +103,7 @@ tailwind.config = {
 
 <style>
   .wrap{ max-width:900px; }
-  .ocr{ font-family:"Public Sans",sans-serif; font-size:15px; line-height:1.75; color:rgb(var(--ink-rgb)/.82); }
-  .ocr p{ margin:.5rem 0; }
+  .ocr{ white-space:pre-line; font-family:"Public Sans",sans-serif; font-size:14.5px; line-height:1.62; color:rgb(var(--ink-rgb)/.8); max-width:72ch; }
   .crumb a{ color:rgb(var(--ink2-rgb)); } .crumb a:hover{ color:rgb(var(--accent-rgb)); }
   .doc-frame{ border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--reader-scan-bg); }
 </style>
@@ -145,9 +144,61 @@ tailwind.config = {
 
     <section class="mt-14" id="transcription">
       <h2 class="font-display text-[26px] sm:text-[30px] font-bold text-ox mb-1">Transcription intégrale</h2>
-      <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original. Reconnaissance automatique — des erreurs subsistent, en particulier sur les fax les plus dégradés. Fait foi : le scan ci-dessus.</p>
-      <div class="ocr"><p>- COUR DE CASSATION PREMIERE PRESIDENCE 086 Pourvoi n° X 0014487 Requête n° 3784/00 Ordonnance n° 93784 LEXTRAIT DES MINUTES DU SECRÉTARIAT GREFFE DE LA COUR DE CASSATION ORDONNANCE ENTRE: Société MAC DONALD&#x27;S SCP Delaporte et Briard, avocat au Conseil d&#x27;Etat et à la Cour de Cassation ET : Monsieur Bernard COLLORAFI La SA SEBOL La SARL B&amp;O La SARL LES PINS &#x27;SCP A. Bouzidi, avocat au Conseil d&#x27;Etat et à la Cour de Cassation</p>
-<p>Nous, Jean-Pierre BOUSCHARAIN, CONSEILLER DÉLÉGUÉ PAR LE. - PREMIER PRÉSIDENT DE LA COUR DE CASSATION, Assisté de Violaine PALOQUE, greffier, Avons rendu l&#x27;ordonnance ci-après, après avoir recueilli l&#x27;avis de M. Pierre Baechlin, avocat général ; Attendu que M COLLORAFI, la Société LES PINS, la Société SEBOL et la Société B&amp;O se sont pourvus en cassation contre les arrêts en date des 09/12/1998 et 08/03/2000 par lesquels la Cour d&#x27;appel de Paris les a condamnés à payer certaines sommes à la Société MAC DONALD&#x27;S FRANCE, cette dernière étant condamnée à leur règler certaines sommes ; que, se prétendant, après compensation, créancière d&#x27;une somme de 2.837.763, 84 frs, la Société MAC DONALD&#x27;S FRANCE demande que le pourvoi soit retiré du rôle de la Cour ; que M. COLLORAFI et les Sociétés LES PINS, SEBOL et B&amp;O s&#x27;opposent à cette mesure, soutenant que l&#x27;exécution de l&#x27;arrêt entraînerait pour eux des conséquences manifestement excessives ; Attendu que les Sociétés LES PINS, SEBOL, et B&amp;O affirment que, depuis le 10/06/1998, elles n&#x27;ont plus d&#x27;activité ; que cette affirmation est compatible avec les énonciations des arrêts attaqués, ce qui permet de considérer qu&#x27;elles sont dans l&#x27;impossibilité d&#x27;exécuter l&#x27;arrêt ; qu&#x27;en ce qui concerne M. COLLORAFI, il justifie de ce que, en 1999, il a déclaré un revenu de 90.136 firs, son épouse déclarant un revenu de 88.353 frs ; quil justifie par ailleurs que l&#x27;immeuble dont les époux sont propriétaires, est grevé d&#x27;hypothèque au profit de la Société MAC DONALD&#x27;S FRANCE ; qu&#x27;en cet état, il apparait que l&#x27;exécution de l&#x27;arrêt entraînerait pour lui des conséquences manifestement excessives ; Que, dans ces conditions, il n&#x27;y a pas lieu de retirer, du rôle de la Cour, le pourvoi n° X 0014487; PAR CES MOTIRS DISONS n&#x27;y avoir lieu à retrait, du rôle de la Cour, du pourvoi n° X 0014487. Fait à PARIS, le 04/04/2001 LE GRAPFIER LE CONSEILLER DÉLÉGUÉ Violaine PALOQUE A LA MINUTE SUIVENT LES SIGNAŁURS COPIE CERTIFIÉE CONFORME U LE GREFFIER EN CHE DE LA COUR DE CASSATION Jean-Pierie BOUSCHARAIN C</p></div>
+      <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original, mise en page préservée. Reconnaissance automatique — des erreurs subsistent, surtout sur les fax dégradés. Le scan ci-dessus fait foi.</p>
+      <div class="ocr">COUR DE CASSATION
+PREMIERE PRESIDENCE
+Pourvoi n° X 0014487
+Requête n° 3784/00
+Ordonnance n° 93784
+LEXTRAIT DES MINUTES DU
+SECRÉTARIAT GREFFE DE LA
+COUR DE CASSATION
+ORDONNANCE
+ENTRE:
+Société MAC DONALD&#x27;S
+SCP Delaporte et Briard, avocat au Conseil d&#x27;Etat et à la Cour de Cassation
+ET :
+Monsieur Bernard COLLORAFI
+La SA SEBOL
+La SARL B&amp;O
+La SARL LES PINS
+&#x27;SCP A. Bouzidi, avocat au Conseil d&#x27;Etat et à la Cour de Cassation
+
+Nous, Jean-Pierre BOUSCHARAIN, CONSEILLER DÉLÉGUÉ PAR LE. -
+PREMIER PRÉSIDENT DE LA COUR DE CASSATION,
+Assisté de Violaine PALOQUE, greffier,
+Avons rendu l&#x27;ordonnance ci-après, après avoir recueilli l&#x27;avis de M. Pierre Baechlin,
+avocat général ;
+Attendu que M COLLORAFI, la Société LES PINS, la Société SEBOL et la Société
+B&amp;O se sont pourvus en cassation contre les arrêts en date des 09/12/1998 et 08/03/2000 par
+lesquels la Cour d&#x27;appel de Paris les a condamnés à payer certaines sommes à la Société MAC
+DONALD&#x27;S FRANCE, cette dernière étant condamnée à leur règler certaines sommes ; que, se
+prétendant, après compensation, créancière d&#x27;une somme de 2.837.763, 84 frs, la Société MAC
+DONALD&#x27;S FRANCE demande que le pourvoi soit retiré du rôle de la Cour ; que M. COLLORAFI
+et les Sociétés LES PINS, SEBOL et B&amp;O s&#x27;opposent à cette mesure, soutenant que l&#x27;exécution de
+l&#x27;arrêt entraînerait pour eux des conséquences manifestement excessives ;
+Attendu que les Sociétés LES PINS, SEBOL, et B&amp;O affirment que, depuis le
+10/06/1998, elles n&#x27;ont plus d&#x27;activité ; que cette affirmation est compatible avec les énonciations des
+arrêts attaqués, ce qui permet de considérer qu&#x27;elles sont dans l&#x27;impossibilité d&#x27;exécuter l&#x27;arrêt ; qu&#x27;en
+ce qui concerne M. COLLORAFI, il justifie de ce que, en 1999, il a déclaré un revenu de 90.136 firs,
+son épouse déclarant un revenu de 88.353 frs ; quil justifie par ailleurs que l&#x27;immeuble dont les époux
+sont propriétaires, est grevé d&#x27;hypothèque au profit de la Société MAC DONALD&#x27;S FRANCE ;
+qu&#x27;en cet état, il apparait que l&#x27;exécution de l&#x27;arrêt entraînerait pour lui des conséquences
+manifestement excessives ;
+Que, dans ces conditions, il n&#x27;y a pas lieu de retirer, du rôle de la Cour, le pourvoi n°
+X 0014487;
+PAR CES MOTIRS
+DISONS n&#x27;y avoir lieu à retrait, du rôle de la Cour, du pourvoi n° X 0014487.
+Fait à PARIS, le 04/04/2001
+LE GRAPFIER
+LE CONSEILLER DÉLÉGUÉ
+Violaine PALOQUE
+A LA MINUTE SUIVENT LES SIGNAŁURS
+COPIE CERTIFIÉE CONFORME
+U LE GREFFIER EN CHE
+DE LA COUR DE CASSATION
+Jean-Pierie BOUSCHARAIN
+C</div>
     </section>
 
   <section class="mt-16 pt-8 border-t" style="border-color:var(--line)">

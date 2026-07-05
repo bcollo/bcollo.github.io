@@ -103,8 +103,7 @@ tailwind.config = {
 
 <style>
   .wrap{ max-width:900px; }
-  .ocr{ font-family:"Public Sans",sans-serif; font-size:15px; line-height:1.75; color:rgb(var(--ink-rgb)/.82); }
-  .ocr p{ margin:.5rem 0; }
+  .ocr{ white-space:pre-line; font-family:"Public Sans",sans-serif; font-size:14.5px; line-height:1.62; color:rgb(var(--ink-rgb)/.8); max-width:72ch; }
   .crumb a{ color:rgb(var(--ink2-rgb)); } .crumb a:hover{ color:rgb(var(--accent-rgb)); }
   .doc-frame{ border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--reader-scan-bg); }
 </style>
@@ -145,8 +144,50 @@ tailwind.config = {
 
     <section class="mt-14" id="transcription">
       <h2 class="font-display text-[26px] sm:text-[30px] font-bold text-ox mb-1">Transcription intégrale</h2>
-      <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original. Reconnaissance automatique — des erreurs subsistent, en particulier sur les fax les plus dégradés. Fait foi : le scan ci-dessus.</p>
-      <div class="ocr"><p>COUR EUROPEENNE DES DROITS DE L&#x27;HOMME CONSEIL DE LEUROPE STRASBOURG EUROPEAN COURT OF HUMAN RIGHTS COUNCIL OF EUROPE STRASBOURG Monsieur Bernard COLLORAFI 21B chemin de l&#x27;Estelle 06110 LE CANNET TROISIÈME SECTION CEDH-LF1.1R AD/mr Requête n° 67232/01 COLLORAFI c. France Strasbourg, le 20 mars 2001 Monsieur, J&#x27;accuse réception de la requête susmentionnée parvenue au greffe le 17 janvier 2001 ainsi que vos différents télécopies du 12 mars 2001. Elle a été enregistrée le 20 mars 2001 sous le n° de dossier 67232/01. Ce numéro devra être rappelé dans toute piece ou communication transmise à la Cour. Sauf décision contraire de la Cour, cette requête sera considérée comme introduite le 10 décembre 2000. Aux termes du règlement de la Cour, un juge de la Cour, désigné comme rapporteur, procédera à un examen préalable de la requête et fera rapport à la Cour sur sa recevabilité. Votre cas sera soumis à la Cour dès que possible. La procédure est en principe écrite et vous n&#x27;avez à comparaître en personne que si la Cour vous y invite. Je ne manquerai pas de vous informer de la décision de la Cour. Il vous incombe de me communiquer vos éventueis changements d&#x27;adresse. En outre, il importe que vous informiez spontanément la Cour de tout développement ultérieur dans votre affaire et lui soumettiez les décisions pertinentes y relatives. Veuillez agréer, Monsieur, mes salutations distinguées. ADRESSE POSTALE / POSTAL ADDRESS CONSEIL DE L&#x27;EUROPE / COUNCIL OF EUROPI F - 67075 STRASBOURG CEDEX ELEPHON 713 88 41 20 1 INTERNET http://www.echr.coe.int TELECOPIEUR/FAX: (0)3 88 41 27 30</p></div>
+      <p class="text-[13px] text-ink2 mb-5">Texte obtenu par reconnaissance optique (OCR) du scan original, mise en page préservée. Reconnaissance automatique — des erreurs subsistent, surtout sur les fax dégradés. Le scan ci-dessus fait foi.</p>
+      <div class="ocr">COUR EUROPEENNE
+DES
+DROITS DE L&#x27;HOMME
+CONSEIL DE LEUROPE
+STRASBOURG
+EUROPEAN COURT
+OF
+HUMAN RIGHTS
+COUNCIL OF EUROPE
+STRASBOURG
+Monsieur Bernard COLLORAFI
+21B chemin de l&#x27;Estelle
+06110 LE CANNET
+TROISIÈME SECTION
+CEDH-LF1.1R
+AD/mr
+Requête n° 67232/01
+COLLORAFI c. France
+Strasbourg, le 20 mars 2001
+Monsieur,
+J&#x27;accuse réception de la requête susmentionnée parvenue au greffe le 17 janvier 2001
+ainsi que vos différents télécopies du 12 mars 2001. Elle a été enregistrée le 20 mars 2001
+sous le n° de dossier 67232/01. Ce numéro devra être rappelé dans toute piece ou
+communication transmise à la Cour. Sauf décision contraire de la Cour, cette requête sera
+considérée comme introduite le 10 décembre 2000.
+Aux termes du règlement de la Cour, un juge de la Cour, désigné comme rapporteur,
+procédera à un examen préalable de la requête et fera rapport à la Cour sur sa recevabilité.
+Votre cas sera soumis à la Cour dès que possible. La procédure est en principe écrite et
+vous n&#x27;avez à comparaître en personne que si la Cour vous y invite. Je ne manquerai pas de
+vous informer de la décision de la Cour.
+Il vous incombe de me communiquer vos éventueis changements d&#x27;adresse. En outre, il
+importe que vous informiez spontanément la Cour de tout développement ultérieur dans votre
+affaire et lui soumettiez les décisions pertinentes y relatives.
+Veuillez agréer, Monsieur, mes salutations distinguées.
+ADRESSE POSTALE / POSTAL ADDRESS
+CONSEIL DE L&#x27;EUROPE / COUNCIL OF EUROPI
+F - 67075 STRASBOURG CEDEX
+ELEPHON
+713 88 41 20 1
+INTERNET
+http://www.echr.coe.int
+TELECOPIEUR/FAX:
+(0)3 88 41 27 30</div>
     </section>
 
   <section class="mt-16 pt-8 border-t" style="border-color:var(--line)">

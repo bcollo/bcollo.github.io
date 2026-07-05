@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Collo contre McDo — 3 nouvelles directions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{ font-family:'Hanken Grotesk',system-ui,sans-serif; background:#e9e6df; }
+
+  /* switcher */
+  .switch{ position:sticky; top:0; z-index:80; display:flex; gap:10px; align-items:center; flex-wrap:wrap;
+    padding:12px 22px; background:#171514; color:#eee; border-bottom:1px solid #2c2825; }
+  .switch b{ font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#9a938a; margin-right:6px; }
+  .switch a{ font-size:12.5px; text-decoration:none; color:#e8e4dc; border:1px solid #3a3531; border-radius:99px; padding:7px 15px; transition:.2s; }
+  .switch a:hover{ background:#fff; color:#111; border-color:#fff; }
+  .switch span{ margin-left:auto; font-size:11px; color:#8b847b; }
+
+  .dir{ min-height:100vh; padding:clamp(40px,6vw,90px) clamp(20px,6vw,90px); position:relative; }
+  .tag{ position:absolute; top:20px; right:22px; font-size:11px; letter-spacing:.12em; text-transform:uppercase; padding:6px 12px; border-radius:99px; }
+  .grid{ max-width:1180px; margin:0 auto; display:grid; grid-template-columns:1fr; gap:clamp(32px,4vw,64px); align-items:center; }
+  @media(min-width:900px){ .grid{ grid-template-columns:1.4fr .8fr; } }
+  .chips{ display:flex; gap:26px; flex-wrap:wrap; margin-top:34px; }
+  .chips div span{ display:block; }
+  .fig{ position:relative; }
+  .fig .paper{ padding:11px; border-radius:16px; }
+  .fig img{ width:100%; display:block; border-radius:9px; }
+  .fig .cap{ position:absolute; left:-12px; bottom:22px; padding:10px 14px; border-radius:12px; }
+  .note{ margin-top:22px; font-size:13.5px; line-height:1.6; }
+
+  /* =============== A — ÉDITO (magazine · vert paon) =============== */
+  #a{ background:#FCFAF6; color:#1b1a17;
+    background-image:radial-gradient(900px 520px at 85% -10%,rgba(14,124,107,.07),transparent 60%); }
+  #a .tag{ background:#0E7C6B; color:#fff; }
+  #a .eyebrow{ font-family:'Hanken Grotesk'; font-weight:600; font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:#0E7C6B; }
+  #a h1{ font-family:'Instrument Serif',serif; font-weight:400; font-size:clamp(4rem,12vw,9.4rem); line-height:.92; letter-spacing:-.01em; margin-top:18px; }
+  #a h1 em{ font-style:italic; color:#7d766a; }
+  #a h1 span{ color:#0E7C6B; }
+  #a .lede{ font-family:'Hanken Grotesk'; font-weight:400; font-size:clamp(1.15rem,2.1vw,1.5rem); line-height:1.5; color:#57513f; max-width:40ch; margin-top:24px; }
+  #a blockquote{ margin-top:30px; border-left:3px solid #0E7C6B; padding-left:20px; font-family:'Instrument Serif',serif; font-style:italic; font-size:1.75rem; line-height:1.24; }
+  #a blockquote cite{ display:block; margin-top:10px; font-family:'Hanken Grotesk'; font-style:normal; font-size:11px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:#8a8375; }
+  #a .chips div span:first-child{ font-family:'Instrument Serif',serif; font-size:2.3rem; color:#0E7C6B; line-height:1; }
+  #a .chips div span:last-child{ font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:#8a8375; margin-top:5px; }
+  #a .chips div.hot span:first-child{ color:#c98a2b; }
+  #a .paper{ background:#fff; border:1px solid rgba(27,26,23,.08); box-shadow:0 34px 64px -40px rgba(30,40,30,.4); transform:rotate(-1.4deg); }
+  #a .cap{ background:#fff; border:1px solid rgba(27,26,23,.08); box-shadow:0 12px 26px -16px rgba(30,40,30,.4); }
+  #a .cap b{ display:block; font-size:10px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:#0E7C6B; }
+  #a .cap i{ font-family:'Instrument Serif',serif; font-style:normal; font-size:1.05rem; }
+  #a .note{ color:#6b6555; }
+
+  /* =============== B — STUDIO (sans · terracotta) =============== */
+  #b{ background:#F5F0E8; color:#221e1a;
+    background-image:radial-gradient(880px 520px at 12% 0%,rgba(194,96,63,.09),transparent 58%); }
+  #b .tag{ background:#C2603F; color:#fff; }
+  #b .eyebrow{ font-family:'Public Sans'; font-weight:700; font-size:11.5px; letter-spacing:.22em; text-transform:uppercase; color:#C2603F; }
+  #b h1{ font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:clamp(3.4rem,10.5vw,8.2rem); line-height:.9; letter-spacing:-.025em; margin-top:20px; }
+  #b h1 em{ font-style:normal; font-weight:500; color:#8a8072; }
+  #b h1 span{ color:#C2603F; }
+  #b .lede{ font-family:'Public Sans'; font-weight:400; font-size:clamp(1.15rem,2.1vw,1.48rem); line-height:1.55; color:#5c5346; max-width:42ch; margin-top:24px; }
+  #b blockquote{ margin-top:30px; background:#fff; border-radius:16px; padding:22px 24px; box-shadow:0 20px 40px -30px rgba(60,40,30,.5); font-family:'Bricolage Grotesque',sans-serif; font-weight:600; font-size:1.4rem; line-height:1.25; }
+  #b blockquote cite{ display:block; margin-top:10px; font-family:'Public Sans'; font-weight:600; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#9a8f80; }
+  #b .chips div span:first-child{ font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:2rem; line-height:1; }
+  #b .chips div span:last-child{ font-family:'Public Sans'; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:#948a7c; margin-top:5px; }
+  #b .chips div.hot span:first-child{ color:#C2603F; }
+  #b .paper{ background:#fff; border-radius:22px; box-shadow:0 34px 64px -42px rgba(60,40,30,.5); transform:rotate(1.2deg); }
+  #b .fig img{ border-radius:14px; }
+  #b .cap{ background:#C2603F; color:#fff; border-radius:14px; box-shadow:0 14px 28px -16px rgba(194,96,63,.7); }
+  #b .cap b{ display:block; font-size:10px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; opacity:.85; }
+  #b .cap i{ font-style:normal; font-weight:600; font-size:1.02rem; }
+  #b .note{ color:#6f6558; }
+
+  /* =============== C — ARCHIVE (serif · bleu encre) =============== */
+  #c{ background:#FAF6EE; color:#18202f;
+    background-image:radial-gradient(900px 560px at 88% -8%,rgba(36,70,122,.07),transparent 60%),radial-gradient(700px 500px at 0% 100%,rgba(192,138,46,.08),transparent 55%); }
+  #c .tag{ background:#24467a; color:#fff; }
+  #c .eyebrow{ font-family:'Newsreader',serif; font-style:italic; font-weight:400; font-size:15px; color:#24467a; }
+  #c h1{ font-family:'Playfair Display',serif; font-weight:800; font-size:clamp(3.5rem,10.5vw,8.4rem); line-height:.96; letter-spacing:-.01em; margin-top:14px; }
+  #c h1 em{ font-style:italic; font-weight:500; color:#6f7486; }
+  #c h1 span{ color:#24467a; }
+  #c .lede{ font-family:'Newsreader',serif; font-weight:300; font-size:clamp(1.2rem,2.2vw,1.6rem); line-height:1.5; color:#3f4657; max-width:38ch; margin-top:24px; }
+  #c blockquote{ margin-top:30px; border-left:3px solid #c08a2e; padding-left:20px; font-family:'Playfair Display',serif; font-style:italic; font-weight:500; font-size:1.6rem; line-height:1.28; color:#18202f; }
+  #c blockquote cite{ display:block; margin-top:10px; font-family:'Newsreader',serif; font-style:normal; font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:#7d8293; }
+  #c .chips div span:first-child{ font-family:'Playfair Display',serif; font-weight:700; font-size:2.1rem; color:#24467a; line-height:1; }
+  #c .chips div span:last-child{ font-family:'Newsreader',serif; font-size:12.5px; color:#7d8293; margin-top:4px; }
+  #c .chips div.hot span:first-child{ color:#c08a2e; }
+  #c .paper{ background:#fff; border:1px solid rgba(24,32,47,.1); box-shadow:0 34px 64px -40px rgba(24,32,47,.45); transform:rotate(-1.2deg); }
+  #c .cap{ background:#fff; border:1px solid rgba(24,32,47,.1); box-shadow:0 12px 26px -16px rgba(24,32,47,.4); }
+  #c .cap b{ display:block; font-family:'Newsreader',serif; font-style:italic; font-size:12px; color:#24467a; }
+  #c .cap i{ font-family:'Playfair Display',serif; font-style:normal; font-weight:600; font-size:1.05rem; }
+  #c .note{ font-family:'Newsreader',serif; color:#565d6e; }
+</style>
+</head>
+<body>
+
+<div class="switch">
+  <b>3 directions</b>
+  <a href="#a">A · Édito (vert paon)</a>
+  <a href="#b">B · Studio (terracotta)</a>
+  <a href="#c">C · Archive (bleu encre)</a>
+  <span>même contenu, 3 habillages — choisis-en un, ou mixe (ex. « palette de A + police de C »)</span>
+</div>
+
+<!-- A -->
+<section id="a" class="dir">
+  <div class="tag">A — Édito</div>
+  <div class="grid">
+    <div>
+      <p class="eyebrow">Antibes · Côte d'Azur — 1987 › 2002</p>
+      <h1>Collo <em>contre</em> <span>McDo</span></h1>
+      <p class="lede">Onze ans de travail, trois restaurants, douze millions de francs — et un franchisé qui a refusé de se taire.</p>
+      <blockquote>« Cette rupture était abusive, conduite de mauvaise foi. »
+        <cite>Cour d'appel de Paris — 8 mars 2000</cite></blockquote>
+      <div class="chips">
+        <div><span>1987</span><span>Location-gérance</span></div>
+        <div><span>1998</span><span>Jugement · expulsion</span></div>
+        <div class="hot"><span>2000</span><span>Résiliation abusive</span></div>
+        <div><span>2002</span><span>Cassation</span></div>
+      </div>
+    </div>
+    <div class="fig">
+      <div class="paper"><img src="assets/arret_p1.png" alt="arrêt"></div>
+      <div class="cap"><b>Pièce maîtresse</b><i>Arrêt du 8 mars 2000</i></div>
+    </div>
+  </div>
+  <p class="note" style="max-width:640px">Instrument Serif chaleureux pour les titres, Hanken Grotesk pour la lecture, un vert paon élégant et vivant. Magazine clair et aéré.</p>
+</section>
+
+<!-- B -->
+<section id="b" class="dir">
+  <div class="tag">B — Studio</div>
+  <div class="grid">
+    <div>
+      <p class="eyebrow">Antibes · Côte d'Azur — 1987 › 2002</p>
+      <h1>Collo <em>contre</em> <span>McDo</span></h1>
+      <p class="lede">Onze ans de travail, trois restaurants, douze millions de francs — et un franchisé qui a refusé de se taire.</p>
+      <blockquote>« Cette rupture était abusive, conduite de mauvaise foi. »
+        <cite>Cour d'appel de Paris — 8 mars 2000</cite></blockquote>
+      <div class="chips">
+        <div><span>1987</span><span>Location-gérance</span></div>
+        <div><span>1998</span><span>Jugement · expulsion</span></div>
+        <div class="hot"><span>2000</span><span>Résiliation abusive</span></div>
+        <div><span>2002</span><span>Cassation</span></div>
+      </div>
+    </div>
+    <div class="fig">
+      <div class="paper" style="padding:12px"><img src="assets/arret_p1.png" alt="arrêt"></div>
+      <div class="cap"><b>Pièce maîtresse</b><i>Arrêt du 8 mars 2000</i></div>
+    </div>
+  </div>
+  <p class="note" style="max-width:640px">Bricolage Grotesque contemporain et gras pour les titres, Public Sans pour le corps, terracotta chaleureux, gros arrondis. Studio moderne, direct.</p>
+</section>
+
+<!-- C -->
+<section id="c" class="dir">
+  <div class="tag">C — Archive</div>
+  <div class="grid">
+    <div>
+      <p class="eyebrow">Antibes, Côte d'Azur — d'un franchisé contre un géant</p>
+      <h1>Collo <em>contre</em> <span>McDo</span></h1>
+      <p class="lede">Onze ans de travail, trois restaurants, douze millions de francs — et un franchisé qui a refusé de se taire.</p>
+      <blockquote>« Cette rupture était abusive, conduite de mauvaise foi. »
+        <cite>Cour d'appel de Paris — 8 mars 2000</cite></blockquote>
+      <div class="chips">
+        <div><span>1987</span><span>Location-gérance</span></div>
+        <div><span>1998</span><span>Jugement · expulsion</span></div>
+        <div class="hot"><span>2000</span><span>Résiliation abusive</span></div>
+        <div><span>2002</span><span>Cassation</span></div>
+      </div>
+    </div>
+    <div class="fig">
+      <div class="paper"><img src="assets/arret_p1.png" alt="arrêt"></div>
+      <div class="cap"><b>Pièce maîtresse</b><i>Arrêt du 8 mars 2000</i></div>
+    </div>
+  </div>
+  <p class="note" style="max-width:640px">Playfair Display élégant et contrasté, Newsreader pour lire, bleu encre + une pointe d'or. Dossier chic, lumineux, sans lourdeur.</p>
+</section>
+
+</body>
+</html>

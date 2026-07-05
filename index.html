@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Collo contre McDo — le dossier d'un franchisé contre un géant · Bernard Collorafi</title>
 <meta name="description" content="Onze ans, trois restaurants, un franchisé contre McDonald's. Le récit et l'intégralité des pièces du procès Bernard Collorafi, en accès libre. Antibes, 1987–2002.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#C2603F">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -235,77 +240,422 @@ tailwind.config = {
       </div>
     </section>
 
-    <!-- LES 85 PIÈCES -->
+    <!-- ===== ARCHIVE — LES 85 PIÈCES ===== -->
     <section id="pieces" class="mt-20">
-      <div class="flex items-end justify-between flex-wrap gap-4 mb-9">
-        <h2 class="font-display text-[46px] sm:text-[60px] font-semibold leading-none">Les 85 pièces</h2>
-        <p class="max-w-xs text-[16px] text-ink2 italic">Classées, datées, nettoyées. Chacune se lit en ligne, avec sa synthèse.</p>
+      <div class="flex items-end justify-between flex-wrap gap-4 mb-4">
+        <h2 class="font-display text-[46px] sm:text-[60px] font-extrabold leading-none tracking-[-.02em]">Les 85 pièces</h2>
+        <p class="max-w-xs text-[16px] text-ink2">Nettoyées, océrisées, datées. Chaque pièce s'ouvre en ligne dans le lecteur.</p>
       </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        <a href="#" class="card block rounded-2xl bg-cream2/70 border p-7" style="border-color:var(--line2)"><div class="flex items-baseline gap-3"><span class="font-display text-[52px] leading-none text-ink">10</span><span class="eyebrow text-[10px] text-ox">Décisions</span></div><p class="mt-4 text-[17px] leading-snug text-ink2">Jugements, arrêts et ordonnances — TC Paris, CA Paris, TC Antibes, Cassation.</p></a>
-        <a href="#" class="card block rounded-2xl bg-cream2/70 border p-7" style="border-color:var(--line2)"><div class="flex items-baseline gap-3"><span class="font-display text-[52px] leading-none text-ink">23</span><span class="eyebrow text-[10px] text-ox">Conclusions</span></div><p class="mt-4 text-[17px] leading-snug text-ink2">Conclusions, mémoires et dires des parties, de 1998 à la cassation.</p></a>
-        <a href="#" class="card block rounded-2xl bg-cream2/70 border p-7" style="border-color:var(--line2)"><div class="flex items-baseline gap-3"><span class="font-display text-[52px] leading-none text-ink">27</span><span class="eyebrow text-[10px] text-ox">Correspondances</span></div><p class="mt-4 text-[17px] leading-snug text-ink2">Lettres recommandées entre Collorafi, McDonald's et les avocats.</p></a>
-        <a href="#" class="card block rounded-2xl bg-cream2/70 border p-7" style="border-color:var(--line2)"><div class="flex items-baseline gap-3"><span class="font-display text-[52px] leading-none text-ink">10</span><span class="eyebrow text-[10px] text-ox">Presse</span></div><p class="mt-4 text-[17px] leading-snug text-ink2">Le Figaro, Les Échos, La Tribune, Investir, la presse de la franchise.</p></a>
-        <a href="#" class="card block rounded-2xl bg-cream2/70 border p-7" style="border-color:var(--line2)"><div class="flex items-baseline gap-3"><span class="font-display text-[52px] leading-none text-ink">05</span><span class="eyebrow text-[10px] text-ox">Expertises</span></div><p class="mt-4 text-[17px] leading-snug text-ink2">Expertise judiciaire, rapports Gandur et SEPT, réunions d'expertise.</p></a>
-        <a href="#" class="card block rounded-2xl bg-cream2/70 border p-7" style="border-color:var(--line2)"><div class="flex items-baseline gap-3"><span class="font-display text-[52px] leading-none text-ink">08</span><span class="eyebrow text-[10px] text-ox">Cassation & CEDH</span></div><p class="mt-4 text-[17px] leading-snug text-ink2">Pourvoi, requête à Strasbourg, liquidations et états des créances.</p></a>
-      </div>
-    </section>
-
-    <!-- ===== PRESSE 1995 (premières pièces numérisées) ===== -->
-    <section id="presse" class="mt-20">
-      <div class="flex items-end justify-between flex-wrap gap-4 mb-9">
-        <div>
-          <p class="eyebrow text-[11px] text-ox mb-3">Déjà en ligne</p>
-          <h2 class="font-display text-[42px] sm:text-[52px] font-semibold leading-none">La presse, 1995</h2>
+      <div class="mt-12">
+        <div class="flex items-baseline gap-3 mb-5"><h3 class="font-display text-[24px] font-bold text-ox">Décisions</h3><span class="flex-1 h-px hair"></span><span class="eyebrow text-[10px] text-ink2">9 pièces</span></div>
+        <p class="text-[15px] text-ink2 mb-6 max-w-2xl">Jugements, arrêts et ordonnances.</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/jugement_tc_paris_18_05_1998.pdf" data-title="Jugement — TC Paris" data-tab="scan">
+            <img src="assets/jugement_tc_paris_18_05_1998_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Jugement — TC Paris</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">18/05/1998</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/appel_aix_10_06_1998.pdf" data-title="Cour d&#x27;appel d&#x27;Aix" data-tab="scan">
+            <img src="assets/appel_aix_10_06_1998_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Cour d&#x27;appel d&#x27;Aix</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">10/06/1998</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/ordonnance_03_07_1998.pdf" data-title="Ordonnance" data-tab="scan">
+            <img src="assets/ordonnance_03_07_1998_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Ordonnance</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">03/07/1998</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/arret_09_12_1998.pdf" data-title="Arrêt" data-tab="scan">
+            <img src="assets/arret_09_12_1998_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Arrêt</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">09/12/1998</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/arret_8_mars_2000.pdf" data-title="Arrêt du 8 mars 2000 — CA Paris" data-tab="scan" data-synth="synth-arret">
+            <img src="assets/arret_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Arrêt du 8 mars 2000 — CA Paris</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">08/03/2000</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/tribunal_de_commerce_d_antibes_14_09_2001.pdf" data-title="Tribunal de commerce d&#x27;Antibes" data-tab="scan">
+            <img src="assets/tribunal_de_commerce_d_antibes_14_09_2001_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Tribunal de commerce d&#x27;Antibes</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">14/09/2001</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/jugement_du_tc_d_antibes_21_09_2001.pdf" data-title="Jugement — TC Antibes" data-tab="scan">
+            <img src="assets/jugement_du_tc_d_antibes_21_09_2001_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Jugement — TC Antibes</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">21/09/2001</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/jugement_tc_antibes_sarl_beto_26_10_2001.pdf" data-title="Jugement TC Antibes — SARL B &amp; O" data-tab="scan">
+            <img src="assets/jugement_tc_antibes_sarl_beto_26_10_2001_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Jugement TC Antibes — SARL B &amp; O</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">26/10/2001</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/jugement_tc_antibes_sarl_les_pins_26_10_2001.pdf" data-title="Jugement TC Antibes — SARL Les Pins" data-tab="scan">
+            <img src="assets/jugement_tc_antibes_sarl_les_pins_26_10_2001_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Jugement TC Antibes — SARL Les Pins</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">26/10/2001</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
         </div>
-        <p class="max-w-sm text-[16px] text-ink2 italic">Le décor de l'affaire : la puissance de l'enseigne, l'année même où tout commence. Chaque coupure se lit en ligne, avec sa fiche.</p>
       </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-
-        <button type="button" class="card group block text-left rounded-2xl bg-panel border overflow-hidden" style="border-color:var(--line2)"
-          data-reader data-pdf="pdf/figaro_1995.pdf" data-title="Le Figaro Économie — 4 septembre 1995" data-synth="synth-figaro" data-tab="scan">
-          <div class="aspect-[5/4] overflow-hidden bg-cream2">
-            <img src="assets/figaro_1995_p1.png" alt="Le Figaro Économie, 4 septembre 1995" class="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-500">
-          </div>
-          <div class="p-5">
-            <p class="eyebrow text-[9.5px] text-ox">Le Figaro Économie · 4 sept. 1995</p>
-            <h3 class="font-display text-[20px] font-semibold leading-tight mt-2">Les ouvertures rythment les embauches</h3>
-          </div>
-        </button>
-
-        <button type="button" class="card group block text-left rounded-2xl bg-panel border overflow-hidden" style="border-color:var(--line2)"
-          data-reader data-pdf="pdf/tribune_1995.pdf" data-title="La Tribune — 26 octobre 1995" data-synth="synth-tribune" data-tab="scan">
-          <div class="aspect-[5/4] overflow-hidden bg-cream2">
-            <img src="assets/tribune_1995_p1.png" alt="La Tribune, 26 octobre 1995" class="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-500">
-          </div>
-          <div class="p-5">
-            <p class="eyebrow text-[9.5px] text-ox">La Tribune · 26 oct. 1995</p>
-            <h3 class="font-display text-[20px] font-semibold leading-tight mt-2">Bénéfice net par action&nbsp;: +17&nbsp;%</h3>
-          </div>
-        </button>
-
-        <button type="button" class="card group block text-left rounded-2xl bg-panel border overflow-hidden" style="border-color:var(--line2)"
-          data-reader data-pdf="pdf/echos_1995.pdf" data-title="Les Échos — 3 novembre 1995" data-synth="synth-echos" data-tab="scan">
-          <div class="aspect-[5/4] overflow-hidden bg-cream2">
-            <img src="assets/echos_1995_p1.png" alt="Les Échos, 3 novembre 1995" class="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-500">
-          </div>
-          <div class="p-5">
-            <p class="eyebrow text-[9.5px] text-ox">Les Échos · 3 nov. 1995</p>
-            <h3 class="font-display text-[20px] font-semibold leading-tight mt-2">McDonald's fait toujours recette en Bourse</h3>
-          </div>
-        </button>
-
-        <button type="button" class="card group block text-left rounded-2xl bg-panel border overflow-hidden" style="border-color:var(--line2)"
-          data-reader data-pdf="pdf/investir_1995.pdf" data-title="Investir — 4 au 10 novembre 1995" data-synth="synth-investir" data-tab="scan">
-          <div class="aspect-[5/4] overflow-hidden bg-cream2">
-            <img src="assets/investir_1995_p1.png" alt="Investir, 4 au 10 novembre 1995" class="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-500">
-          </div>
-          <div class="p-5">
-            <p class="eyebrow text-[9.5px] text-ox">Investir · 4–10 nov. 1995</p>
-            <h3 class="font-display text-[20px] font-semibold leading-tight mt-2">Rude concurrence aux États-Unis</h3>
-          </div>
-        </button>
-
+      <div class="mt-12">
+        <div class="flex items-baseline gap-3 mb-5"><h3 class="font-display text-[24px] font-bold text-ox">Conclusions</h3><span class="flex-1 h-px hair"></span><span class="eyebrow text-[10px] text-ink2">20 pièces</span></div>
+        <p class="text-[15px] text-ink2 mb-6 max-w-2xl">Conclusions, mémoires, dires et assignations des parties.</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/assignation_mcdonald_s_tribunal_de_grande_instance_de_grasse.pdf" data-title="Assignation — TGI de Grasse" data-tab="scan">
+            <img src="assets/assignation_mcdonald_s_tribunal_de_grande_instance_de_grasse_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Assignation — TGI de Grasse</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5"></span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/conclusions_mcd_15_01_1998.pdf" data-title="Conclusions — McDonald&#x27;s" data-tab="scan">
+            <img src="assets/conclusions_mcd_15_01_1998_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions — McDonald&#x27;s</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">15/01/1998</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/conclusions_ref_15_01_1998.pdf" data-title="Conclusions de référé" data-tab="scan">
+            <img src="assets/conclusions_ref_15_01_1998_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions de référé</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">15/01/1998</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/conclusions_partie_1_audience_du_09_02_1998.pdf" data-title="Conclusions d&#x27;audience — partie 1" data-tab="scan">
+            <img src="assets/conclusions_partie_1_audience_du_09_02_1998_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions d&#x27;audience — partie 1</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">09/02/1998</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/conclusions_partie_2_audience_du_09_02_1998.pdf" data-title="Conclusions d&#x27;audience — partie 2" data-tab="scan">
+            <img src="assets/conclusions_partie_2_audience_du_09_02_1998_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions d&#x27;audience — partie 2</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">09/02/1998</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/conclusions_du_16_03_1998.pdf" data-title="Conclusions" data-tab="scan">
+            <img src="assets/conclusions_du_16_03_1998_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">16/03/1998</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/conclusions_en_replique_16_03_1998.pdf" data-title="Conclusions en réplique" data-tab="scan">
+            <img src="assets/conclusions_en_replique_16_03_1998_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions en réplique</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">16/03/1998</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/conclusions_en_replique_mcd_partie_1_16_03_1998.pdf" data-title="Conclusions en réplique McDonald&#x27;s — partie 1" data-tab="scan">
+            <img src="assets/conclusions_en_replique_mcd_partie_1_16_03_1998_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions en réplique McDonald&#x27;s — partie 1</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">16/03/1998</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/conclusions_en_replique_mcd_partie_2_16_03_1998.pdf" data-title="Conclusions en réplique McDonald&#x27;s — partie 2" data-tab="scan">
+            <img src="assets/conclusions_en_replique_mcd_partie_2_16_03_1998_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions en réplique McDonald&#x27;s — partie 2</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">16/03/1998</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/assignation_refere_d_appel_29_05_1998.pdf" data-title="Assignation en référé d&#x27;appel" data-tab="scan">
+            <img src="assets/assignation_refere_d_appel_29_05_1998_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Assignation en référé d&#x27;appel</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">29/05/1998</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/assignation_du_09_06_1998.pdf" data-title="Assignation" data-tab="scan">
+            <img src="assets/assignation_du_09_06_1998_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Assignation</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">09/06/1998</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/conclusions_jex_09_06_1998.pdf" data-title="Conclusions (JEX)" data-tab="scan">
+            <img src="assets/conclusions_jex_09_06_1998_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions (JEX)</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">09/06/1998</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/conclusions_mcd_refere_25_06_1998.pdf" data-title="Conclusions de référé — McDonald&#x27;s" data-tab="scan">
+            <img src="assets/conclusions_mcd_refere_25_06_1998_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions de référé — McDonald&#x27;s</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">25/06/1998</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/conclusions_refere_appel_25_06_1998.pdf" data-title="Conclusions de référé d&#x27;appel" data-tab="scan">
+            <img src="assets/conclusions_refere_appel_25_06_1998_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions de référé d&#x27;appel</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">25/06/1998</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/dire_n1_collorafi_04_03_1999.pdf" data-title="Dire n°1 — Collorafi" data-tab="scan">
+            <img src="assets/dire_n1_collorafi_04_03_1999_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Dire n°1 — Collorafi</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">04/03/1999</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/memoire_mcd_16_04_1999.pdf" data-title="Mémoire — McDonald&#x27;s" data-tab="scan">
+            <img src="assets/memoire_mcd_16_04_1999_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Mémoire — McDonald&#x27;s</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">16/04/1999</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/dire_n5_collorafi_16_06_1999.pdf" data-title="Dire n°5 — Collorafi" data-tab="scan">
+            <img src="assets/dire_n5_collorafi_16_06_1999_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Dire n°5 — Collorafi</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">16/06/1999</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/memoire_mcd_16_07_1999.pdf" data-title="Mémoire — McDonald&#x27;s" data-tab="scan">
+            <img src="assets/memoire_mcd_16_07_1999_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Mémoire — McDonald&#x27;s</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">16/07/1999</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/conclusion_appel_14_12_1999.pdf" data-title="Conclusions d&#x27;appel — Collorafi" data-tab="scan">
+            <img src="assets/conclusion_appel_14_12_1999_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions d&#x27;appel — Collorafi</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">14/12/1999</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/conclusions_appel_mcd_14_12_1999.pdf" data-title="Conclusions d&#x27;appel — McDonald&#x27;s" data-tab="scan">
+            <img src="assets/conclusions_appel_mcd_14_12_1999_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions d&#x27;appel — McDonald&#x27;s</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">14/12/1999</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+        </div>
+      </div>
+      <div class="mt-12">
+        <div class="flex items-baseline gap-3 mb-5"><h3 class="font-display text-[24px] font-bold text-ox">Expertises</h3><span class="flex-1 h-px hair"></span><span class="eyebrow text-[10px] text-ink2">5 pièces</span></div>
+        <p class="text-[15px] text-ink2 mb-6 max-w-2xl">Expertise judiciaire et rapports.</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/rapport_gandur_04_02_1998.pdf" data-title="Rapport Gandur" data-tab="scan">
+            <img src="assets/rapport_gandur_04_02_1998_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Rapport Gandur</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">04/02/1998</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/rapport_sept_01_03_1998.pdf" data-title="Rapport SEPT" data-tab="scan">
+            <img src="assets/rapport_sept_01_03_1998_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Rapport SEPT</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">01/03/1998</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/cr_reunion_expertise_02_02_1999.pdf" data-title="CR réunion d&#x27;expertise" data-tab="scan">
+            <img src="assets/cr_reunion_expertise_02_02_1999_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">CR réunion d&#x27;expertise</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">02/02/1999</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/cr_reunion_expertise_09_06_1999.pdf" data-title="CR réunion d&#x27;expertise" data-tab="scan">
+            <img src="assets/cr_reunion_expertise_09_06_1999_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">CR réunion d&#x27;expertise</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">09/06/1999</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/rapport_expertise_judiciaire_15_10_1999.pdf" data-title="Rapport d&#x27;expertise judiciaire" data-tab="scan">
+            <img src="assets/rapport_expertise_judiciaire_15_10_1999_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Rapport d&#x27;expertise judiciaire</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">15/10/1999</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+        </div>
+      </div>
+      <div class="mt-12">
+        <div class="flex items-baseline gap-3 mb-5"><h3 class="font-display text-[24px] font-bold text-ox">Correspondances</h3><span class="flex-1 h-px hair"></span><span class="eyebrow text-[10px] text-ink2">21 pièces</span></div>
+        <p class="text-[15px] text-ink2 mb-6 max-w-2xl">Lettres recommandées entre Collorafi, McDonald&#x27;s et les avocats.</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/lr_collorafi_mcd_16_12_1996.pdf" data-title="LR Collorafi → McDonald&#x27;s" data-tab="scan">
+            <img src="assets/lr_collorafi_mcd_16_12_1996_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">LR Collorafi → McDonald&#x27;s</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">16/12/1996</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/lettre_collorafi_draix_16_12_1996.pdf" data-title="Lettre Collorafi → D. Raix" data-tab="scan">
+            <img src="assets/lettre_collorafi_draix_16_12_1996_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Lettre Collorafi → D. Raix</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">16/12/1996</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/lr_collorafi_10_01_1997.pdf" data-title="LR Collorafi" data-tab="scan">
+            <img src="assets/lr_collorafi_10_01_1997_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">LR Collorafi</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">10/01/1997</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/lettre_collorafi_aix_17_01_1997.pdf" data-title="Lettre Collorafi → Aix" data-tab="scan">
+            <img src="assets/lettre_collorafi_aix_17_01_1997_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Lettre Collorafi → Aix</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">17/01/1997</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/lettre_collorafi_avocat_27_01_1997.pdf" data-title="Lettre Collorafi → avocat" data-tab="scan">
+            <img src="assets/lettre_collorafi_avocat_27_01_1997_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Lettre Collorafi → avocat</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">27/01/1997</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/lr_collorafi_mcd_31_01_1997.pdf" data-title="LR Collorafi → McDonald&#x27;s" data-tab="scan">
+            <img src="assets/lr_collorafi_mcd_31_01_1997_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">LR Collorafi → McDonald&#x27;s</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">31/01/1997</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/lr_mcd_12_02_1997.pdf" data-title="LR McDonald&#x27;s" data-tab="scan">
+            <img src="assets/lr_mcd_12_02_1997_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">LR McDonald&#x27;s</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">12/02/1997</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/lr_mcd_27_03_1997.pdf" data-title="LR McDonald&#x27;s" data-tab="scan">
+            <img src="assets/lr_mcd_27_03_1997_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">LR McDonald&#x27;s</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">27/03/1997</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/lettre_mcd_25_04_1997.pdf" data-title="Lettre McDonald&#x27;s" data-tab="scan">
+            <img src="assets/lettre_mcd_25_04_1997_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Lettre McDonald&#x27;s</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">25/04/1997</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/lettre_avocat_mcd_05_05_1997.pdf" data-title="Lettre avocat → McDonald&#x27;s" data-tab="scan">
+            <img src="assets/lettre_avocat_mcd_05_05_1997_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Lettre avocat → McDonald&#x27;s</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">05/05/1997</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/lr_collorafi_mcd_27_06_1997.pdf" data-title="LR Collorafi → McDonald&#x27;s" data-tab="scan">
+            <img src="assets/lr_collorafi_mcd_27_06_1997_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">LR Collorafi → McDonald&#x27;s</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">27/06/1997</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/lr_mcd_22_07_1997.pdf" data-title="LR McDonald&#x27;s" data-tab="scan">
+            <img src="assets/lr_mcd_22_07_1997_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">LR McDonald&#x27;s</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">22/07/1997</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/lr_collorafi_mcd_01_08_1997.pdf" data-title="LR Collorafi → McDonald&#x27;s" data-tab="scan">
+            <img src="assets/lr_collorafi_mcd_01_08_1997_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">LR Collorafi → McDonald&#x27;s</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">01/08/1997</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/lettre_collorafi_aix_01_09_1997.pdf" data-title="Lettre Collorafi → Aix" data-tab="scan">
+            <img src="assets/lettre_collorafi_aix_01_09_1997_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Lettre Collorafi → Aix</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">01/09/1997</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/lr_mcd_22_09_1997.pdf" data-title="LR McDonald&#x27;s" data-tab="scan">
+            <img src="assets/lr_mcd_22_09_1997_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">LR McDonald&#x27;s</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">22/09/1997</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/lr_collorafi_aix_23_09_1997.pdf" data-title="LR Collorafi → Aix" data-tab="scan">
+            <img src="assets/lr_collorafi_aix_23_09_1997_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">LR Collorafi → Aix</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">23/09/1997</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/lr_collorafi_mcd_03_10_1997.pdf" data-title="LR Collorafi → McDonald&#x27;s" data-tab="scan">
+            <img src="assets/lr_collorafi_mcd_03_10_1997_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">LR Collorafi → McDonald&#x27;s</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">03/10/1997</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/lr_collorafi_mcd_09_10_1997.pdf" data-title="LR Collorafi → McDonald&#x27;s" data-tab="scan">
+            <img src="assets/lr_collorafi_mcd_09_10_1997_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">LR Collorafi → McDonald&#x27;s</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">09/10/1997</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/lr_mcd_20_10_1997.pdf" data-title="LR McDonald&#x27;s" data-tab="scan">
+            <img src="assets/lr_mcd_20_10_1997_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">LR McDonald&#x27;s</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">20/10/1997</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/contre_verites_02_02_2002.pdf" data-title="Contre-vérités" data-tab="scan">
+            <img src="assets/contre_verites_02_02_2002_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Contre-vérités</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">02/02/2002</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/contre_verites_2_03_02_2002.pdf" data-title="Contre-vérités (2)" data-tab="scan">
+            <img src="assets/contre_verites_2_03_02_2002_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Contre-vérités (2)</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">03/02/2002</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+        </div>
+      </div>
+      <div class="mt-12">
+        <div class="flex items-baseline gap-3 mb-5"><h3 class="font-display text-[24px] font-bold text-ox">Cassation &amp; CEDH</h3><span class="flex-1 h-px hair"></span><span class="eyebrow text-[10px] text-ink2">11 pièces</span></div>
+        <p class="text-[15px] text-ink2 mb-6 max-w-2xl">Pourvoi, requêtes, délibérés et états des créances.</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/cour_de_cassation_requete_mcdonald_s_10_01_2001.pdf" data-title="Cassation — requête McDonald&#x27;s" data-tab="scan">
+            <img src="assets/cour_de_cassation_requete_mcdonald_s_10_01_2001_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Cassation — requête McDonald&#x27;s</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">10/01/2001</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/cour_de_cassation_defense_requete_07_03_2001.pdf" data-title="Cassation — défense à requête" data-tab="scan">
+            <img src="assets/cour_de_cassation_defense_requete_07_03_2001_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Cassation — défense à requête</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">07/03/2001</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/cour_de_cassation_delibere_complementaire_19_03_2001.pdf" data-title="Cassation — délibéré complémentaire" data-tab="scan">
+            <img src="assets/cour_de_cassation_delibere_complementaire_19_03_2001_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Cassation — délibéré complémentaire</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">19/03/2001</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/cour_europeenne_des_droits_de_l_homme_requete_20_03_2001.pdf" data-title="CEDH — requête" data-tab="scan">
+            <img src="assets/cour_europeenne_des_droits_de_l_homme_requete_20_03_2001_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">CEDH — requête</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">20/03/2001</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/cour_de_cassation_ordonnance_04_04_2001.pdf" data-title="Cassation — ordonnance" data-tab="scan">
+            <img src="assets/cour_de_cassation_ordonnance_04_04_2001_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Cassation — ordonnance</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">04/04/2001</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/cour_de_cassation_memoire_collorafi_01_10_2001.pdf" data-title="Mémoire en cassation — Collorafi" data-tab="scan">
+            <img src="assets/cour_de_cassation_memoire_collorafi_01_10_2001_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Mémoire en cassation — Collorafi</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">01/10/2001</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/cour_de_cassation_memoire_mcdonald_s_01_10_2001.pdf" data-title="Mémoire en cassation — McDonald&#x27;s" data-tab="scan">
+            <img src="assets/cour_de_cassation_memoire_mcdonald_s_01_10_2001_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Mémoire en cassation — McDonald&#x27;s</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">01/10/2001</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/etat_des_creances_sarl_b_et_o_01_02_2002.pdf" data-title="État des créances — SARL B &amp; O" data-tab="scan">
+            <img src="assets/etat_des_creances_sarl_b_et_o_01_02_2002_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">État des créances — SARL B &amp; O</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">01/02/2002</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/etat_des_creances_sarl_les_pins_01_02_2002.pdf" data-title="État des créances — SARL Les Pins" data-tab="scan">
+            <img src="assets/etat_des_creances_sarl_les_pins_01_02_2002_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">État des créances — SARL Les Pins</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">01/02/2002</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/etat_des_creances_sa_sebol_01_02_2002.pdf" data-title="État des créances — SA SEBOL" data-tab="scan">
+            <img src="assets/etat_des_creances_sa_sebol_01_02_2002_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">État des créances — SA SEBOL</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">01/02/2002</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/arret_cour_de_cassation_10_05_2002.pdf" data-title="Arrêt de la Cour de cassation" data-tab="scan">
+            <img src="assets/arret_cour_de_cassation_10_05_2002_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Arrêt de la Cour de cassation</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">10/05/2002</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+        </div>
+      </div>
+      <div class="mt-12">
+        <div class="flex items-baseline gap-3 mb-5"><h3 class="font-display text-[24px] font-bold text-ox">Presse</h3><span class="flex-1 h-px hair"></span><span class="eyebrow text-[10px] text-ink2">9 pièces</span></div>
+        <p class="text-[15px] text-ink2 mb-6 max-w-2xl">La couverture presse de l&#x27;affaire.</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/revue_hr_01_01_1995.pdf" data-title="Revue H&amp;R" data-tab="scan">
+            <img src="assets/revue_hr_01_01_1995_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Revue H&amp;R</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">01/01/1995</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/figaro_1995.pdf" data-title="Le Figaro Économie — les ouvertures rythment les embauches" data-tab="scan" data-synth="synth-figaro">
+            <img src="assets/figaro_1995_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Le Figaro Économie — les ouvertures rythment les embauches</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">01/09/1995</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/tribune_1995.pdf" data-title="La Tribune — bénéfice net par action : +17 %" data-tab="scan" data-synth="synth-tribune">
+            <img src="assets/tribune_1995_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">La Tribune — bénéfice net par action : +17 %</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">01/10/1995</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/investir_1995.pdf" data-title="Investir — rude concurrence aux États-Unis" data-tab="scan" data-synth="synth-investir">
+            <img src="assets/investir_1995_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Investir — rude concurrence aux États-Unis</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">01/11/1995</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/echos_1995.pdf" data-title="Les Échos — McDonald&#x27;s fait toujours recette en Bourse" data-tab="scan" data-synth="synth-echos">
+            <img src="assets/echos_1995_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Les Échos — McDonald&#x27;s fait toujours recette en Bourse</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">01/11/1995</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/franchise_magazine_01_03_1996.pdf" data-title="Franchise Magazine" data-tab="scan">
+            <img src="assets/franchise_magazine_01_03_1996_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Franchise Magazine</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">01/03/1996</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/pme_affaires_01_12_1996.pdf" data-title="PME &amp; Affaires" data-tab="scan">
+            <img src="assets/pme_affaires_01_12_1996_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">PME &amp; Affaires</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">01/12/1996</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/franchise_n6_14_03_2000.pdf" data-title="La Franchise n°6" data-tab="scan">
+            <img src="assets/franchise_n6_14_03_2000_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">La Franchise n°6</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">14/03/2000</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+          <button type="button" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-center" style="border-color:var(--line2)" data-reader data-pdf="pdf/officiel_franchisen_6_14_03_2000.pdf" data-title="L&#x27;Officiel de la Franchise n°6" data-tab="scan">
+            <img src="assets/officiel_franchisen_6_14_03_2000_p1.png" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
+            <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">L&#x27;Officiel de la Franchise n°6</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">14/03/2000</span></span>
+            <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
+          </button>
+        </div>
       </div>
     </section>
 
@@ -465,8 +815,11 @@ tailwind.config = {
     if(cfg.pdf){ frame.src = cfg.pdf + '#view=FitH&toolbar=1'; }
     // synthèse
     synthEl.innerHTML = '';
-    if(cfg.synth){ const tpl = document.getElementById(cfg.synth); if(tpl) synthEl.appendChild(tpl.content.cloneNode(true)); }
-    setTab(cfg.tab==='synth' ? 'synth' : 'scan');
+    const synthTab = modal.querySelector('.tab[data-pane="synth"]');
+    const hasSynth = !!cfg.synth;
+    if(hasSynth){ const tpl = document.getElementById(cfg.synth); if(tpl) synthEl.appendChild(tpl.content.cloneNode(true)); }
+    if(synthTab) synthTab.parentElement.style.display = hasSynth ? '' : 'none';
+    setTab(hasSynth && cfg.tab==='synth' ? 'synth' : 'scan');
     modal.hidden = false;
     document.body.style.overflow = 'hidden';
   }

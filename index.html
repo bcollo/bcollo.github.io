@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Collo contre McDo — le dossier d'un franchisé contre un géant · Bernard Collorafi</title>
+<meta name="description" content="Onze ans, trois restaurants, un franchisé contre McDonald's. Le récit et l'intégralité des pièces du procès Bernard Collorafi, en accès libre. Antibes, 1987–2002.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: { extend: {
+    colors: {
+      cream:'rgb(var(--bg-rgb)/<alpha-value>)', cream2:'rgb(var(--bg2-rgb)/<alpha-value>)',
+      ink:'rgb(var(--ink-rgb)/<alpha-value>)', ink2:'rgb(var(--ink2-rgb)/<alpha-value>)',
+      ox:'rgb(var(--accent-rgb)/<alpha-value>)', oxdeep:'var(--accent-deep)',
+      gold:'rgb(var(--gold-rgb)/<alpha-value>)',
+    },
+    fontFamily: { display:['Fraunces','Georgia','serif'], body:['"Hanken Grotesk"','system-ui','sans-serif'], ui:['"Hanken Grotesk"','system-ui','sans-serif'] },
+  } }
+}
+</script>
+
+<style>
+  :root{
+    /* ===== PALETTE : clair, chaud, doux — accent rouge doux ===== */
+    --bg-rgb:251 248 243; --bg2-rgb:244 238 228;
+    --ink-rgb:38 32 25; --ink2-rgb:138 127 112;
+    --accent-rgb:192 69 59; --accent-deep:#a3392f; --gold-rgb:214 180 140;
+    --panel:#ffffff; --reader-scan-bg:#2a2620; --card-hover:#ffffff;
+    --shadow:rgba(60,44,28,.30);
+    --line: rgb(var(--ink-rgb) / .10); --line2: rgb(var(--ink-rgb) / .05);
+  }
+  html{ scroll-behavior:smooth; }
+  body{ background-color:rgb(var(--bg-rgb));
+    background-image:
+      radial-gradient(1100px 640px at 88% -10%, rgb(var(--accent-rgb) / .06), transparent 60%),
+      radial-gradient(900px 700px at -8% 8%, rgb(var(--gold-rgb) / .07), transparent 55%); }
+  ::selection{ background:rgb(var(--accent-rgb)); color:rgb(var(--bg-rgb)); }
+  .eyebrow{ font-family:"Hanken Grotesk",sans-serif; font-weight:600; text-transform:uppercase; letter-spacing:.2em; }
+  .hair{ background:var(--line); }
+
+  .ulink{ position:relative; }
+  .ulink::after{ content:""; position:absolute; left:0; bottom:-2px; height:1px; width:100%; background:currentColor; transform:scaleX(0); transform-origin:left; transition:transform .35s cubic-bezier(.2,.7,.2,1); }
+  .ulink:hover::after{ transform:scaleX(1); }
+
+  @keyframes fadeup{ from{opacity:0; transform:translateY(16px)} to{opacity:1; transform:none} }
+  .fu{ opacity:0; animation:fadeup .9s cubic-bezier(.2,.7,.2,1) forwards; }
+  .fd1{animation-delay:.05s}.fd2{animation-delay:.16s}.fd3{animation-delay:.3s}.fd4{animation-delay:.46s}.fd5{animation-delay:.62s}
+
+  .dropcap::first-letter{ font-family:Fraunces,serif; font-weight:500; color:rgb(var(--accent-rgb)); font-size:4.8rem; line-height:.72; float:left; margin:.36rem .64rem -.1rem 0; }
+
+  /* sidebar timeline */
+  .tl{ position:relative; }
+  .tl a{ display:block; padding:.15rem 0 .15rem 1.4rem; }
+  .tl a::before{ content:""; position:absolute; left:0; top:.62rem; width:8px; height:8px; border-radius:99px; background:rgb(var(--bg-rgb)); border:1.5px solid rgb(var(--gold-rgb)); transition:.25s; }
+  .tl a:hover::before{ border-color:rgb(var(--accent-rgb)); background:rgb(var(--accent-rgb)); box-shadow:0 0 0 5px rgb(var(--accent-rgb) / .15); }
+  .tl a:hover .t-title{ color:rgb(var(--accent-rgb)); }
+  .tl a:hover{ transform:translateX(2px); }
+  .tl a{ transition:transform .2s; }
+  .tl .piv::before{ background:rgb(var(--accent-rgb)); border-color:rgb(var(--accent-rgb)); width:10px; height:10px; }
+
+  .card{ transition:transform .3s cubic-bezier(.2,.7,.2,1), box-shadow .3s, background-color .3s; }
+  .card:hover{ transform:translateY(-4px); box-shadow:0 22px 40px -26px var(--shadow); background:var(--card-hover); }
+  .softshadow{ box-shadow:0 30px 60px -40px var(--shadow); }
+  .noscroll::-webkit-scrollbar{ height:0 } .thinscroll::-webkit-scrollbar{ height:5px } .thinscroll::-webkit-scrollbar-thumb{ background:var(--line); border-radius:9px }
+  .paper-frame{ background:var(--panel); padding:10px; border:1px solid var(--line); border-radius:18px; }
+
+  /* reader modal */
+  #reader[hidden]{ display:none; }
+  #reader{ animation:fade .3s ease; }
+  @keyframes fade{ from{opacity:0} to{opacity:1} }
+  .tab.is-on{ color:rgb(var(--ink-rgb)); border-color:rgb(var(--accent-rgb)); }
+  .prose-synth h3{ font-family:Fraunces,serif; font-weight:600; font-size:1.5rem; color:rgb(var(--accent-rgb)); margin:1.6rem 0 .5rem; }
+  .prose-synth p{ margin:.6rem 0; line-height:1.7; }
+  .prose-synth strong{ font-weight:600; }
+  .prose-synth table{ width:100%; border-collapse:collapse; margin:1rem 0; font-size:.92rem; }
+  .prose-synth th{ text-align:left; background:rgb(var(--bg2-rgb)); font-family:"Hanken Grotesk",sans-serif; font-weight:600; text-transform:uppercase; letter-spacing:.1em; font-size:.66rem; padding:.5rem .7rem; }
+  .prose-synth td{ padding:.5rem .7rem; border-top:1px solid var(--line2); }
+</style>
+</head>
+
+<body class="font-body text-ink antialiased overflow-x-hidden">
+
+<!-- ============ HEADER ============ -->
+<header class="sticky top-0 z-40 bg-cream/85 backdrop-blur-md">
+  <div class="max-w-[1320px] mx-auto px-5 sm:px-8 h-16 flex items-center justify-between border-b" style="border-color:var(--line)">
+    <a href="#top" class="font-display text-2xl sm:text-[26px] font-semibold tracking-tight leading-none">Collo <span class="italic text-ink2">contre</span> <span class="text-ox">McDo</span></a>
+    <nav class="flex items-center gap-6 eyebrow text-[10.5px] text-ink2">
+      <a href="#recit" class="hidden sm:inline hover:text-ox transition">Le récit</a>
+      <a href="#chrono" class="hidden md:inline hover:text-ox transition">Chronologie</a>
+      <a href="#pieces" class="hover:text-ox transition">Les pièces</a>
+      <a href="#piece" class="hidden lg:inline hover:text-ox transition">Arrêt&nbsp;2000</a>
+    </nav>
+  </div>
+</header>
+
+<a id="top"></a>
+
+<!-- ============ HERO ============ -->
+<section class="relative">
+  <div class="max-w-[1320px] mx-auto px-5 sm:px-8 pt-14 sm:pt-20 pb-10">
+    <div class="grid lg:grid-cols-[1fr_150px] gap-10 lg:gap-14 items-start">
+      <div>
+        <p class="fu fd1 eyebrow text-[11px] text-ox mb-6">Antibes · Côte d'Azur — 1987 › 2002</p>
+        <h1 class="fu fd2 font-display font-semibold leading-[.92] tracking-[-.01em] text-[clamp(3.6rem,13vw,10rem)]">Collo <span class="italic font-normal text-ink2">contre</span> <span class="text-ox">McDo</span></h1>
+        <p class="fu fd3 mt-7 max-w-xl text-[24px] sm:text-[28px] leading-[1.38] text-ink2 font-light italic">Onze ans de travail, trois restaurants, douze millions de francs — et le récit d'un franchisé qui a refusé de se taire, jusqu'à la Cour de cassation.</p>
+        <div class="fu fd4 mt-9 flex flex-wrap items-center gap-x-7 gap-y-3 eyebrow text-[11px] text-ink2">
+          <a href="#recit" class="ulink text-ink hover:text-ox transition">Lire le récit</a>
+          <span class="hair w-8 h-px"></span>
+          <a href="#pieces" class="ulink hover:text-ox transition">Les 85 pièces du dossier</a>
+        </div>
+      </div>
+      <figure class="fu fd4 hidden lg:block mt-3">
+        <div class="paper-frame softshadow rotate-[1.4deg] p-[6px] rounded-[10px]">
+          <img src="assets/bernard_collorafi.jpg" alt="Bernard Collorafi" class="w-full rounded-[10px] contrast-[1.02]">
+        </div>
+        <figcaption class="mt-3 text-center eyebrow text-[9px] text-ink2 leading-relaxed">Bernard « Collo »<br>Collorafi</figcaption>
+      </figure>
+    </div>
+
+    <!-- frise -->
+    <div class="fu fd5 mt-16">
+      <p class="eyebrow text-[10px] text-ink2 mb-6">L'affaire en une ligne</p>
+      <div class="noscroll overflow-x-auto -mx-5 px-5 sm:mx-0 sm:px-0">
+        <ol class="relative flex min-w-[760px] sm:min-w-0 sm:grid sm:grid-cols-7">
+          <div class="absolute left-0 right-0 top-[7px] h-px hair"></div>
+          <li class="relative pr-6 sm:pr-4"><span class="block w-[13px] h-[13px] rounded-full bg-cream border-2 border-gold"></span><div class="mt-4 font-display text-2xl text-ox leading-none">1987</div><p class="mt-1.5 text-[15px] leading-snug text-ink2 pr-3">Contrat de location-gérance à Antibes</p></li>
+          <li class="relative pr-6 sm:pr-4"><span class="block w-[13px] h-[13px] rounded-full bg-cream border-2 border-gold"></span><div class="mt-4 font-display text-2xl text-ox leading-none">1995</div><p class="mt-1.5 text-[15px] leading-snug text-ink2 pr-3">Un <em>Quick</em> avec drive ouvre à 300 m</p></li>
+          <li class="relative pr-6 sm:pr-4"><span class="block w-[13px] h-[13px] rounded-full bg-cream border-2 border-gold"></span><div class="mt-4 font-display text-2xl text-ox leading-none">1996</div><p class="mt-1.5 text-[15px] leading-snug text-ink2 pr-3">McDo réplique : « Antibes Nord »</p></li>
+          <li class="relative pr-6 sm:pr-4"><span class="block w-[13px] h-[13px] rounded-full bg-cream border-2 border-gold"></span><div class="mt-4 font-display text-2xl text-ox leading-none">1997</div><p class="mt-1.5 text-[15px] leading-snug text-ink2 pr-3">Effondrement — l'affaire devient judiciaire</p></li>
+          <li class="relative pr-6 sm:pr-4"><span class="block w-[13px] h-[13px] rounded-full bg-cream border-2 border-gold"></span><div class="mt-4 font-display text-2xl text-ox leading-none">1998</div><p class="mt-1.5 text-[15px] leading-snug text-ink2 pr-3">Jugement, résiliation, <strong class="font-semibold text-ink">expulsion</strong></p></li>
+          <li class="relative pr-6 sm:pr-4"><span class="block w-[15px] h-[15px] -mt-px rounded-full bg-ox border-2 border-ox"></span><div class="mt-4 font-display text-2xl text-ox leading-none">2000</div><p class="mt-1.5 text-[15px] leading-snug text-ink font-medium pr-3">La Cour d'appel juge la résiliation <span class="text-ox">abusive</span></p></li>
+          <li class="relative"><span class="block w-[13px] h-[13px] rounded-full bg-cream border-2 border-gold"></span><div class="mt-4 font-display text-2xl text-ox leading-none">2002</div><p class="mt-1.5 text-[15px] leading-snug text-ink2 pr-3">Cassation : pourvoi non admis</p></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-[1320px] mx-auto px-5 sm:px-8"><div class="h-px hair"></div></div>
+</section>
+
+<!-- ============ CORPS ============ -->
+<div class="max-w-[1320px] mx-auto px-5 sm:px-8 grid lg:grid-cols-[240px_1fr] gap-12 lg:gap-16">
+
+  <!-- SIDEBAR -->
+  <aside id="chrono" class="hidden lg:block">
+    <div class="sticky top-24 py-16">
+      <p class="eyebrow text-[10px] text-ink2 mb-7 pl-[1.4rem]">Chronologie du procès</p>
+      <ol class="tl" style="border-left:1px solid var(--line); padding-left:0;">
+        <li><a href="#"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ink2/65">Août 1987</div><div class="t-title mt-0.5 text-[16.5px] leading-snug text-ink/85 transition-colors">Contrat de location-gérance — SEBOL</div></a></li>
+        <li><a href="#"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ink2/65">Juillet 1995</div><div class="t-title mt-0.5 text-[16.5px] leading-snug text-ink/85 transition-colors">Un Quick concurrent avec drive</div></a></li>
+        <li><a href="#"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ink2/65">Oct. 1996</div><div class="t-title mt-0.5 text-[16.5px] leading-snug text-ink/85 transition-colors">« Antibes Nord » confié à B & O</div></a></li>
+        <li><a href="#"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ink2/65">Juin 1997</div><div class="t-title mt-0.5 text-[16.5px] leading-snug text-ink/85 transition-colors">« Antibes Ouest » confié aux Pins</div></a></li>
+        <li><a href="#"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ink2/65">Mai 1998</div><div class="t-title mt-0.5 text-[16.5px] leading-snug text-ink/85 transition-colors">Jugement du Tribunal de commerce</div></a></li>
+        <li><a href="#"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ink2/65">Juin 1998</div><div class="t-title mt-0.5 text-[16.5px] leading-snug text-ink/85 transition-colors">Expulsion des trois restaurants</div></a></li>
+        <li><a href="#"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ink2/65">Oct. 1999</div><div class="t-title mt-0.5 text-[16.5px] leading-snug text-ink/85 transition-colors">Rapport d'expertise Martin & Dumont</div></a></li>
+        <li><a href="#piece" class="piv"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ox">8 mars 2000</div><div class="t-title mt-0.5 text-[15px] font-medium leading-snug text-ox transition-colors">Arrêt : la résiliation est abusive</div></a></li>
+        <li><a href="#"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ink2/65">Déc. 2000</div><div class="t-title mt-0.5 text-[16.5px] leading-snug text-ink/85 transition-colors">Requête à la CEDH</div></a></li>
+        <li><a href="#"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ink2/65">2001</div><div class="t-title mt-0.5 text-[16.5px] leading-snug text-ink/85 transition-colors">Liquidations judiciaires</div></a></li>
+        <li><a href="#" class="piv"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ox">6 mai 2002</div><div class="t-title mt-0.5 text-[15px] font-medium leading-snug text-ox transition-colors">Cassation — pourvoi non admis</div></a></li>
+      </ol>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="py-14 lg:py-20 min-w-0">
+
+    <!-- mobile chrono -->
+    <div class="lg:hidden mb-14">
+      <p class="eyebrow text-[10px] text-ink2 mb-4">Chronologie — glisser →</p>
+      <div class="thinscroll overflow-x-auto -mx-5 px-5">
+        <ol class="flex gap-8 min-w-max pb-2 relative">
+          <div class="absolute left-0 right-0 top-1 h-px hair"></div>
+          <li class="w-44 shrink-0"><span class="block w-2.5 h-2.5 rounded-full bg-gold"></span><div class="mt-3 font-display text-xl text-ox">1987</div><p class="text-[14px] text-ink2">Location-gérance</p></li>
+          <li class="w-44 shrink-0"><span class="block w-2.5 h-2.5 rounded-full bg-gold"></span><div class="mt-3 font-display text-xl text-ox">1998</div><p class="text-[14px] text-ink2">Jugement & expulsion</p></li>
+          <li class="w-44 shrink-0"><span class="block w-3 h-3 rounded-full bg-ox"></span><div class="mt-3 font-display text-xl text-ox">2000</div><p class="text-[14px] text-ink font-medium">Résiliation abusive</p></li>
+          <li class="w-44 shrink-0"><span class="block w-3 h-3 rounded-full bg-ox"></span><div class="mt-3 font-display text-xl text-ox">2002</div><p class="text-[14px] text-ink2">Cassation</p></li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- RÉCIT -->
+    <section id="recit" class="max-w-[42rem]">
+      <p class="eyebrow text-[11px] text-ox mb-6">Le mot de Bernard Collorafi</p>
+      <p class="dropcap font-body text-[24px] sm:text-[27px] leading-[1.48] text-ink mb-7">Amis internautes, j'ai collaboré avec la société McDonald's<span class="align-super text-[.6em]">®</span> en tant que franchisé pendant neuf ans, sans le moindre problème.</p>
+      <div class="space-y-6 text-[20px] leading-[1.7] text-ink/90">
+        <p>À Antibes, j'avais fait d'un restaurant du Centre Commercial Carrefour un établissement-témoin de l'enseigne. J'y ai consacré onze ans de ma vie et près de douze millions de francs. Puis un concurrent s'est installé à trois cents mètres, et la logique a basculé : pour le contrer, McDonald's a multiplié ses propres restaurants dans ma zone de chalandise — et m'a laissé sombrer.</p>
+        <blockquote class="my-9 pl-6 border-l-2 border-ox">
+          <p class="font-display italic text-[27px] sm:text-[30px] leading-[1.28] text-ink">« Cette rupture était abusive, conduite de mauvaise foi. »</p>
+          <cite class="mt-3 block not-italic eyebrow text-[10px] text-ink2">Cour d'appel de Paris — 8 mars 2000</cite>
+        </blockquote>
+        <p>Quand je n'ai plus pu payer des redevances devenues intenables, on a fait jouer les clauses, ordonné la résiliation, puis l'expulsion. J'ai refusé de me taire. La Cour d'appel de Paris a fini par le reconnaître — mais le combat s'est poursuivi jusqu'à la Cour de cassation, et jusqu'à Strasbourg.</p>
+        <p class="text-ink2 italic">Ce site rassemble l'intégralité des pièces de ce combat : décisions, conclusions, expertises, correspondances, presse. Rien n'est caché. À vous de juger.</p>
+      </div>
+    </section>
+
+    <!-- PIÈCE MAÎTRESSE -->
+    <section id="piece" class="mt-20">
+      <div class="flex items-center gap-4 mb-8">
+        <p class="eyebrow text-[11px] text-ox">Pièce maîtresse</p>
+        <span class="flex-1 h-px hair"></span>
+        <p class="eyebrow text-[10px] text-ink2">se lit sans quitter le site</p>
+      </div>
+      <div class="grid md:grid-cols-[300px_1fr] gap-9 items-start">
+        <button type="button" class="group block text-left w-full"
+          data-reader data-pdf="pdf/arret_8_mars_2000.pdf" data-title="Arrêt du 8 mars 2000 — Cour d'appel de Paris" data-synth="synth-arret" data-tab="scan">
+          <div class="paper-frame softshadow -rotate-1 group-hover:rotate-0 transition-transform duration-500">
+            <div class="relative overflow-hidden rounded-[8px]">
+              <img src="assets/arret_p1.png" alt="Première page de l'arrêt du 8 mars 2000" class="w-full block">
+              <span class="absolute inset-0 bg-ink/0 group-hover:bg-ink/10 transition"></span>
+            </div>
+          </div>
+          <span class="mt-4 flex justify-center eyebrow text-[10px] text-ox group-hover:text-oxdeep transition">Ouvrir le lecteur ›</span>
+        </button>
+        <div>
+          <p class="eyebrow text-[10px] text-gold mb-3">8 mars 2000 · Cour d'appel de Paris, 16<sup>e</sup> ch. A</p>
+          <h2 class="font-display text-[44px] sm:text-[54px] font-semibold leading-[.98] mb-5">L'arrêt du 8 mars 2000</h2>
+          <p class="text-[20px] leading-[1.62] text-ink/90">La Cour infirme partiellement le jugement et dit la <span class="text-ox font-medium">résiliation abusive</span> : les commandements de payer visant la clause résolutoire ont été délivrés <em>de mauvaise foi</em>. McDonald's aurait dû proposer un plan d'ensemble sur dix-huit mois.</p>
+          <ul class="mt-6 space-y-2.5 text-[17px] text-ink2">
+            <li class="flex gap-3"><span class="mt-2.5 w-4 h-px bg-ox shrink-0"></span> Résiliation de plein droit écartée</li>
+            <li class="flex gap-3"><span class="mt-2.5 w-4 h-px bg-ox shrink-0"></span> 4&nbsp;528&nbsp;333&nbsp;F d'immobilisations + préjudice moral</li>
+            <li class="flex gap-3"><span class="mt-2.5 w-4 h-px bg-ox shrink-0"></span> Dépens : trois quarts à la charge de McDonald's</li>
+          </ul>
+          <div class="mt-8 flex flex-wrap items-center gap-7 eyebrow text-[11px]">
+            <button type="button" class="ulink text-ink hover:text-ox transition" data-reader data-pdf="pdf/arret_8_mars_2000.pdf" data-title="Arrêt du 8 mars 2000 — Cour d'appel de Paris" data-synth="synth-arret" data-tab="scan">Lire le scan ›</button>
+            <button type="button" class="ulink text-ox hover:text-oxdeep transition" data-reader data-pdf="pdf/arret_8_mars_2000.pdf" data-title="Arrêt du 8 mars 2000 — Cour d'appel de Paris" data-synth="synth-arret" data-tab="synth">Lire la synthèse ›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LES 85 PIÈCES -->
+    <section id="pieces" class="mt-20">
+      <div class="flex items-end justify-between flex-wrap gap-4 mb-9">
+        <h2 class="font-display text-[46px] sm:text-[60px] font-semibold leading-none">Les 85 pièces</h2>
+        <p class="max-w-xs text-[16px] text-ink2 italic">Classées, datées, nettoyées. Chacune se lit en ligne, avec sa synthèse.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <a href="#" class="card block rounded-2xl bg-cream2/70 border p-7" style="border-color:var(--line2)"><div class="flex items-baseline gap-3"><span class="font-display text-[52px] leading-none text-ink">10</span><span class="eyebrow text-[10px] text-ox">Décisions</span></div><p class="mt-4 text-[17px] leading-snug text-ink2">Jugements, arrêts et ordonnances — TC Paris, CA Paris, TC Antibes, Cassation.</p></a>
+        <a href="#" class="card block rounded-2xl bg-cream2/70 border p-7" style="border-color:var(--line2)"><div class="flex items-baseline gap-3"><span class="font-display text-[52px] leading-none text-ink">23</span><span class="eyebrow text-[10px] text-ox">Conclusions</span></div><p class="mt-4 text-[17px] leading-snug text-ink2">Conclusions, mémoires et dires des parties, de 1998 à la cassation.</p></a>
+        <a href="#" class="card block rounded-2xl bg-cream2/70 border p-7" style="border-color:var(--line2)"><div class="flex items-baseline gap-3"><span class="font-display text-[52px] leading-none text-ink">27</span><span class="eyebrow text-[10px] text-ox">Correspondances</span></div><p class="mt-4 text-[17px] leading-snug text-ink2">Lettres recommandées entre Collorafi, McDonald's et les avocats.</p></a>
+        <a href="#" class="card block rounded-2xl bg-cream2/70 border p-7" style="border-color:var(--line2)"><div class="flex items-baseline gap-3"><span class="font-display text-[52px] leading-none text-ink">10</span><span class="eyebrow text-[10px] text-ox">Presse</span></div><p class="mt-4 text-[17px] leading-snug text-ink2">Le Figaro, Les Échos, La Tribune, Investir, la presse de la franchise.</p></a>
+        <a href="#" class="card block rounded-2xl bg-cream2/70 border p-7" style="border-color:var(--line2)"><div class="flex items-baseline gap-3"><span class="font-display text-[52px] leading-none text-ink">05</span><span class="eyebrow text-[10px] text-ox">Expertises</span></div><p class="mt-4 text-[17px] leading-snug text-ink2">Expertise judiciaire, rapports Gandur et SEPT, réunions d'expertise.</p></a>
+        <a href="#" class="card block rounded-2xl bg-cream2/70 border p-7" style="border-color:var(--line2)"><div class="flex items-baseline gap-3"><span class="font-display text-[52px] leading-none text-ink">08</span><span class="eyebrow text-[10px] text-ox">Cassation & CEDH</span></div><p class="mt-4 text-[17px] leading-snug text-ink2">Pourvoi, requête à Strasbourg, liquidations et états des créances.</p></a>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="mt-10">
+  <div class="max-w-[1320px] mx-auto px-5 sm:px-8">
+    <div class="h-px hair"></div>
+    <div class="py-12 grid sm:grid-cols-[1fr_auto] gap-8 items-end">
+      <div>
+        <div class="font-display text-3xl font-semibold">Collo <span class="italic text-ink2">contre</span> <span class="text-ox">McDo</span></div>
+        <p class="mt-3 max-w-md text-[16px] text-ink2 leading-relaxed">Le dossier documentaire du procès Bernard Collorafi contre McDonald's France. Toutes les pièces, en accès libre — à vous de juger.</p>
+      </div>
+      <nav class="flex flex-col gap-1.5 eyebrow text-[10.5px] text-ink2 sm:text-right">
+        <a href="#recit" class="hover:text-ox transition">Le récit</a>
+        <a href="#chrono" class="hover:text-ox transition">Chronologie du procès</a>
+        <a href="#pieces" class="hover:text-ox transition">Les 85 pièces</a>
+        <span class="mt-3 text-gold">Cour d'appel de Paris · RG 1998/14119</span>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ LECTEUR INTÉGRÉ (modal) ============ -->
+<div id="reader" hidden class="fixed inset-0 z-50">
+  <div class="absolute inset-0 bg-ink/70 backdrop-blur-sm" data-close></div>
+  <div class="relative mx-auto my-[2.5vh] w-[min(1120px,94vw)] h-[95vh] bg-cream rounded-2xl overflow-hidden flex flex-col softshadow">
+    <header class="flex items-center gap-4 px-5 sm:px-7 h-16 border-b shrink-0" style="border-color:var(--line)">
+      <h3 id="reader-title" class="font-display text-[22px] sm:text-[26px] font-semibold leading-tight truncate flex-1">Arrêt du 8 mars 2000</h3>
+      <div class="flex items-center gap-1 bg-cream2/70 rounded-full p-1">
+        <button class="tab is-on rounded-full px-4 py-1.5 eyebrow text-[10px] text-ink2 border border-transparent transition" data-pane="scan">Le scan</button>
+        <button class="tab rounded-full px-4 py-1.5 eyebrow text-[10px] text-ink2 border border-transparent transition" data-pane="synth">La synthèse</button>
+      </div>
+      <a id="reader-dl" href="#" class="hidden sm:inline eyebrow text-[10px] text-ink2 hover:text-ox transition ulink">Télécharger ↓</a>
+      <button data-close class="text-ink2 hover:text-ox transition text-2xl leading-none w-9 h-9 grid place-items-center rounded-full hover:bg-cream2" aria-label="Fermer">×</button>
+    </header>
+    <div class="flex-1 min-h-0">
+      <div data-view="scan" class="h-full" style="background:var(--reader-scan-bg)">
+        <iframe id="reader-frame" title="Document" class="w-full h-full border-0"></iframe>
+      </div>
+      <div data-view="synth" class="h-full overflow-y-auto hidden">
+        <div class="max-w-[46rem] mx-auto px-6 sm:px-10 py-10 prose-synth text-[16.5px] text-ink/90" id="reader-synth"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- synthèses (templates, une par pièce) -->
+<template id="synth-arret">
+  <p class="eyebrow text-[10px] text-gold" style="letter-spacing:.16em">Fiche de synthèse</p>
+  <h3 style="margin-top:.4rem">Cour d'appel de Paris — 8 mars 2000</h3>
+  <p><strong>RG 1998/14119</strong> · 16<sup>e</sup> chambre, section A · sur appel du jugement du Tribunal de commerce de Paris du 18 mai 1998. Décision : <strong>infirmation partielle</strong>.</p>
+  <h3>Ce que juge la Cour</h3>
+  <p>La clause résolutoire s'impose au juge, mais son application doit être <strong>de bonne foi</strong> (art. 1134 C. civ.). Les restaurants SEBOL (Carrefour) et B&nbsp;&amp;&nbsp;O (Antibes Nord) forment une <strong>entité économique</strong> conçue en synergie contre le concurrent Quick. McDonald's, qui connaissait les pertes, aurait dû proposer un <strong>plan d'ensemble sur dix-huit mois</strong> ; l'avenant ponctuel était dérisoire. Les commandements de payer ayant été délivrés <strong>de mauvaise foi</strong>, la résiliation est <strong>abusive</strong>.</p>
+  <p>Mais le préjudice est limité : même avec ce plan, les sociétés seraient restées déficitaires. Pas de perte de chance de rentabilité.</p>
+  <h3>Dispositif chiffré</h3>
+  <p><strong>Redevances dues par Collorafi et ses sociétés</strong> (2 janv. – 10 juin 1998) :</p>
+  <table>
+    <thead><tr><th>Débiteurs</th><th>Arriérés</th><th>Redevances</th></tr></thead>
+    <tbody>
+      <tr><td>SEBOL + Collorafi</td><td>1 867 247,84 F</td><td>1 272 000 F</td></tr>
+      <tr><td>B & O + Collorafi</td><td>1 533 548,87 F</td><td>1 113 000 F</td></tr>
+      <tr><td>Les Pins + Collorafi</td><td>504 474,42 F</td><td>1 272 000 F</td></tr>
+    </tbody>
+  </table>
+  <p><strong>McDonald's condamnée à verser</strong> : 240 330 F (perte de salaire de Collorafi) · 4 528 333 F aux sociétés et à Collorafi (immobilisations récupérées) · 100 000 F de préjudice moral.</p>
+  <p><strong>Dépens</strong> : trois quarts à la charge de McDonald's, un quart à Collorafi. Article 700 : chaque partie garde ses frais.</p>
+  <h3>Portée</h3>
+  <p>Contrôle de la bonne foi dans la mise en œuvre d'une clause résolutoire : la tête de réseau qui a suscité les difficultés du locataire-gérant ne peut invoquer de mauvaise foi l'acquisition de la clause. Obligation de loyauté du franchiseur en période de crise — sans garantie de résultat.</p>
+</template>
+
+<script>
+(function(){
+  const modal = document.getElementById('reader');
+  const frame = document.getElementById('reader-frame');
+  const titleEl = document.getElementById('reader-title');
+  const synthEl = document.getElementById('reader-synth');
+  const dl = document.getElementById('reader-dl');
+  let lastFocus = null;
+
+  function setTab(name){
+    modal.querySelectorAll('.tab').forEach(t=>t.classList.toggle('is-on', t.dataset.pane===name));
+    modal.querySelector('[data-view="scan"]').classList.toggle('hidden', name!=='scan');
+    modal.querySelector('[data-view="synth"]').classList.toggle('hidden', name!=='synth');
+  }
+  function open(cfg){
+    lastFocus = document.activeElement;
+    titleEl.textContent = cfg.title || 'Document';
+    dl.href = cfg.pdf || '#';
+    // scan
+    if(cfg.pdf){ frame.src = cfg.pdf + '#view=FitH&toolbar=1'; }
+    // synthèse
+    synthEl.innerHTML = '';
+    if(cfg.synth){ const tpl = document.getElementById(cfg.synth); if(tpl) synthEl.appendChild(tpl.content.cloneNode(true)); }
+    setTab(cfg.tab==='synth' ? 'synth' : 'scan');
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+  }
+  function close(){
+    modal.hidden = true;
+    frame.src = 'about:blank';
+    document.body.style.overflow = '';
+    if(lastFocus) lastFocus.focus();
+  }
+
+  document.querySelectorAll('[data-reader]').forEach(btn=>{
+    btn.addEventListener('click', e=>{ e.preventDefault(); open({
+      pdf: btn.dataset.pdf, title: btn.dataset.title, synth: btn.dataset.synth, tab: btn.dataset.tab
+    }); });
+  });
+  modal.querySelectorAll('[data-close]').forEach(el=>el.addEventListener('click', close));
+  modal.querySelectorAll('.tab').forEach(t=>t.addEventListener('click', ()=>setTab(t.dataset.pane)));
+  document.addEventListener('keydown', e=>{ if(e.key==='Escape' && !modal.hidden) close(); });
+})();
+</script>
+
+</body>
+</html>

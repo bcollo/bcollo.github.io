@@ -91,6 +91,27 @@ tailwind.config = {
   .prose-synth li{ margin:.3rem 0; line-height:1.6; }
   .chrono-scroll{ scrollbar-width:none; -ms-overflow-style:none; }
   .chrono-scroll::-webkit-scrollbar{ width:0; height:0; display:none; }
+
+  /* frise verticale (colonne de gauche) */
+  .frise{ position:relative; margin-top:1.9rem; padding-left:1.9rem; }
+  .frise::before{ content:""; position:absolute; left:6px; top:8px; bottom:8px; width:2px; transform:translateX(-1px); border-radius:2px;
+    background:linear-gradient(180deg, rgb(var(--accent-rgb)/.12), rgb(var(--accent-rgb)/.5) 8%, rgb(var(--accent-rgb)/.5) 92%, rgb(var(--accent-rgb)/.1)); }
+  .fr-year{ position:relative; display:flex; align-items:baseline; gap:.6rem; margin:2.2rem 0 .9rem; }
+  .frise > .fr-year:first-child{ margin-top:0; }
+  .fr-year::before{ content:""; position:absolute; left:calc(-1.9rem + 6px); top:.28rem; transform:translateX(-50%); width:15px; height:15px; border-radius:50%;
+    background:rgb(var(--accent-rgb)); box-shadow:0 0 0 5px rgb(var(--bg2-rgb)), 0 0 0 6px rgb(var(--accent-rgb)/.22); z-index:1; }
+  .fr-ynum{ font-family:"Bricolage Grotesque",sans-serif; font-weight:800; font-size:1.9rem; line-height:.9; color:var(--ox); letter-spacing:-.02em; }
+  .fr-yct{ font-size:9.5px; text-transform:uppercase; letter-spacing:.13em; color:rgb(var(--ink2-rgb)); font-weight:600; }
+  .fr-item{ position:relative; display:grid; grid-template-columns:2.9rem 1fr; align-items:baseline; gap:.75rem;
+    padding:.48rem 0; border-bottom:1px solid var(--line2); transition:padding-left .18s ease; }
+  .frise .fr-item:last-child{ border-bottom:0; }
+  .fr-item::before{ content:""; position:absolute; left:calc(-1.9rem + 6px); top:.82rem; transform:translateX(-50%); width:9px; height:9px; border-radius:50%;
+    background:rgb(var(--bg-rgb)); border:2px solid rgb(var(--gold-rgb)); transition:border-color .18s, background .18s, box-shadow .18s; z-index:1; }
+  .fr-item:hover{ padding-left:.35rem; }
+  .fr-item:hover::before{ border-color:var(--ox); background:var(--ox); box-shadow:0 0 0 4px rgb(var(--accent-rgb)/.14); }
+  .fr-date{ font-size:10.5px; letter-spacing:.03em; font-variant-numeric:tabular-nums; color:rgb(var(--ink2-rgb)); font-weight:600; padding-top:.12rem; white-space:nowrap; transition:color .18s; }
+  .fr-title{ font-size:13.5px; line-height:1.38; color:rgb(var(--ink-rgb)); font-weight:450; transition:color .18s; }
+  .fr-item:hover .fr-title, .fr-item:hover .fr-date{ color:var(--ox); }
 </style>
 </head>
 
@@ -134,7 +155,7 @@ tailwind.config = {
     </div>
 
     <!-- frise -->
-    <div id="chrono" class="fu fd5 mt-16">
+    <div id="apercu" class="fu fd5 mt-16">
       <p class="eyebrow text-[10px] text-ink2 mb-6">L'affaire en une ligne</p>
       <div class="noscroll overflow-x-auto -mx-5 px-5 sm:mx-0 sm:px-0">
         <ol class="relative flex min-w-[760px] sm:min-w-0 sm:grid sm:grid-cols-7">
@@ -153,60 +174,11 @@ tailwind.config = {
   <div class="max-w-[1320px] mx-auto px-5 sm:px-8"><div class="h-px hair"></div></div>
 </section>
 
-<!-- ============ CORPS ============ -->
-<div class="max-w-[1320px] mx-auto px-5 sm:px-8 grid lg:grid-cols-[240px_1fr] gap-12 lg:gap-16">
-
-  <!-- SIDEBAR -->
-  <aside class="hidden lg:block">
-    <div class="sticky top-20 max-h-[calc(100dvh_-_4rem)] overflow-y-auto overscroll-contain chrono-scroll py-8">
-      <p class="eyebrow text-[10px] text-ink2 mb-5 pl-[1.4rem]">Chronologie du procès</p>
-      <ol class="tl" style="border-left:1px solid var(--line); padding-left:0;">
-        <li><a href="pieces/figaro_1995/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">1995</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Expansion de McDonald’s</div></a></li>
-        <li><a href="pieces/lr_collorafi_mcd_16_12_1996/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Déc. 1996</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Demande d’Antibes Ouest</div></a></li>
-        <li><a href="pieces/lr_mcd_12_02_1997/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Fév. 1997</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Réponse de McDonald’s</div></a></li>
-        <li><a href="pieces/lettre_avocat_mcd_05_05_1997/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Mai 1997</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">L’avocat écrit au siège</div></a></li>
-        <li><a href="pieces/lr_collorafi_mcd_27_06_1997/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Juin 1997</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Courrier de Collorafi</div></a></li>
-        <li><a href="pieces/lr_collorafi_mcd_03_10_1997/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Oct. 1997</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Passage au contentieux</div></a></li>
-        <li><a href="pieces/conclusions_mcd_15_01_1998/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Janv. 1998</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Défense de McDonald’s</div></a></li>
-        <li><a href="pieces/rapport_gandur_04_02_1998/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Fév. 1998</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Expertise Gandur</div></a></li>
-        <li><a href="pieces/rapport_sept_01_03_1998/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Mars 1998</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Expertise S.E.P.T.</div></a></li>
-        <li><a href="pieces/jugement_tc_paris_18_05_1998/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Mai 1998</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Jugement du TC de Paris</div></a></li>
-        <li><a href="pieces/ordonnance_03_07_1998/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Juil. 1998</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Référé sur l’expulsion</div></a></li>
-        <li><a href="pieces/arret_09_12_1998/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Déc. 1998</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Expertise ordonnée en appel</div></a></li>
-        <li><a href="pieces/cr_reunion_expertise_02_02_1999/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Fév. 1999</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Réunion d’expertise</div></a></li>
-        <li><a href="pieces/dire_n5_collorafi_16_06_1999/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Juin 1999</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Dire de Collorafi</div></a></li>
-        <li><a href="pieces/rapport_expertise_judiciaire_15_10_1999/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Oct. 1999</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Rapport Martin & Dumont</div></a></li>
-        <li><a href="pieces/conclusion_appel_14_12_1999/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Déc. 1999</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Conclusions d’appel</div></a></li>
-        <li><a href="pieces/arret_8_mars_2000/" class="piv cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ox">8 mars 2000</div><div class="t-title mt-px text-[13.5px] leading-tight font-medium text-ox transition-colors">Résiliation jugée abusive</div></a></li>
-        <li><a href="pieces/cour_de_cassation_requete_mcdonald_s_10_01_2001/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Janv. 2001</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Requête de McDonald’s</div></a></li>
-        <li><a href="pieces/cour_europeenne_des_droits_de_l_homme_requete_20_03_2001/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Mars 2001</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Requête à la CEDH</div></a></li>
-        <li><a href="pieces/jugement_du_tc_d_antibes_21_09_2001/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Sept. 2001</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Jugement du TC d’Antibes</div></a></li>
-        <li><a href="pieces/cour_de_cassation_memoire_collorafi_01_10_2001/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Oct. 2001</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Mémoire en cassation</div></a></li>
-        <li><a href="pieces/etat_des_creances_sa_sebol_01_02_2002/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Fév. 2002</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">États des créances</div></a></li>
-        <li><a href="pieces/arret_cour_de_cassation_10_05_2002/" class="piv cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ox">6 mai 2002</div><div class="t-title mt-px text-[13.5px] leading-tight font-medium text-ox transition-colors">Pourvoi non admis</div></a></li>
-      </ol>
-    </div>
-  </aside>
-
-  <!-- MAIN -->
-  <main class="py-14 lg:py-20 min-w-0">
-
-    <!-- mobile chrono -->
-    <div class="lg:hidden mb-14">
-      <p class="eyebrow text-[10px] text-ink2 mb-4">Chronologie — glisser →</p>
-      <div class="thinscroll overflow-x-auto -mx-5 px-5">
-        <ol class="flex gap-8 min-w-max pb-2 relative">
-          <div class="absolute left-0 right-0 top-1 h-px hair"></div>
-          <li class="w-44 shrink-0"><span class="block w-2.5 h-2.5 rounded-full bg-gold"></span><div class="mt-3 font-display text-xl text-ox">1987</div><p class="text-[14px] text-ink2">Location-gérance</p></li>
-          <li class="w-44 shrink-0"><span class="block w-2.5 h-2.5 rounded-full bg-gold"></span><div class="mt-3 font-display text-xl text-ox">1998</div><p class="text-[14px] text-ink2">Jugement & expulsion</p></li>
-          <li class="w-44 shrink-0"><span class="block w-3 h-3 rounded-full bg-ox"></span><div class="mt-3 font-display text-xl text-ox">2000</div><p class="text-[14px] text-ink font-medium">Résiliation abusive</p></li>
-          <li class="w-44 shrink-0"><span class="block w-3 h-3 rounded-full bg-ox"></span><div class="mt-3 font-display text-xl text-ox">2002</div><p class="text-[14px] text-ink2">Cassation</p></li>
-        </ol>
-      </div>
-    </div>
-
-    <!-- RÉCIT -->
-    <section id="recit" class="max-w-[42rem]">
+<!-- ============ INTRO + PIÈCE MAÎTRESSE (2 colonnes) ============ -->
+<section class="relative">
+  <div class="max-w-[1320px] mx-auto px-5 sm:px-8 py-14 sm:py-20">
+    <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+      <section id="recit" class="max-w-none">
       <p class="eyebrow text-[11px] text-ox mb-6">Le mot de Bernard Collorafi</p>
       <p class="dropcap font-body text-[24px] sm:text-[27px] leading-[1.48] text-ink mb-7">Amis internautes, j'ai collaboré avec la société McDonald's<span class="align-super text-[.6em]">®</span> en tant que franchisé pendant neuf ans, sans le moindre problème.</p>
       <div class="space-y-6 text-[20px] leading-[1.7] text-ink/90">
@@ -219,43 +191,136 @@ tailwind.config = {
         <p class="text-ink2 italic">Ce site rassemble l'intégralité des pièces de ce combat : décisions, conclusions, expertises, correspondances, presse. Rien n'est caché. À vous de juger.</p>
       </div>
     </section>
-
-    <!-- PIÈCE MAÎTRESSE -->
-    <section id="piece" class="mt-20">
-      <div class="flex items-center gap-4 mb-8">
-        <p class="eyebrow text-[11px] text-ox">Pièce maîtresse</p>
-        <span class="flex-1 h-px hair"></span>
-        <p class="eyebrow text-[10px] text-ink2">Fiche complète · scan · transcription</p>
-      </div>
-      <div class="grid md:grid-cols-[300px_1fr] gap-9 items-start">
-        <a href="pieces/arret_8_mars_2000/" class="group block text-left w-full">
-          <div class="paper-frame softshadow -rotate-1 group-hover:rotate-0 transition-transform duration-500">
-            <div class="relative overflow-hidden rounded-[8px]">
-              <img src="assets/arret_p1.webp" alt="Première page de l'arrêt du 8 mars 2000" class="w-full block">
-              <span class="absolute inset-0 bg-ink/0 group-hover:bg-ink/10 transition"></span>
+      <section id="piece">
+        <div class="flex items-center gap-4 mb-6">
+          <p class="eyebrow text-[11px] text-ox">Pièce maîtresse</p>
+          <span class="flex-1 h-px hair"></span>
+        </div>
+        <div class="grid grid-cols-[132px_1fr] gap-6 items-stretch">
+          <a href="pieces/arret-ca-paris-resiliation-abusive-franchise-mcdonalds-2000/" class="group block" aria-label="Ouvrir l'arrêt du 8 mars 2000">
+            <div class="paper-frame softshadow -rotate-1 group-hover:rotate-0 transition-transform duration-500 h-full">
+              <div class="relative overflow-hidden rounded-[8px] h-full min-h-[190px]">
+                <img src="assets/arret_p1.webp" alt="Première page de l'arrêt du 8 mars 2000" class="w-full h-full object-cover object-top block">
+                <span class="absolute inset-0 bg-ink/0 group-hover:bg-ink/10 transition"></span>
+              </div>
             </div>
-          </div>
-          <span class="mt-4 flex justify-center eyebrow text-[10px] text-ox group-hover:text-oxdeep transition">Ouvrir la pièce ›</span>
-        </a>
-        <div>
-          <p class="eyebrow text-[10px] text-gold mb-3">8 mars 2000 · Cour d'appel de Paris, 16<sup>e</sup> ch. A</p>
-          <h2 class="font-display text-[44px] sm:text-[54px] font-semibold leading-[.98] mb-5">L'arrêt du 8 mars 2000</h2>
-          <p class="text-[20px] leading-[1.62] text-ink/90">La Cour infirme partiellement le jugement et dit la <span class="text-ox font-medium">résiliation abusive</span> : les commandements de payer visant la clause résolutoire ont été délivrés <em>de mauvaise foi</em>. McDonald's aurait dû proposer un plan d'ensemble sur dix-huit mois.</p>
-          <ul class="mt-6 space-y-2.5 text-[17px] text-ink2">
-            <li class="flex gap-3"><span class="mt-2.5 w-4 h-px bg-ox shrink-0"></span> Résiliation de plein droit écartée</li>
-            <li class="flex gap-3"><span class="mt-2.5 w-4 h-px bg-ox shrink-0"></span> 4&nbsp;528&nbsp;333&nbsp;F d'immobilisations + préjudice moral</li>
-            <li class="flex gap-3"><span class="mt-2.5 w-4 h-px bg-ox shrink-0"></span> Dépens : trois quarts à la charge de McDonald's</li>
-          </ul>
-          <div class="mt-8 flex flex-wrap items-center gap-7 eyebrow text-[11px]">
-            <a href="pieces/arret_8_mars_2000/" class="ulink text-ink hover:text-ox transition">Lire le scan ›</a>
-            <a href="pieces/arret_8_mars_2000/" class="ulink text-ox hover:text-oxdeep transition">Lire la synthèse ›</a>
+          </a>
+          <div class="min-w-0">
+            <p class="eyebrow text-[10px] text-gold mb-2.5">8 mars 2000 · Cour d'appel de Paris, 16<sup>e</sup> ch. A</p>
+            <h2 class="font-display text-[29px] sm:text-[34px] font-semibold leading-[1.02] mb-3">L'arrêt du 8 mars 2000</h2>
+            <p class="text-[16px] leading-[1.55] text-ink/90">La Cour infirme partiellement le jugement et dit la <span class="text-ox font-medium">résiliation abusive</span> : les commandements de payer visant la clause résolutoire ont été délivrés <em>de mauvaise foi</em>. McDonald's aurait dû proposer un plan d'ensemble sur dix-huit mois.</p>
           </div>
         </div>
-      </div>
-    </section>
+        <ul class="mt-6 space-y-2 text-[15.5px] text-ink2">
+          <li class="flex gap-3 items-baseline"><span class="w-4 h-px bg-ox shrink-0 translate-y-[-.35em]"></span><span>Résiliation de plein droit écartée</span></li>
+          <li class="flex gap-3 items-baseline"><span class="w-4 h-px bg-ox shrink-0 translate-y-[-.35em]"></span><span>4&nbsp;528&nbsp;333&nbsp;F d'immobilisations + préjudice moral</span></li>
+          <li class="flex gap-3 items-baseline"><span class="w-4 h-px bg-ox shrink-0 translate-y-[-.35em]"></span><span>Dépens : trois quarts à la charge de McDonald's</span></li>
+        </ul>
+        <div class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 eyebrow text-[11px]">
+          <a href="pieces/arret-ca-paris-resiliation-abusive-franchise-mcdonalds-2000/" class="ulink text-ink hover:text-ox transition">Ouvrir la pièce ›</a>
+          <a href="pieces/arret-ca-paris-resiliation-abusive-franchise-mcdonalds-2000/" class="ulink text-ink hover:text-ox transition">Lire le scan ›</a>
+          <a href="pieces/arret-ca-paris-resiliation-abusive-franchise-mcdonalds-2000/" class="ulink text-ox hover:text-oxdeep transition">Lire la synthèse ›</a>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
 
-    <!-- ===== ARCHIVE — LES 85 PIÈCES ===== -->
-    <section id="pieces" class="mt-20">
+<!-- ============ CHRONOLOGIE + DOSSIERS (2 colonnes) ============ -->
+<section class="border-y" style="border-color:var(--line); background:rgb(var(--bg2-rgb)/.45)">
+  <div class="max-w-[1320px] mx-auto px-5 sm:px-8 py-16 sm:py-20">
+    <div class="grid lg:grid-cols-[minmax(0,400px)_1fr] gap-10 lg:gap-16 items-start">
+      <div id="chrono">
+        <p class="eyebrow text-[10px] text-ox mb-3">Chronologie du procès</p>
+        <h2 class="font-display text-[clamp(1.8rem,3.4vw,2.4rem)] font-extrabold leading-[1.04] tracking-[-.02em]">Onze ans, 75 pièces</h2>
+        <p class="mt-3 text-[15px] leading-[1.5] text-ink2">De la location-gérance d’Antibes (1987) à l’arrêt de la Cour de cassation (2002) — tout le dossier, dans l’ordre du procès.</p>
+        <div class="frise">
+          <div class="fr-year"><span class="fr-ynum">1995</span><span class="fr-yct">5 pièces</span></div>
+          <a href="pieces/article-revue-hr-enquete-chaines-restauration-mcdonalds-1995/" class="fr-item"><span class="fr-date">01/01</span><span class="fr-title">Revue H&amp;R</span></a>
+          <a href="pieces/article-figaro-mcdonalds-ouvertures-embauches-france-1995/" class="fr-item"><span class="fr-date">04/09</span><span class="fr-title">Le Figaro Économie — les ouvertures rythment les embauches</span></a>
+          <a href="pieces/article-la-tribune-mcdonalds-resultats-benefice-1995/" class="fr-item"><span class="fr-date">26/10</span><span class="fr-title">La Tribune — bénéfice net par action : +17 %</span></a>
+          <a href="pieces/article-investir-mcdonalds-bourse-concurrence-etats-unis-1995/" class="fr-item"><span class="fr-date">01/11</span><span class="fr-title">Investir — rude concurrence aux États-Unis</span></a>
+          <a href="pieces/article-les-echos-mcdonalds-bourse-expansion-1995/" class="fr-item"><span class="fr-date">03/11</span><span class="fr-title">Les Échos — McDonald&#x27;s fait toujours recette en Bourse</span></a>
+          <div class="fr-year"><span class="fr-ynum">1996</span><span class="fr-yct">4 pièces</span></div>
+          <a href="pieces/article-franchise-magazine-mcdonalds-contrat-20-ans-1996/" class="fr-item"><span class="fr-date">01/03</span><span class="fr-title">Franchise Magazine</span></a>
+          <a href="pieces/article-pme-affaires-franchise-independance-dependance-1996/" class="fr-item"><span class="fr-date">01/12</span><span class="fr-title">PME &amp; Affaires</span></a>
+          <a href="pieces/lettre-collorafi-hennequin-demande-antibes-ouest-1996/" class="fr-item"><span class="fr-date">16/12</span><span class="fr-title">LR Collorafi → McDonald&#x27;s</span></a>
+          <a href="pieces/lettre-collorafi-direction-aix-antibes-ouest-1996/" class="fr-item"><span class="fr-date">16/12</span><span class="fr-title">Lettre Collorafi → McDonald’s (Aix)</span></a>
+          <div class="fr-year"><span class="fr-ynum">1997</span><span class="fr-yct">17 pièces</span></div>
+          <a href="pieces/lettre-collorafi-hennequin-casus-belli-antibes-ouest-1997/" class="fr-item"><span class="fr-date">10/01</span><span class="fr-title">LR Collorafi</span></a>
+          <a href="pieces/lettre-collorafi-mcdonalds-aix-objectifs-previsionnels-1997/" class="fr-item"><span class="fr-date">17/01</span><span class="fr-title">Lettre Collorafi → Aix</span></a>
+          <a href="pieces/lettre-collorafi-avocat-facture-loges-antibes-basket-1997/" class="fr-item"><span class="fr-date">27/01</span><span class="fr-title">Lettre Collorafi → avocat</span></a>
+          <a href="pieces/lettre-collorafi-mcdonalds-vallauris-zone-chalandise-1997/" class="fr-item"><span class="fr-date">31/01</span><span class="fr-title">LR Collorafi → McDonald&#x27;s</span></a>
+          <a href="pieces/lettre-mcdonalds-collorafi-refus-vallauris-redevances-1997/" class="fr-item"><span class="fr-date">12/02</span><span class="fr-title">LR McDonald&#x27;s</span></a>
+          <a href="pieces/lettre-mcdonalds-collorafi-non-exclusivite-territoriale-1997/" class="fr-item"><span class="fr-date">27/03</span><span class="fr-title">LR McDonald&#x27;s</span></a>
+          <a href="pieces/lettre-mcdonalds-hennequin-collorafi-inauguration-antibes-1997/" class="fr-item"><span class="fr-date">25/04</span><span class="fr-title">Lettre McDonald&#x27;s</span></a>
+          <a href="pieces/lettre-avocat-clement-mcdonalds-vallauris-chalandise-1997/" class="fr-item"><span class="fr-date">05/05</span><span class="fr-title">Lettre avocat → McDonald&#x27;s</span></a>
+          <a href="pieces/lettre-collorafi-hennequin-mcdonalds-intimidation-exclusion-1997/" class="fr-item"><span class="fr-date">27/06</span><span class="fr-title">LR Collorafi → McDonald&#x27;s</span></a>
+          <a href="pieces/lettre-mcdonalds-collorafi-mise-en-demeure-redevances-1997/" class="fr-item"><span class="fr-date">22/07</span><span class="fr-title">LR McDonald&#x27;s</span></a>
+          <a href="pieces/lettre-collorafi-mcdonalds-redevances-baisse-ca-aout-1997/" class="fr-item"><span class="fr-date">01/08</span><span class="fr-title">LR Collorafi → McDonald&#x27;s</span></a>
+          <a href="pieces/lettre-collorafi-kuster-chiffre-affaires-sebol-beto-1997/" class="fr-item"><span class="fr-date">01/09</span><span class="fr-title">Lettre Collorafi → Aix</span></a>
+          <a href="pieces/lettre-mcdonalds-collorafi-impayes-revue-location-gerance-1997/" class="fr-item"><span class="fr-date">22/09</span><span class="fr-title">LR McDonald&#x27;s</span></a>
+          <a href="pieces/lettre-collorafi-mcdonalds-aix-relance-aides-objectifs-1997/" class="fr-item"><span class="fr-date">23/09</span><span class="fr-title">LR Collorafi → Aix</span></a>
+          <a href="pieces/lettre-collorafi-mcdonalds-villeneuve-loubet-eviction-1997/" class="fr-item"><span class="fr-date">03/10</span><span class="fr-title">LR Collorafi → McDonald&#x27;s</span></a>
+          <a href="pieces/lettre-collorafi-mcdonalds-loyers-impayes-tresorerie-1997/" class="fr-item"><span class="fr-date">09/10</span><span class="fr-title">LR Collorafi → McDonald&#x27;s</span></a>
+          <a href="pieces/lettre-mcdonalds-hennequin-collorafi-redevances-audit-1997/" class="fr-item"><span class="fr-date">20/10</span><span class="fr-title">LR McDonald&#x27;s</span></a>
+          <div class="fr-year"><span class="fr-ynum">1998</span><span class="fr-yct">19 pièces</span></div>
+          <a href="pieces/conclusions-mcdonalds-tc-paris-redevances-impayees-1998/" class="fr-item"><span class="fr-date">15/01</span><span class="fr-title">Conclusions — McDonald&#x27;s</span></a>
+          <a href="pieces/conclusions-refere-collorafi-tc-paris-expulsion-1998/" class="fr-item"><span class="fr-date">15/01</span><span class="fr-title">Conclusions de référé</span></a>
+          <a href="pieces/rapport-gandur-collorafi-mcdonalds-prejudice-franchise-1998/" class="fr-item"><span class="fr-date">04/02</span><span class="fr-title">Rapport Gandur</span></a>
+          <a href="pieces/conclusions-collorafi-concurrence-interne-vallauris-1998/" class="fr-item"><span class="fr-date">09/02</span><span class="fr-title">Conclusions d&#x27;audience — partie 1</span></a>
+          <a href="pieces/conclusions-collorafi-mauvaise-foi-mcdonalds-tc-paris-p2-1998/" class="fr-item"><span class="fr-date">09/02</span><span class="fr-title">Conclusions d&#x27;audience — partie 2</span></a>
+          <a href="pieces/rapport-sept-contre-expertise-mcdonalds-gandur-1998/" class="fr-item"><span class="fr-date">01/03</span><span class="fr-title">Rapport SEPT</span></a>
+          <a href="pieces/conclusions-collorafi-tc-paris-responsabilite-mcdonalds-1998/" class="fr-item"><span class="fr-date">16/03</span><span class="fr-title">Conclusions</span></a>
+          <a href="pieces/conclusions-replique-tc-paris-collorafi-mcdonalds-franchise-1998/" class="fr-item"><span class="fr-date">16/03</span><span class="fr-title">Conclusions en réplique</span></a>
+          <a href="pieces/conclusions-replique-mcdonalds-mauvaise-foi-collorafi-1998/" class="fr-item"><span class="fr-date">16/03</span><span class="fr-title">Conclusions en réplique McDonald&#x27;s — partie 1</span></a>
+          <a href="pieces/conclusions-replique-mcdonalds-rentabilite-tc-paris-p2-1998/" class="fr-item"><span class="fr-date">16/03</span><span class="fr-title">Conclusions en réplique McDonald&#x27;s — partie 2</span></a>
+          <a href="pieces/jugement-tc-paris-resiliation-expulsion-redevances-1998/" class="fr-item"><span class="fr-date">18/05</span><span class="fr-title">Jugement — TC Paris</span></a>
+          <a href="pieces/assignation-refere-appel-collorafi-mcdonalds-1998/" class="fr-item"><span class="fr-date">29/05</span><span class="fr-title">Assignation en référé d&#x27;appel</span></a>
+          <a href="pieces/assignation-juge-execution-tgi-grasse-collorafi-1998/" class="fr-item"><span class="fr-date">09/06</span><span class="fr-title">Assignation</span></a>
+          <a href="pieces/assignation-jex-grasse-collorafi-suspension-expulsion-1998/" class="fr-item"><span class="fr-date">09/06</span><span class="fr-title">Conclusions (JEX)</span></a>
+          <a href="pieces/declaration-appel-ca-aix-collorafi-mcdonalds-expulsion-1998/" class="fr-item"><span class="fr-date">10/06</span><span class="fr-title">Cour d&#x27;appel d&#x27;Aix</span></a>
+          <a href="pieces/conclusions-refere-ca-paris-mcdonalds-execution-provisoire-1998/" class="fr-item"><span class="fr-date">25/06</span><span class="fr-title">Conclusions de référé — McDonald&#x27;s</span></a>
+          <a href="pieces/conclusions-refere-ca-paris-suspension-execution-1998/" class="fr-item"><span class="fr-date">25/06</span><span class="fr-title">Conclusions de référé d&#x27;appel</span></a>
+          <a href="pieces/ordonnance-refere-ca-paris-arret-execution-provisoire-1998/" class="fr-item"><span class="fr-date">03/07</span><span class="fr-title">Ordonnance</span></a>
+          <a href="pieces/arret-ca-paris-avant-dire-droit-expertise-collorafi-1998/" class="fr-item"><span class="fr-date">09/12</span><span class="fr-title">Arrêt</span></a>
+          <div class="fr-year"><span class="fr-ynum">1999</span><span class="fr-yct">9 pièces</span></div>
+          <a href="pieces/compte-rendu-reunion-expertise-ca-paris-collorafi-1999/" class="fr-item"><span class="fr-date">02/02</span><span class="fr-title">CR réunion d&#x27;expertise</span></a>
+          <a href="pieces/dire-n1-collorafi-experts-chute-ca-antibes-1999/" class="fr-item"><span class="fr-date">04/03</span><span class="fr-title">Dire n°1 — Collorafi</span></a>
+          <a href="pieces/memoire-mcdonalds-experts-rentabilite-collorafi-1999/" class="fr-item"><span class="fr-date">16/04</span><span class="fr-title">Mémoire — McDonald&#x27;s</span></a>
+          <a href="pieces/compte-rendu-expertise-sebol-mcdonalds-rentabilite-1999/" class="fr-item"><span class="fr-date">09/06</span><span class="fr-title">CR réunion d&#x27;expertise</span></a>
+          <a href="pieces/dire-n5-collorafi-expertise-gestion-loyers-antibes-1999/" class="fr-item"><span class="fr-date">16/06</span><span class="fr-title">Dire n°5 — Collorafi</span></a>
+          <a href="pieces/memoire-experts-mcdonalds-rentabilite-redevances-1999/" class="fr-item"><span class="fr-date">16/07</span><span class="fr-title">Mémoire — McDonald&#x27;s</span></a>
+          <a href="pieces/rapport-expertise-martin-dumont-ca-paris-redevances-1999/" class="fr-item"><span class="fr-date">15/10</span><span class="fr-title">Rapport d&#x27;expertise judiciaire</span></a>
+          <a href="pieces/conclusions-appel-collorafi-mcdonalds-indemnites-ca-paris-1999/" class="fr-item"><span class="fr-date">14/12</span><span class="fr-title">Conclusions d&#x27;appel — Collorafi</span></a>
+          <a href="pieces/conclusions-appel-mcdonalds-reponse-collorafi-paris-1999/" class="fr-item"><span class="fr-date">14/12</span><span class="fr-title">Conclusions d&#x27;appel — McDonald&#x27;s</span></a>
+          <div class="fr-year"><span class="fr-ynum">2000</span><span class="fr-yct">3 pièces</span></div>
+          <a href="pieces/arret-ca-paris-resiliation-abusive-franchise-mcdonalds-2000/" class="fr-item"><span class="fr-date">08/03</span><span class="fr-title">Arrêt du 8 mars 2000 — CA Paris</span></a>
+          <a href="pieces/article-officiel-franchise-dictionnaire-marot-2000/" class="fr-item"><span class="fr-date">14/03</span><span class="fr-title">La Franchise n°6</span></a>
+          <a href="pieces/officiel-franchise-lexique-refus-vendre-loi-doubin-2000/" class="fr-item"><span class="fr-date">14/03</span><span class="fr-title">L&#x27;Officiel de la Franchise n°6</span></a>
+          <div class="fr-year"><span class="fr-ynum">2001</span><span class="fr-yct">12 pièces</span></div>
+          <a href="pieces/cassation-mcdonalds-requete-retrait-role-pourvoi-collorafi-2001/" class="fr-item"><span class="fr-date">10/01</span><span class="fr-title">Cassation — requête McDonald&#x27;s</span></a>
+          <a href="pieces/cassation-collorafi-defense-retrait-role-pourvoi-mcdonalds-2001/" class="fr-item"><span class="fr-date">07/03</span><span class="fr-title">Cassation — défense à requête</span></a>
+          <a href="pieces/note-delibere-cassation-mcdonalds-retrait-pourvoi-2001/" class="fr-item"><span class="fr-date">19/03</span><span class="fr-title">Cassation — délibéré complémentaire</span></a>
+          <a href="pieces/requete-cedh-collorafi-c-france-accuse-reception-2001/" class="fr-item"><span class="fr-date">20/03</span><span class="fr-title">CEDH — requête</span></a>
+          <a href="pieces/ordonnance-cassation-refus-retrait-pourvoi-collorafi-2001/" class="fr-item"><span class="fr-date">04/04</span><span class="fr-title">Cassation — ordonnance</span></a>
+          <a href="pieces/assignation-tgi-grasse-mcdonalds-collorafi-saisie-parts-2001/" class="fr-item"><span class="fr-date">20/06</span><span class="fr-title">Assignation — TGI de Grasse</span></a>
+          <a href="pieces/jugement-tc-antibes-liquidation-sa-sebol-mcdonalds-2001/" class="fr-item"><span class="fr-date">14/09</span><span class="fr-title">Tribunal de commerce d&#x27;Antibes</span></a>
+          <a href="pieces/jugement-tc-antibes-credit-du-nord-pret-b-et-o-2001/" class="fr-item"><span class="fr-date">21/09</span><span class="fr-title">Jugement — TC Antibes</span></a>
+          <a href="pieces/memoire-ampliatif-cassation-collorafi-pourvoi-2001/" class="fr-item"><span class="fr-date">01/10</span><span class="fr-title">Mémoire en cassation — Collorafi</span></a>
+          <a href="pieces/memoire-defense-cassation-mcdonalds-pourvoi-collorafi-2001/" class="fr-item"><span class="fr-date">01/10</span><span class="fr-title">Mémoire en cassation — McDonald&#x27;s</span></a>
+          <a href="pieces/jugement-tc-antibes-liquidation-judiciaire-sarl-beto-2001/" class="fr-item"><span class="fr-date">26/10</span><span class="fr-title">Jugement TC Antibes — SARL B &amp; O</span></a>
+          <a href="pieces/jugement-tc-antibes-liquidation-sarl-les-pins-2001/" class="fr-item"><span class="fr-date">26/10</span><span class="fr-title">Jugement TC Antibes — SARL Les Pins</span></a>
+          <div class="fr-year"><span class="fr-ynum">2002</span><span class="fr-yct">6 pièces</span></div>
+          <a href="pieces/etat-creances-sarl-b-et-o-procedure-collective-passif-2002/" class="fr-item"><span class="fr-date">01/02</span><span class="fr-title">État des créances — SARL B &amp; O</span></a>
+          <a href="pieces/etat-creances-les-pins-procedure-collective-mcdonalds-2002/" class="fr-item"><span class="fr-date">01/02</span><span class="fr-title">État des créances — SARL Les Pins</span></a>
+          <a href="pieces/etat-creances-sebol-procedure-collective-antibes-2002/" class="fr-item"><span class="fr-date">01/02</span><span class="fr-title">État des créances — SA SEBOL</span></a>
+          <a href="pieces/note-contre-verites-collorafi-mcdonalds-filiale-mar-2002/" class="fr-item"><span class="fr-date">02/02</span><span class="fr-title">Contre-vérités</span></a>
+          <a href="pieces/note-contre-verites-collorafi-mcdonalds-cassation-2002/" class="fr-item"><span class="fr-date">03/02</span><span class="fr-title">Contre-vérités (2)</span></a>
+          <a href="pieces/arret-cassation-pourvoi-collorafi-non-admis-mcdonalds-2002/" class="fr-item"><span class="fr-date">06/05</span><span class="fr-title">Arrêt de la Cour de cassation</span></a>
+        </div>
+      </div>
+      <section id="pieces">
       <div class="flex items-end justify-between flex-wrap gap-4 mb-4">
         <h2 class="font-display text-[46px] sm:text-[60px] font-extrabold leading-none tracking-[-.02em]">Les 85 pièces</h2>
         <p class="max-w-xs text-[16px] text-ink2">Nettoyées, océrisées, datées. Chaque pièce s'ouvre en ligne dans le lecteur.</p>
@@ -264,47 +329,47 @@ tailwind.config = {
         <div class="flex items-baseline gap-3 mb-5"><h3 class="font-display text-[24px] font-bold text-ox">Décisions</h3><span class="flex-1 h-px hair"></span><span class="eyebrow text-[10px] text-ink2">9 pièces</span></div>
         <p class="text-[15px] text-ink2 mb-6 max-w-2xl">Jugements, arrêts et ordonnances.</p>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
-          <a href="pieces/jugement_tc_paris_18_05_1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/jugement-tc-paris-resiliation-expulsion-redevances-1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/jugement_tc_paris_18_05_1998_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Jugement — TC Paris</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Jugement de la première chambre du Tribunal de commerce de Paris joignant deux procédures. D&#x27;un côté SEBOL, la société B et O, Bernard Collorafi et…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">18/05/1998</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/appel_aix_10_06_1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/declaration-appel-ca-aix-collorafi-mcdonalds-expulsion-1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/appel_aix_10_06_1998_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Cour d&#x27;appel d&#x27;Aix</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Déclaration d&#x27;appel formée le 10 juin 1998 par les sociétés SEBOL (SA), B et O (SARL) et LES PINS (SARL), ainsi que par M. Bernard Collorafi, contre la SA…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">10/06/1998</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/ordonnance_03_07_1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/ordonnance-refere-ca-paris-arret-execution-provisoire-1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/ordonnance_03_07_1998_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Ordonnance</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Ordonnance rendue en référé par Jean Mazars, agissant par délégation du Premier Président de la Cour d&#x27;appel de Paris, sur l&#x27;assignation des sociétés SEBOL…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">03/07/1998</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/arret_09_12_1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/arret-ca-paris-avant-dire-droit-expertise-collorafi-1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/arret_09_12_1998_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Arrêt</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Arrêt contradictoire de la Cour d&#x27;appel de Paris (16e chambre, section A, 24 pages) statuant sur l&#x27;appel formé par les sociétés SEBOL, B et O, LES PINS et M.…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">09/12/1998</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/arret_8_mars_2000/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/arret-ca-paris-resiliation-abusive-franchise-mcdonalds-2000/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/arret_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Arrêt du 8 mars 2000 — CA Paris</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">La cour d&#x27;appel de Paris juge la résiliation abusive : faute de bonne foi, McDonald&#x27;s est condamnée à indemniser le franchisé.</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">08/03/2000</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/tribunal_de_commerce_d_antibes_14_09_2001/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/jugement-tc-antibes-liquidation-sa-sebol-mcdonalds-2001/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/tribunal_de_commerce_d_antibes_14_09_2001_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Tribunal de commerce d&#x27;Antibes</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Jugement de la première chambre du Tribunal de commerce d&#x27;Antibes prononçant la liquidation judiciaire de la SA SEBOL, société exploitant sous l&#x27;enseigne…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">14/09/2001</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/jugement_du_tc_d_antibes_21_09_2001/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/jugement-tc-antibes-credit-du-nord-pret-b-et-o-2001/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/jugement_du_tc_d_antibes_21_09_2001_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Jugement — TC Antibes</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Jugement de la première chambre du Tribunal de commerce d&#x27;Antibes, opposant la SA Crédit du Nord à la SARL B et O, société du franchisé Bernard Collorafi…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">21/09/2001</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/jugement_tc_antibes_sarl_beto_26_10_2001/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/jugement-tc-antibes-liquidation-judiciaire-sarl-beto-2001/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/jugement_tc_antibes_sarl_beto_26_10_2001_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Jugement TC Antibes — SARL B &amp; O</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Jugement de la première chambre du Tribunal de commerce d&#x27;Antibes ouvrant une procédure collective à l&#x27;encontre de la SARL B et O (activité de restauration…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">26/10/2001</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/jugement_tc_antibes_sarl_les_pins_26_10_2001/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/jugement-tc-antibes-liquidation-sarl-les-pins-2001/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/jugement_tc_antibes_sarl_les_pins_26_10_2001_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Jugement TC Antibes — SARL Les Pins</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Jugement de la première chambre du Tribunal de commerce d&#x27;Antibes, rendu sur déclaration de cessation des paiements de la SARL Les Pins (restauration…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">26/10/2001</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
@@ -315,102 +380,102 @@ tailwind.config = {
         <div class="flex items-baseline gap-3 mb-5"><h3 class="font-display text-[24px] font-bold text-ox">Conclusions</h3><span class="flex-1 h-px hair"></span><span class="eyebrow text-[10px] text-ink2">20 pièces</span></div>
         <p class="text-[15px] text-ink2 mb-6 max-w-2xl">Conclusions, mémoires, dires et assignations des parties.</p>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
-          <a href="pieces/assignation_mcdonald_s_tribunal_de_grande_instance_de_grasse/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/assignation-tgi-grasse-mcdonalds-collorafi-saisie-parts-2001/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/assignation_mcdonald_s_tribunal_de_grande_instance_de_grasse_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Assignation — TGI de Grasse</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Assignation délivrée par huissier à la requête de la société McDonald&#x27;s France devant le Tribunal de grande instance de Grasse, dirigée contre Bernard et…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">20/06/2001</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/conclusions_mcd_15_01_1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/conclusions-mcdonalds-tc-paris-redevances-impayees-1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/conclusions_mcd_15_01_1998_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions — McDonald&#x27;s</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Écritures en défense de McDonald&#x27;s France répondant à la demande de M. Collorafi et de ses sociétés, et formulant les demandes de condamnation de McDonald&#x27;s…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">15/01/1998</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/conclusions_ref_15_01_1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/conclusions-refere-collorafi-tc-paris-expulsion-1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/conclusions_ref_15_01_1998_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions de référé</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions déposées pour SEBOL, B et O et l&#x27;EURL LES PINS, représentées par Bernard Collorafi, devant le président du Tribunal de commerce de Paris, à…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">15/01/1998</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/conclusions_partie_1_audience_du_09_02_1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/conclusions-collorafi-concurrence-interne-vallauris-1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/conclusions_partie_1_audience_du_09_02_1998_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions d&#x27;audience — partie 1</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions (première partie) déposées pour M. Bernard Collorafi et les sociétés SEBOL, B et O et LES PINS, en vue de l&#x27;audience du 9 février 1998.</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">09/02/1998</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/conclusions_partie_2_audience_du_09_02_1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/conclusions-collorafi-mauvaise-foi-mcdonalds-tc-paris-p2-1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/conclusions_partie_2_audience_du_09_02_1998_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions d&#x27;audience — partie 2</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions déposées pour les sociétés SEBOL, B et O et Les Pins (intervenante volontaire) et pour M. Bernard Collorafi, par Me Jean-Paul Clément, devant la…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">09/02/1998</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/conclusions_du_16_03_1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/conclusions-collorafi-tc-paris-responsabilite-mcdonalds-1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/conclusions_du_16_03_1998_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions déposées par le cabinet Clément (Me Jean-Paul Clément) pour les sociétés SEBOL, B et O, LES PINS et M. Collorafi, devant la 1re chambre du…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">16/03/1998</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/conclusions_en_replique_16_03_1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/conclusions-replique-tc-paris-collorafi-mcdonalds-franchise-1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/conclusions_en_replique_16_03_1998_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions en réplique</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions en réplique déposées pour les sociétés SEBOL, B et O et LES PINS, ainsi que pour Bernard Collorafi en son nom personnel, devant la première…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">16/03/1998</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/conclusions_en_replique_mcd_partie_1_16_03_1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/conclusions-replique-mcdonalds-mauvaise-foi-collorafi-1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/conclusions_en_replique_mcd_partie_1_16_03_1998_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions en réplique McDonald&#x27;s — partie 1</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Première partie des conclusions en réplique de McDonald&#x27;s France, répondant aux demandes de Bernard Collorafi et de ses sociétés (SEBOL, B et O, Les Pins).…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">16/03/1998</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/conclusions_en_replique_mcd_partie_2_16_03_1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/conclusions-replique-mcdonalds-rentabilite-tc-paris-p2-1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/conclusions_en_replique_mcd_partie_2_16_03_1998_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions en réplique McDonald&#x27;s — partie 2</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions en réplique déposées par McDonald&#x27;s France (avocats et SCP Vincent Molas Léger Cusin, mandataire d&#x27;audience) contre les sociétés SEBOL, B et O…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">16/03/1998</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/assignation_refere_d_appel_29_05_1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/assignation-refere-appel-collorafi-mcdonalds-1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/assignation_refere_d_appel_29_05_1998_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Assignation en référé d&#x27;appel</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Acte d&#x27;huissier délivré le 29 mai 1998, portant assignation en référé dans le cadre d&#x27;un appel, à l&#x27;initiative des sociétés du franchisé, dirigé contre…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">29/05/1998</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/assignation_du_09_06_1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/assignation-juge-execution-tgi-grasse-collorafi-1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/assignation_du_09_06_1998_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Assignation</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Assignation délivrée à la requête des sociétés SEBOL, B et O et Les Pins et de Bernard Collorafi, contre McDonald&#x27;s France, devant le juge de l&#x27;exécution du…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">09/06/1998</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/conclusions_jex_09_06_1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/assignation-jex-grasse-collorafi-suspension-expulsion-1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/conclusions_jex_09_06_1998_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions (JEX)</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Assignation délivrée à la requête des sociétés SEBOL, B et O, Les Pins et de M. Bernard Collorafi, contre McDonald&#x27;s France, devant le juge de l&#x27;exécution du…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">09/06/1998</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/conclusions_mcd_refere_25_06_1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/conclusions-refere-ca-paris-mcdonalds-execution-provisoire-1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/conclusions_mcd_refere_25_06_1998_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions de référé — McDonald&#x27;s</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions déposées pour McDonald&#x27;s France devant le Premier Président de la Cour d&#x27;appel de Paris, en réponse à la demande de suspension de l&#x27;exécution…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">25/06/1998</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/conclusions_refere_appel_25_06_1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/conclusions-refere-ca-paris-suspension-execution-1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/conclusions_refere_appel_25_06_1998_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions de référé d&#x27;appel</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions de référé d&#x27;appel déposées pour les sociétés SEBOL, B et O et LES PINS et pour M. Bernard Collorafi, datées du 25 juin 1998.</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">25/06/1998</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/dire_n1_collorafi_04_03_1999/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/dire-n1-collorafi-experts-chute-ca-antibes-1999/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/dire_n1_collorafi_04_03_1999_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Dire n°1 — Collorafi</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Dire adressé aux experts Jean-Luc Dumont et Alain Martin par Me Jean-Paul Clément, au nom de M. Bernard Collorafi et des sociétés SEBOL, B et O et Les Pins…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">04/03/1999</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/memoire_mcd_16_04_1999/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/memoire-mcdonalds-experts-rentabilite-collorafi-1999/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/memoire_mcd_16_04_1999_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Mémoire — McDonald&#x27;s</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Mémoire adressé par McDonald&#x27;s France (cabinet Leloup, Me Jean-Marie Leloup) aux experts Jean-Luc Dumont et Alain Martin, désignés par l&#x27;arrêt de la Cour…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">16/04/1999</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/dire_n5_collorafi_16_06_1999/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/dire-n5-collorafi-expertise-gestion-loyers-antibes-1999/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/dire_n5_collorafi_16_06_1999_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Dire n°5 — Collorafi</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Dire produit par Bernard Collorafi dans le cadre de l&#x27;expertise judiciaire, présentant ses observations sur le compte-rendu de la réunion d&#x27;expertise du 11…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">16/06/1999</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/memoire_mcd_16_07_1999/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/memoire-experts-mcdonalds-rentabilite-redevances-1999/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/memoire_mcd_16_07_1999_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Mémoire — McDonald&#x27;s</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Mémoire de McDonald&#x27;s France adressé aux experts Jean-Luc Dumont et Alain Martin, signé Jean-Marie Leloup. Il s&#x27;inscrit dans l&#x27;expertise ordonnée par l&#x27;arrêt…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">16/07/1999</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/conclusion_appel_14_12_1999/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/conclusions-appel-collorafi-mcdonalds-indemnites-ca-paris-1999/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/conclusion_appel_14_12_1999_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions d&#x27;appel — Collorafi</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions récapitulatives après expertise (n° 2) déposées devant la 16e chambre A de la Cour d&#x27;appel de Paris (RG 98/14119) pour les sociétés SEBOL, B et…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">14/12/1999</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/conclusions_appel_mcd_14_12_1999/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/conclusions-appel-mcdonalds-reponse-collorafi-paris-1999/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/conclusions_appel_mcd_14_12_1999_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions d&#x27;appel — McDonald&#x27;s</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Conclusions en réponse déposées pour la société McDonald&#x27;s France, intimée, devant la 16e chambre A de la Cour d&#x27;appel de Paris, contre Bernard Collorafi et…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">14/12/1999</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
@@ -421,27 +486,27 @@ tailwind.config = {
         <div class="flex items-baseline gap-3 mb-5"><h3 class="font-display text-[24px] font-bold text-ox">Expertises</h3><span class="flex-1 h-px hair"></span><span class="eyebrow text-[10px] text-ink2">5 pièces</span></div>
         <p class="text-[15px] text-ink2 mb-6 max-w-2xl">Expertise judiciaire et rapports.</p>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
-          <a href="pieces/rapport_gandur_04_02_1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/rapport-gandur-collorafi-mcdonalds-prejudice-franchise-1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/rapport_gandur_04_02_1998_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Rapport Gandur</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Consultation établie par Robert Gandur, expert agréé par la Cour de cassation, à la demande de Maître Jean-Paul Clément, avocat de Bernard Collorafi et des…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">04/02/1998</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/rapport_sept_01_03_1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/rapport-sept-contre-expertise-mcdonalds-gandur-1998/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/rapport_sept_01_03_1998_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Rapport SEPT</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Rapport d&#x27;expertise privée réalisé par la société S.E.P.T., sous la responsabilité d&#x27;Alain Husson-Dumoutier (ancien directeur de la franchise au Crédit…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">01/03/1998</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/cr_reunion_expertise_02_02_1999/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/compte-rendu-reunion-expertise-ca-paris-collorafi-1999/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/cr_reunion_expertise_02_02_1999_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">CR réunion d&#x27;expertise</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Compte-rendu de la première réunion d&#x27;expertise, tenue le 2 février 1999, dans le cadre de l&#x27;arrêt de la Cour d&#x27;appel de Paris du 9 décembre 1998 (RG…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">02/02/1999</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/cr_reunion_expertise_09_06_1999/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/compte-rendu-expertise-sebol-mcdonalds-rentabilite-1999/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/cr_reunion_expertise_09_06_1999_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">CR réunion d&#x27;expertise</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Compte-rendu de la deuxième réunion d&#x27;expertise, établi le 9 juin 1999 par les experts, dans l&#x27;affaire SEBOL c/ McDonald&#x27;s France (Cour d&#x27;appel de Paris…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">09/06/1999</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/rapport_expertise_judiciaire_15_10_1999/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/rapport-expertise-martin-dumont-ca-paris-redevances-1999/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/rapport_expertise_judiciaire_15_10_1999_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Rapport d&#x27;expertise judiciaire</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Rapport des experts financiers Alain Martin et Jean-Luc Dumont, désignés par la Cour d&#x27;appel de Paris (arrêt du 9 décembre 1998, RG 1998/14119), dans…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">15/10/1999</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
@@ -452,107 +517,107 @@ tailwind.config = {
         <div class="flex items-baseline gap-3 mb-5"><h3 class="font-display text-[24px] font-bold text-ox">Correspondances</h3><span class="flex-1 h-px hair"></span><span class="eyebrow text-[10px] text-ink2">21 pièces</span></div>
         <p class="text-[15px] text-ink2 mb-6 max-w-2xl">Lettres recommandées entre Collorafi, McDonald&#x27;s et les avocats.</p>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
-          <a href="pieces/lr_collorafi_mcd_16_12_1996/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/lettre-collorafi-hennequin-demande-antibes-ouest-1996/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/lr_collorafi_mcd_16_12_1996_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">LR Collorafi → McDonald&#x27;s</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Lettre de Bernard Collorafi à Denis Hennequin, président directeur général de McDonald&#x27;s France, relative à l&#x27;ouverture prochaine du restaurant d&#x27;Antibes…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">16/12/1996</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/lettre_collorafi_draix_16_12_1996/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/lettre-collorafi-direction-aix-antibes-ouest-1996/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/lettre_collorafi_draix_16_12_1996_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Lettre Collorafi → McDonald’s (Aix)</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Lettre de Bernard Collorafi adressée à Isabelle Kuster, direction régionale de McDonald&#x27;s France à Aix-en-Provence, à la suite d&#x27;un rendez-vous du 13…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">16/12/1996</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/lr_collorafi_10_01_1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/lettre-collorafi-hennequin-casus-belli-antibes-ouest-1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/lr_collorafi_10_01_1997_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">LR Collorafi</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Lettre personnelle de Bernard Collorafi, franchisé McDonald&#x27;s, à Denis Hennequin, président-directeur général de McDonald&#x27;s France. Elle fait suite à un…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">10/01/1997</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/lettre_collorafi_aix_17_01_1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/lettre-collorafi-mcdonalds-aix-objectifs-previsionnels-1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/lettre_collorafi_aix_17_01_1997_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Lettre Collorafi → Aix</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Courrier adressé par Bernard Collorafi, depuis Antibes, à Guy Dupuy, de McDonald&#x27;s France (BP 309, Aix-en-Provence), au sujet des chiffres d&#x27;affaires…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">17/01/1997</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/lettre_collorafi_avocat_27_01_1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/lettre-collorafi-avocat-facture-loges-antibes-basket-1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/lettre_collorafi_avocat_27_01_1997_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Lettre Collorafi → avocat</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Lettre adressée par Bernard Collorafi à Maître Jean-Paul Clément, avocat à Paris, signalant un incident qu&#x27;il estime devoir verser au dossier du litige avec…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">27/01/1997</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/lr_collorafi_mcd_31_01_1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/lettre-collorafi-mcdonalds-vallauris-zone-chalandise-1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/lr_collorafi_mcd_31_01_1997_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">LR Collorafi → McDonald&#x27;s</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Lettre recommandée avec accusé de réception adressée par Bernard Collorafi à Denis Hennequin, président-directeur général de McDonald&#x27;s France, faisant suite…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">31/01/1997</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/lr_mcd_12_02_1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/lettre-mcdonalds-collorafi-refus-vallauris-redevances-1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/lr_mcd_12_02_1997_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">LR McDonald&#x27;s</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Lettre recommandée avec accusé de réception adressée par Denis Hennequin, de McDonald&#x27;s France, à Bernard Collorafi (SEBOL SA, Antibes), en réponse à ses…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">12/02/1997</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/lr_mcd_27_03_1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/lettre-mcdonalds-collorafi-non-exclusivite-territoriale-1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/lr_mcd_27_03_1997_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">LR McDonald&#x27;s</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Lettre recommandée avec accusé de réception adressée par Denis Hennequin, président-directeur général de McDonald&#x27;s France, à Bernard Collorafi (SEBOL), en…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">27/03/1997</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/lettre_mcd_25_04_1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/lettre-mcdonalds-hennequin-collorafi-inauguration-antibes-1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/lettre_mcd_25_04_1997_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Lettre McDonald&#x27;s</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Courte lettre adressée par Denis Hennequin, de McDonald&#x27;s France, à M. et Mme Collorafi, datée de Guyancourt le 25 avril 1997.</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">25/04/1997</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/lettre_avocat_mcd_05_05_1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/lettre-avocat-clement-mcdonalds-vallauris-chalandise-1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/lettre_avocat_mcd_05_05_1997_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Lettre avocat → McDonald&#x27;s</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Lettre adressée par Me Jean-Paul Clément, conseil de M. Bernard Collorafi et de SEBOL, à la direction de McDonald&#x27;s France (M. Denis Hennequin), en réponse à…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">05/05/1997</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/lr_collorafi_mcd_27_06_1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/lettre-collorafi-hennequin-mcdonalds-intimidation-exclusion-1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/lr_collorafi_mcd_27_06_1997_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">LR Collorafi → McDonald&#x27;s</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Lettre recommandée avec accusé de réception adressée par Bernard Collorafi à Denis Hennequin, président directeur général de McDonald&#x27;s France, sur fond de…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">27/06/1997</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/lr_mcd_22_07_1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/lettre-mcdonalds-collorafi-mise-en-demeure-redevances-1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/lr_mcd_22_07_1997_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">LR McDonald&#x27;s</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Lettre recommandée avec accusé de réception adressée par la direction régionale Sud-Est de McDonald&#x27;s France, sous la signature d&#x27;Isabelle Kuster, à Bernard…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">22/07/1997</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/lr_collorafi_mcd_01_08_1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/lettre-collorafi-mcdonalds-redevances-baisse-ca-aout-1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/lr_collorafi_mcd_01_08_1997_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">LR Collorafi → McDonald&#x27;s</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Lettre recommandée avec accusé de réception adressée par Bernard Collorafi à Isabelle Kuster, de McDonald&#x27;s France, avec copie à Denis Hennequin. Elle répond…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">01/08/1997</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/lettre_collorafi_aix_01_09_1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/lettre-collorafi-kuster-chiffre-affaires-sebol-beto-1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/lettre_collorafi_aix_01_09_1997_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Lettre Collorafi → Aix</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Courrier adressé par Bernard Collorafi (GIE SODEVA, à Antibes) à Isabelle Kuster, de McDonald&#x27;s France (Acti Mart, rue Ampère, BP 309, Aix-en-Provence)…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">01/09/1997</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/lr_mcd_22_09_1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/lettre-mcdonalds-collorafi-impayes-revue-location-gerance-1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/lr_mcd_22_09_1997_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">LR McDonald&#x27;s</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Lettre recommandée avec accusé de réception adressée par McDonald&#x27;s France, sous la signature d&#x27;Isabelle Kuster, Directeur Régional, à Bernard Collorafi…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">22/09/1997</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/lr_collorafi_aix_23_09_1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/lettre-collorafi-mcdonalds-aix-relance-aides-objectifs-1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/lr_collorafi_aix_23_09_1997_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">LR Collorafi → Aix</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Lettre recommandée avec accusé de réception adressée par Bernard Collorafi (GIE SODEVA, Antibes) à Isabelle Kuster, McDonald&#x27;s France, à Aix-en-Provence…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">23/09/1997</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/lr_collorafi_mcd_03_10_1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/lettre-collorafi-mcdonalds-villeneuve-loubet-eviction-1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/lr_collorafi_mcd_03_10_1997_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">LR Collorafi → McDonald&#x27;s</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Lettre recommandée avec accusé de réception adressée par Bernard Collorafi à Denis Hennequin (McDonald&#x27;s France), au sujet de l&#x27;attribution d&#x27;un nouveau…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">03/10/1997</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/lr_collorafi_mcd_09_10_1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/lettre-collorafi-mcdonalds-loyers-impayes-tresorerie-1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/lr_collorafi_mcd_09_10_1997_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">LR Collorafi → McDonald&#x27;s</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Lettre de Bernard Collorafi (GIE SODEVA, Antibes) adressée à Isabelle Kuster, de McDonald&#x27;s France à Aix-en-Provence, en réponse à un courrier du 22…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">09/10/1997</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/lr_mcd_20_10_1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/lettre-mcdonalds-hennequin-collorafi-redevances-audit-1997/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/lr_mcd_20_10_1997_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">LR McDonald&#x27;s</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Lettre recommandée avec accusé de réception adressée par Denis Hennequin, président-directeur général de McDonald&#x27;s France, à Bernard Collorafi, datée du 20…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">20/10/1997</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/contre_verites_02_02_2002/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/note-contre-verites-collorafi-mcdonalds-filiale-mar-2002/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/contre_verites_02_02_2002_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Contre-vérités</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Note argumentative intitulée « Contre-vérités », qui confronte des motifs de l&#x27;arrêt de la Cour d&#x27;appel de Paris du 8 mars 2000 à la situation constatée…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">02/02/2002</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/contre_verites_2_03_02_2002/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/note-contre-verites-collorafi-mcdonalds-cassation-2002/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/contre_verites_2_03_02_2002_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Contre-vérités (2)</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Courte note argumentaire, versée au dossier, qui met en regard plusieurs déclarations attribuées à McDonald&#x27;s pour en souligner les contradictions.</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">03/02/2002</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
@@ -563,57 +628,57 @@ tailwind.config = {
         <div class="flex items-baseline gap-3 mb-5"><h3 class="font-display text-[24px] font-bold text-ox">Cassation &amp; CEDH</h3><span class="flex-1 h-px hair"></span><span class="eyebrow text-[10px] text-ink2">11 pièces</span></div>
         <p class="text-[15px] text-ink2 mb-6 max-w-2xl">Pourvoi, requêtes, délibérés et états des créances.</p>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
-          <a href="pieces/cour_de_cassation_requete_mcdonald_s_10_01_2001/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/cassation-mcdonalds-requete-retrait-role-pourvoi-collorafi-2001/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/cour_de_cassation_requete_mcdonald_s_10_01_2001_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Cassation — requête McDonald&#x27;s</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Requête présentée pour la SA McDonald&#x27;s France, par la SCP Delaporte-Briard, avocat au Conseil d&#x27;État et à la Cour de cassation, contre Bernard Collorafi et…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">10/01/2001</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/cour_de_cassation_defense_requete_07_03_2001/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/cassation-collorafi-defense-retrait-role-pourvoi-mcdonalds-2001/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/cour_de_cassation_defense_requete_07_03_2001_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Cassation — défense à requête</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Observations en défense présentées par la SCP A. Bouzidi, avocat au Conseil d&#x27;État et à la Cour de cassation, pour Bernard Collorafi et les sociétés SEBOL, B…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">07/03/2001</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/cour_de_cassation_delibere_complementaire_19_03_2001/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/note-delibere-cassation-mcdonalds-retrait-pourvoi-2001/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/cour_de_cassation_delibere_complementaire_19_03_2001_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Cassation — délibéré complémentaire</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Note en délibéré complémentaire déposée pour McDonald&#x27;s France par la SCP Delaporte-Briard, avocat au Conseil d&#x27;État et à la Cour de cassation, après…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">19/03/2001</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/cour_europeenne_des_droits_de_l_homme_requete_20_03_2001/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/requete-cedh-collorafi-c-france-accuse-reception-2001/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/cour_europeenne_des_droits_de_l_homme_requete_20_03_2001_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">CEDH — requête</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Lettre du greffe de la Cour européenne des droits de l&#x27;homme (troisième section, Strasbourg) accusant réception de la requête introduite par Bernard…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">20/03/2001</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/cour_de_cassation_ordonnance_04_04_2001/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/ordonnance-cassation-refus-retrait-pourvoi-collorafi-2001/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/cour_de_cassation_ordonnance_04_04_2001_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Cassation — ordonnance</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Ordonnance rendue par Jean-Pierre Bouscharain, conseiller délégué par le premier président de la Cour de cassation, sur le pourvoi n° X 0014487 opposant la…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">04/04/2001</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/cour_de_cassation_memoire_collorafi_01_10_2001/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/memoire-ampliatif-cassation-collorafi-pourvoi-2001/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/cour_de_cassation_memoire_collorafi_01_10_2001_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Mémoire en cassation — Collorafi</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Mémoire ampliatif déposé devant la Cour de cassation par la SCP Bouzidi pour M. Bernard Collorafi et les sociétés Les Pins, SEBOL et B &amp; O, contre McDonald&#x27;s…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">01/10/2001</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/cour_de_cassation_memoire_mcdonald_s_01_10_2001/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/memoire-defense-cassation-mcdonalds-pourvoi-collorafi-2001/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/cour_de_cassation_memoire_mcdonald_s_01_10_2001_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Mémoire en cassation — McDonald&#x27;s</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Mémoire en défense déposé pour McDonald&#x27;s France devant les chambres civiles de la Cour de cassation, en réponse au pourvoi n° X 00-14 487 formé par Bernard…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">01/10/2001</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/etat_des_creances_sarl_b_et_o_01_02_2002/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/etat-creances-sarl-b-et-o-procedure-collective-passif-2002/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/etat_des_creances_sarl_b_et_o_01_02_2002_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">État des créances — SARL B &amp; O</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">État succinct des créances de la SARL B et O, arrêté au 29 janvier 2002, établi par Maître Gilles Gauthier dans le cadre de la procédure collective (dossier…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">01/02/2002</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/etat_des_creances_sarl_les_pins_01_02_2002/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/etat-creances-les-pins-procedure-collective-mcdonalds-2002/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/etat_des_creances_sarl_les_pins_01_02_2002_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">État des créances — SARL Les Pins</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">État succinct des créances établi au titre de l&#x27;article 621-103 du Code de commerce, dans la procédure collective de la SARL Les Pins (Juan-les-Pins), dressé…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">01/02/2002</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/etat_des_creances_sa_sebol_01_02_2002/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/etat-creances-sebol-procedure-collective-antibes-2002/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/etat_des_creances_sa_sebol_01_02_2002_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">État des créances — SA SEBOL</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">État succinct des créances de la SA SEBOL (Chemin de Saint-Claude, Antibes), établi dans le cadre d&#x27;une procédure collective, mentionné comme relevant de…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">01/02/2002</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/arret_cour_de_cassation_10_05_2002/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/arret-cassation-pourvoi-collorafi-non-admis-mcdonalds-2002/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/arret_cour_de_cassation_10_05_2002_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Arrêt de la Cour de cassation</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Arrêt de la Cour de cassation, chambre commerciale, financière et économique, statuant sur le pourvoi n° X 00-14.487 formé par Bernard Collorafi et les…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">06/05/2002</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
@@ -624,47 +689,47 @@ tailwind.config = {
         <div class="flex items-baseline gap-3 mb-5"><h3 class="font-display text-[24px] font-bold text-ox">Presse</h3><span class="flex-1 h-px hair"></span><span class="eyebrow text-[10px] text-ink2">9 pièces</span></div>
         <p class="text-[15px] text-ink2 mb-6 max-w-2xl">La couverture presse de l&#x27;affaire.</p>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
-          <a href="pieces/revue_hr_01_01_1995/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/article-revue-hr-enquete-chaines-restauration-mcdonalds-1995/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/revue_hr_01_01_1995_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Revue H&amp;R</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Article de presse professionnelle publié dans la Revue technique des hôtels et restaurants de janvier 1995, présentant la synthèse d&#x27;une enquête de Gira Sic…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">01/01/1995</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/figaro_1995/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/article-figaro-mcdonalds-ouvertures-embauches-france-1995/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/figaro_1995_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Le Figaro Économie — les ouvertures rythment les embauches</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Le Figaro Économie : McDonald&#x27;s multiplie les ouvertures en France — plus de soixante en 1995 — et recrute en conséquence.</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">04/09/1995</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/tribune_1995/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/article-la-tribune-mcdonalds-resultats-benefice-1995/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/tribune_1995_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">La Tribune — bénéfice net par action : +17 %</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">La Tribune : au 3e trimestre 1995, le bénéfice net par action de McDonald&#x27;s progresse de 17 %, tiré par l&#x27;international.</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">26/10/1995</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/investir_1995/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/article-investir-mcdonalds-bourse-concurrence-etats-unis-1995/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/investir_1995_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Investir — rude concurrence aux États-Unis</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Investir : sous rude concurrence aux États-Unis, McDonald&#x27;s rogne ses marges et ralentit son rythme d&#x27;ouvertures.</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">01/11/1995</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/echos_1995/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/article-les-echos-mcdonalds-bourse-expansion-1995/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/echos_1995_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Les Échos — McDonald&#x27;s fait toujours recette en Bourse</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Les Échos : « titre défensif par excellence », l&#x27;action McDonald&#x27;s s&#x27;envole en Bourse sur fond d&#x27;expansion mondiale.</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">03/11/1995</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/franchise_magazine_01_03_1996/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/article-franchise-magazine-mcdonalds-contrat-20-ans-1996/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/franchise_magazine_01_03_1996_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Franchise Magazine</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Article de presse signé Philippe Malterre, publié dans Franchise Magazine (mars 1996), consacré au développement de McDonald&#x27;s en France et à son modèle de…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">01/03/1996</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/pme_affaires_01_12_1996/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/article-pme-affaires-franchise-independance-dependance-1996/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/pme_affaires_01_12_1996_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">PME &amp; Affaires</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Article de presse paru dans la revue PME Affaires (numéro de novembre-décembre 1996), rubrique « Les rendez-vous de la franchise », consacré aux rapports…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">01/12/1996</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/franchise_n6_14_03_2000/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/article-officiel-franchise-dictionnaire-marot-2000/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/franchise_n6_14_03_2000_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">La Franchise n°6</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Article de presse spécialisée reproduisant un « dictionnaire de la franchise », extrait de l&#x27;ouvrage d&#x27;Yves Marot « Le Langage de la Franchise ». Il s&#x27;agit…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">14/03/2000</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
           </a>
-          <a href="pieces/officiel_franchisen_6_14_03_2000/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
+          <a href="pieces/officiel-franchise-lexique-refus-vendre-loi-doubin-2000/" class="card group w-full text-left rounded-xl bg-panel border p-3 flex gap-3 items-start" style="border-color:var(--line2)">
             <img src="assets/officiel_franchisen_6_14_03_2000_p1.webp" alt="" loading="lazy" class="w-11 h-14 object-cover object-top rounded-md bg-cream2 shrink-0 border" style="border-color:var(--line2)">
             <span class="min-w-0 flex-1"><span class="block font-display font-semibold text-[14.5px] leading-tight text-ink" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">L&#x27;Officiel de la Franchise n°6</span><span data-resume class="block text-[11.5px] leading-snug text-ink2/80 mt-1" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Extraits d&#x27;un lexique de la franchise publié par la revue L&#x27;Officiel de la Franchise, reprenant des définitions tirées de l&#x27;ouvrage d&#x27;Yves Marot « Le Langage…</span><span class="block eyebrow text-[9px] text-ink2 mt-1.5">14/03/2000</span></span>
             <span class="text-ox opacity-0 group-hover:opacity-100 transition text-lg shrink-0">›</span>
@@ -672,9 +737,9 @@ tailwind.config = {
         </div>
       </div>
     </section>
-
-  </main>
-</div>
+    </div>
+  </div>
+</section>
 
 <!-- ============ FOOTER ============ -->
 <footer class="mt-10">

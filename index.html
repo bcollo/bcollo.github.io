@@ -62,8 +62,8 @@ tailwind.config = {
 
   /* sidebar timeline */
   .tl{ position:relative; }
-  .tl a{ display:block; position:relative; padding:.15rem 0 .15rem 1.4rem; }
-  .tl a::before{ content:""; position:absolute; left:0; top:.62rem; width:8px; height:8px; border-radius:99px; background:rgb(var(--bg-rgb)); border:1.5px solid rgb(var(--gold-rgb)); transition:.25s; }
+  .tl a{ display:block; position:relative; padding:.34rem 0 .34rem 1.4rem; }
+  .tl a::before{ content:""; position:absolute; left:0; top:.55rem; width:8px; height:8px; border-radius:99px; background:rgb(var(--bg-rgb)); border:1.5px solid rgb(var(--gold-rgb)); transition:.25s; }
   .tl a:hover::before{ border-color:rgb(var(--accent-rgb)); background:rgb(var(--accent-rgb)); box-shadow:0 0 0 5px rgb(var(--accent-rgb) / .15); }
   .tl a:hover .t-title{ color:rgb(var(--accent-rgb)); }
   .tl a:hover{ transform:translateX(2px); }
@@ -89,9 +89,8 @@ tailwind.config = {
   .prose-synth td{ padding:.5rem .7rem; border-top:1px solid var(--line2); }
   .prose-synth ul{ margin:.6rem 0 .8rem 1.15rem; list-style:disc; }
   .prose-synth li{ margin:.3rem 0; line-height:1.6; }
-  .chrono-scroll{ scrollbar-width:thin; scrollbar-color:var(--line) transparent; }
-  .chrono-scroll::-webkit-scrollbar{ width:6px; }
-  .chrono-scroll::-webkit-scrollbar-thumb{ background:var(--line); border-radius:9px; }
+  .chrono-scroll{ scrollbar-width:none; -ms-overflow-style:none; }
+  .chrono-scroll::-webkit-scrollbar{ width:0; height:0; display:none; }
 </style>
 </head>
 
@@ -159,32 +158,32 @@ tailwind.config = {
 
   <!-- SIDEBAR -->
   <aside class="hidden lg:block">
-    <div class="sticky top-20 max-h-[calc(100dvh_-_5.5rem)] overflow-y-auto overscroll-contain chrono-scroll pr-3 py-10">
-      <p class="eyebrow text-[10px] text-ink2 mb-7 pl-[1.4rem]">Chronologie du procès</p>
+    <div class="sticky top-20 max-h-[calc(100dvh_-_4rem)] overflow-y-auto overscroll-contain chrono-scroll py-8">
+      <p class="eyebrow text-[10px] text-ink2 mb-5 pl-[1.4rem]">Chronologie du procès</p>
       <ol class="tl" style="border-left:1px solid var(--line); padding-left:0;">
-        <li><a href="pieces/figaro_1995/" class="cursor-pointer"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ink2/65">1995</div><div class="t-title mt-0.5 text-[16.5px] leading-snug text-ink/85 transition-colors">McDonald's multiplie les restaurants</div></a></li>
-        <li><a href="pieces/lr_collorafi_mcd_16_12_1996/" class="cursor-pointer"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ink2/65">Déc. 1996</div><div class="t-title mt-0.5 text-[16.5px] leading-snug text-ink/85 transition-colors">Collorafi réclame Antibes Ouest</div></a></li>
-        <li><a href="pieces/lr_mcd_12_02_1997/" class="cursor-pointer"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ink2/65">Fév. 1997</div><div class="t-title mt-0.5 text-[16.5px] leading-snug text-ink/85 transition-colors">McDonald's répond à Collorafi</div></a></li>
-        <li><a href="pieces/lettre_avocat_mcd_05_05_1997/" class="cursor-pointer"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ink2/65">Mai 1997</div><div class="t-title mt-0.5 text-[16.5px] leading-snug text-ink/85 transition-colors">L'avocat de Collorafi écrit au siège</div></a></li>
-        <li><a href="pieces/lr_collorafi_mcd_27_06_1997/" class="cursor-pointer"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ink2/65">Juin 1997</div><div class="t-title mt-0.5 text-[16.5px] leading-snug text-ink/85 transition-colors">Nouveau courrier de Collorafi</div></a></li>
-        <li><a href="pieces/lr_collorafi_mcd_03_10_1997/" class="cursor-pointer"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ink2/65">Oct. 1997</div><div class="t-title mt-0.5 text-[16.5px] leading-snug text-ink/85 transition-colors">Collorafi passe au contentieux</div></a></li>
-        <li><a href="pieces/conclusions_mcd_15_01_1998/" class="cursor-pointer"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ink2/65">Janv. 1998</div><div class="t-title mt-0.5 text-[16.5px] leading-snug text-ink/85 transition-colors">Conclusions en défense de McDonald's</div></a></li>
-        <li><a href="pieces/rapport_gandur_04_02_1998/" class="cursor-pointer"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ink2/65">Fév. 1998</div><div class="t-title mt-0.5 text-[16.5px] leading-snug text-ink/85 transition-colors">Consultation de l'expert Gandur</div></a></li>
-        <li><a href="pieces/rapport_sept_01_03_1998/" class="cursor-pointer"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ink2/65">Mars 1998</div><div class="t-title mt-0.5 text-[16.5px] leading-snug text-ink/85 transition-colors">Rapport d'expertise S.E.P.T.</div></a></li>
-        <li><a href="pieces/jugement_tc_paris_18_05_1998/" class="cursor-pointer"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ink2/65">Mai 1998</div><div class="t-title mt-0.5 text-[16.5px] leading-snug text-ink/85 transition-colors">Jugement du Tribunal de commerce</div></a></li>
-        <li><a href="pieces/ordonnance_03_07_1998/" class="cursor-pointer"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ink2/65">Juil. 1998</div><div class="t-title mt-0.5 text-[16.5px] leading-snug text-ink/85 transition-colors">Référé sur l'expulsion des restaurants</div></a></li>
-        <li><a href="pieces/arret_09_12_1998/" class="cursor-pointer"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ink2/65">Déc. 1998</div><div class="t-title mt-0.5 text-[16.5px] leading-snug text-ink/85 transition-colors">La cour d'appel ordonne une expertise</div></a></li>
-        <li><a href="pieces/cr_reunion_expertise_02_02_1999/" class="cursor-pointer"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ink2/65">Fév. 1999</div><div class="t-title mt-0.5 text-[16.5px] leading-snug text-ink/85 transition-colors">Réunion d'expertise</div></a></li>
-        <li><a href="pieces/dire_n5_collorafi_16_06_1999/" class="cursor-pointer"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ink2/65">Juin 1999</div><div class="t-title mt-0.5 text-[16.5px] leading-snug text-ink/85 transition-colors">Dire de Collorafi à l'expert</div></a></li>
-        <li><a href="pieces/rapport_expertise_judiciaire_15_10_1999/" class="cursor-pointer"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ink2/65">Oct. 1999</div><div class="t-title mt-0.5 text-[16.5px] leading-snug text-ink/85 transition-colors">Rapport d'expertise Martin & Dumont</div></a></li>
-        <li><a href="pieces/conclusion_appel_14_12_1999/" class="cursor-pointer"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ink2/65">Déc. 1999</div><div class="t-title mt-0.5 text-[16.5px] leading-snug text-ink/85 transition-colors">Conclusions d'appel de Collorafi</div></a></li>
-        <li><a href="pieces/arret_8_mars_2000/" class="piv cursor-pointer"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ox">8 mars 2000</div><div class="t-title mt-0.5 text-[15px] font-medium leading-snug text-ox transition-colors">Arrêt : la résiliation est abusive</div></a></li>
-        <li><a href="pieces/cour_de_cassation_requete_mcdonald_s_10_01_2001/" class="cursor-pointer"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ink2/65">Janv. 2001</div><div class="t-title mt-0.5 text-[16.5px] leading-snug text-ink/85 transition-colors">Requête de McDonald's en cassation</div></a></li>
-        <li><a href="pieces/cour_europeenne_des_droits_de_l_homme_requete_20_03_2001/" class="cursor-pointer"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ink2/65">Mars 2001</div><div class="t-title mt-0.5 text-[16.5px] leading-snug text-ink/85 transition-colors">Requête à la CEDH</div></a></li>
-        <li><a href="pieces/jugement_du_tc_d_antibes_21_09_2001/" class="cursor-pointer"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ink2/65">Sept. 2001</div><div class="t-title mt-0.5 text-[16.5px] leading-snug text-ink/85 transition-colors">Jugement du TC d'Antibes</div></a></li>
-        <li><a href="pieces/cour_de_cassation_memoire_collorafi_01_10_2001/" class="cursor-pointer"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ink2/65">Oct. 2001</div><div class="t-title mt-0.5 text-[16.5px] leading-snug text-ink/85 transition-colors">Mémoire de Collorafi en cassation</div></a></li>
-        <li><a href="pieces/etat_des_creances_sa_sebol_01_02_2002/" class="cursor-pointer"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ink2/65">Fév. 2002</div><div class="t-title mt-0.5 text-[16.5px] leading-snug text-ink/85 transition-colors">États des créances — liquidation</div></a></li>
-        <li><a href="pieces/arret_cour_de_cassation_10_05_2002/" class="piv cursor-pointer"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ox">6 mai 2002</div><div class="t-title mt-0.5 text-[15px] font-medium leading-snug text-ox transition-colors">Cassation — pourvoi non admis</div></a></li>
+        <li><a href="pieces/figaro_1995/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">1995</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Expansion de McDonald’s</div></a></li>
+        <li><a href="pieces/lr_collorafi_mcd_16_12_1996/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Déc. 1996</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Demande d’Antibes Ouest</div></a></li>
+        <li><a href="pieces/lr_mcd_12_02_1997/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Fév. 1997</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Réponse de McDonald’s</div></a></li>
+        <li><a href="pieces/lettre_avocat_mcd_05_05_1997/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Mai 1997</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">L’avocat écrit au siège</div></a></li>
+        <li><a href="pieces/lr_collorafi_mcd_27_06_1997/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Juin 1997</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Courrier de Collorafi</div></a></li>
+        <li><a href="pieces/lr_collorafi_mcd_03_10_1997/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Oct. 1997</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Passage au contentieux</div></a></li>
+        <li><a href="pieces/conclusions_mcd_15_01_1998/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Janv. 1998</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Défense de McDonald’s</div></a></li>
+        <li><a href="pieces/rapport_gandur_04_02_1998/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Fév. 1998</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Expertise Gandur</div></a></li>
+        <li><a href="pieces/rapport_sept_01_03_1998/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Mars 1998</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Expertise S.E.P.T.</div></a></li>
+        <li><a href="pieces/jugement_tc_paris_18_05_1998/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Mai 1998</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Jugement du TC de Paris</div></a></li>
+        <li><a href="pieces/ordonnance_03_07_1998/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Juil. 1998</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Référé sur l’expulsion</div></a></li>
+        <li><a href="pieces/arret_09_12_1998/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Déc. 1998</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Expertise ordonnée en appel</div></a></li>
+        <li><a href="pieces/cr_reunion_expertise_02_02_1999/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Fév. 1999</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Réunion d’expertise</div></a></li>
+        <li><a href="pieces/dire_n5_collorafi_16_06_1999/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Juin 1999</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Dire de Collorafi</div></a></li>
+        <li><a href="pieces/rapport_expertise_judiciaire_15_10_1999/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Oct. 1999</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Rapport Martin & Dumont</div></a></li>
+        <li><a href="pieces/conclusion_appel_14_12_1999/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Déc. 1999</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Conclusions d’appel</div></a></li>
+        <li><a href="pieces/arret_8_mars_2000/" class="piv cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ox">8 mars 2000</div><div class="t-title mt-px text-[13.5px] leading-tight font-medium text-ox transition-colors">Résiliation jugée abusive</div></a></li>
+        <li><a href="pieces/cour_de_cassation_requete_mcdonald_s_10_01_2001/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Janv. 2001</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Requête de McDonald’s</div></a></li>
+        <li><a href="pieces/cour_europeenne_des_droits_de_l_homme_requete_20_03_2001/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Mars 2001</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Requête à la CEDH</div></a></li>
+        <li><a href="pieces/jugement_du_tc_d_antibes_21_09_2001/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Sept. 2001</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Jugement du TC d’Antibes</div></a></li>
+        <li><a href="pieces/cour_de_cassation_memoire_collorafi_01_10_2001/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Oct. 2001</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">Mémoire en cassation</div></a></li>
+        <li><a href="pieces/etat_des_creances_sa_sebol_01_02_2002/" class="cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ink2/65">Fév. 2002</div><div class="t-title mt-px text-[13.5px] leading-tight text-ink/85 transition-colors">États des créances</div></a></li>
+        <li><a href="pieces/arret_cour_de_cassation_10_05_2002/" class="piv cursor-pointer"><div class="font-ui text-[9.5px] uppercase tracking-[.14em] text-ox">6 mai 2002</div><div class="t-title mt-px text-[13.5px] leading-tight font-medium text-ox transition-colors">Pourvoi non admis</div></a></li>
       </ol>
     </div>
   </aside>

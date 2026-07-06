@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page introuvable — Le Dossier Collorafi</title>
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#C2603F">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+  :root{ --bg:#f5f0e8; --bg2:#eae2d6; --ink:#221e1a; --ink2:#8a8072; --accent:#c2603f; }
+  *{ box-sizing:border-box; margin:0; }
+  html,body{ height:100%; }
+  body{
+    font-family:"Public Sans",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    color:var(--ink); background:var(--bg);
+    background-image:
+      radial-gradient(1100px 640px at 88% -10%, rgba(194,96,63,.06), transparent 60%),
+      radial-gradient(900px 700px at -8% 8%, rgba(214,180,140,.07), transparent 55%);
+    display:flex; align-items:center; justify-content:center;
+    min-height:100%; padding:32px; text-align:center;
+  }
+  .wrap{ max-width:560px; }
+  .eyebrow{ font-weight:700; text-transform:uppercase; letter-spacing:.2em;
+    font-size:.72rem; color:var(--accent); }
+  h1{ font-family:Georgia,"Times New Roman",serif; font-weight:700;
+    font-size:clamp(2.4rem,7vw,3.6rem); line-height:1.05; margin:.5rem 0 .75rem; }
+  p{ color:var(--ink2); font-size:1.05rem; line-height:1.6; margin:0 auto 2rem; max-width:44ch; }
+  .btn{ display:inline-block; text-decoration:none; font-weight:600;
+    color:var(--bg); background:var(--ink); padding:.8rem 1.5rem; border-radius:999px;
+    transition:transform .2s ease, background .2s ease; }
+  .btn:hover{ background:var(--accent); transform:translateY(-1px); }
+  .rule{ width:56px; height:2px; background:var(--accent); margin:0 auto 1.75rem; }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <p class="eyebrow">Erreur 404</p>
+    <h1>Cette page est introuvable</h1>
+    <div class="rule"></div>
+    <p>Le document que vous cherchez a peut-être changé d'adresse. Le récit et l'intégralité des pièces du dossier restent en accès libre depuis l'accueil.</p>
+    <a class="btn" href="/">Revenir au dossier</a>
+  </main>
+</body>
+</html>

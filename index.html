@@ -112,6 +112,15 @@ tailwind.config = {
   .fr-date{ font-size:10.5px; letter-spacing:.03em; font-variant-numeric:tabular-nums; color:rgb(var(--ink2-rgb)); font-weight:600; padding-top:.12rem; white-space:nowrap; transition:color .18s; }
   .fr-title{ font-size:13.5px; line-height:1.38; color:rgb(var(--ink-rgb)); font-weight:450; transition:color .18s; }
   .fr-item:hover .fr-title, .fr-item:hover .fr-date{ color:var(--ox); }
+  /* modale pièce maîtresse */
+  .pm-modal{ width:min(940px,93vw); max-width:93vw; height:88vh; border:0; border-radius:16px; padding:0; background:var(--panel); color:rgb(var(--ink-rgb)); box-shadow:0 40px 120px -30px rgba(40,28,16,.6); overflow:hidden; }
+  .pm-modal::backdrop{ background:rgba(30,22,14,.55); backdrop-filter:blur(3px); }
+  .pm-head{ display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.85rem 1.1rem; border-bottom:1px solid var(--line); }
+  .pm-close{ width:32px; height:32px; border-radius:50%; display:grid; place-items:center; background:rgb(var(--bg2-rgb)); color:rgb(var(--ink-rgb)); font-size:13px; transition:.2s; }
+  .pm-close:hover{ background:var(--ox); color:rgb(var(--bg-rgb)); }
+  .pm-body{ height:calc(88vh - 104px); background:#4a4038; }
+  .pm-body iframe{ width:100%; height:100%; border:0; display:block; }
+  .pm-foot{ display:flex; align-items:center; gap:1.75rem; padding:.7rem 1.1rem; border-top:1px solid var(--line); }
 </style>
 </head>
 
@@ -197,14 +206,14 @@ tailwind.config = {
           <span class="flex-1 h-px hair"></span>
         </div>
         <div class="grid grid-cols-[132px_1fr] gap-6 items-stretch">
-          <a href="pieces/arret-ca-paris-resiliation-abusive-franchise-mcdonalds-2000/" class="group block" aria-label="Ouvrir l'arrêt du 8 mars 2000">
+          <button type="button" data-open-scan class="group block h-full text-left" aria-label="Ouvrir le scan de l'arrêt du 8 mars 2000">
             <div class="paper-frame softshadow -rotate-1 group-hover:rotate-0 transition-transform duration-500 h-full">
               <div class="relative overflow-hidden rounded-[8px] h-full min-h-[190px]">
                 <img src="assets/arret_p1.webp" alt="Première page de l'arrêt du 8 mars 2000" class="w-full h-full object-cover object-top block">
                 <span class="absolute inset-0 bg-ink/0 group-hover:bg-ink/10 transition"></span>
               </div>
             </div>
-          </a>
+          </button>
           <div class="min-w-0">
             <p class="eyebrow text-[10px] text-gold mb-2.5">8 mars 2000 · Cour d'appel de Paris, 16<sup>e</sup> ch. A</p>
             <h2 class="font-display text-[29px] sm:text-[34px] font-semibold leading-[1.02] mb-3">L'arrêt du 8 mars 2000</h2>
@@ -216,10 +225,21 @@ tailwind.config = {
           <li class="flex gap-3 items-baseline"><span class="w-4 h-px bg-ox shrink-0 translate-y-[-.35em]"></span><span>4&nbsp;528&nbsp;333&nbsp;F d'immobilisations + préjudice moral</span></li>
           <li class="flex gap-3 items-baseline"><span class="w-4 h-px bg-ox shrink-0 translate-y-[-.35em]"></span><span>Dépens : trois quarts à la charge de McDonald's</span></li>
         </ul>
-        <div class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 eyebrow text-[11px]">
-          <a href="pieces/arret-ca-paris-resiliation-abusive-franchise-mcdonalds-2000/" class="ulink text-ink hover:text-ox transition">Ouvrir la pièce ›</a>
-          <a href="pieces/arret-ca-paris-resiliation-abusive-franchise-mcdonalds-2000/" class="ulink text-ink hover:text-ox transition">Lire le scan ›</a>
-          <a href="pieces/arret-ca-paris-resiliation-abusive-franchise-mcdonalds-2000/" class="ulink text-ox hover:text-oxdeep transition">Lire la synthèse ›</a>
+        <div class="mt-6 flex flex-wrap items-center gap-3">
+          <button type="button" data-open-scan class="inline-flex items-center gap-2 rounded-full bg-ox text-cream px-5 py-2.5 eyebrow text-[11px] hover:bg-oxdeep transition">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+            Ouvrir la pièce
+          </button>
+          <a href="pieces/arret-ca-paris-resiliation-abusive-franchise-mcdonalds-2000/" class="inline-flex items-center gap-2 rounded-full border px-5 py-2.5 eyebrow text-[11px] text-ink hover:border-ox hover:text-ox transition" style="border-color:var(--line)">Fiche complète ›</a>
+        </div>
+        <div class="mt-8 pt-7 border-t" style="border-color:var(--line)">
+          <p class="eyebrow text-[10px] text-ox mb-3">La synthèse</p>
+          <div class="prose-synth text-[15.5px]">
+            <h3>Ce que juge la Cour</h3>
+  <p>La clause résolutoire s'impose au juge, mais son application doit être <strong>de bonne foi</strong> (art. 1134 C. civ.). Les restaurants SEBOL (Carrefour) et B&nbsp;&amp;&nbsp;O (Antibes Nord) forment une <strong>entité économique</strong> conçue en synergie contre le concurrent Quick. McDonald's, qui connaissait les pertes, aurait dû proposer un <strong>plan d'ensemble sur dix-huit mois</strong> ; l'avenant ponctuel était dérisoire. Les commandements de payer ayant été délivrés <strong>de mauvaise foi</strong>, la résiliation est <strong>abusive</strong>.</p>
+  <p>Mais le préjudice est limité : même avec ce plan, les sociétés seraient restées déficitaires. Pas de perte de chance de rentabilité.</p>
+          </div>
+          <a href="pieces/arret-ca-paris-resiliation-abusive-franchise-mcdonalds-2000/" class="mt-4 inline-block ulink eyebrow text-[11px] text-ox hover:text-oxdeep transition">Lire la fiche complète ›</a>
         </div>
       </section>
     </div>
@@ -761,6 +781,31 @@ tailwind.config = {
 </footer>
 
 <!-- lecteur remplacé par pages dédiées pieces/<slug>/ -->
+
+
+<!-- MODALE pièce maîtresse (scan) -->
+<dialog id="pmModal" class="pm-modal" aria-label="Scan de l'arrêt du 8 mars 2000">
+  <div class="pm-head">
+    <span class="eyebrow text-[11px] text-ox">Arrêt du 8 mars 2000 — Cour d'appel de Paris</span>
+    <button type="button" data-close-scan class="pm-close" aria-label="Fermer">&#10005;</button>
+  </div>
+  <div class="pm-body"><iframe data-src="pdf/arret_8_mars_2000.pdf#view=FitH" title="Scan de l'arrêt du 8 mars 2000"></iframe></div>
+  <div class="pm-foot">
+    <a href="pdf/arret_8_mars_2000.pdf" download class="eyebrow text-[11px] text-ox hover:text-oxdeep transition">Télécharger le PDF ›</a>
+    <a href="pieces/arret-ca-paris-resiliation-abusive-franchise-mcdonalds-2000/" class="eyebrow text-[11px] text-ink2 hover:text-ox transition">Ouvrir la fiche complète ›</a>
+  </div>
+</dialog>
+<script>
+(function(){
+  var m=document.getElementById('pmModal'); if(!m) return;
+  var frame=m.querySelector('iframe');
+  function open(){ if(frame && !frame.src) frame.src=frame.dataset.src; if(typeof m.showModal==='function') m.showModal(); else m.setAttribute('open',''); }
+  function close(){ if(typeof m.close==='function') m.close(); else m.removeAttribute('open'); }
+  document.querySelectorAll('[data-open-scan]').forEach(function(b){ b.addEventListener('click',open); });
+  m.querySelectorAll('[data-close-scan]').forEach(function(b){ b.addEventListener('click',close); });
+  m.addEventListener('click',function(e){ if(e.target===m) close(); });
+})();
+</script>
 
 </body>
 </html>

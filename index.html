@@ -89,6 +89,9 @@ tailwind.config = {
   .prose-synth td{ padding:.5rem .7rem; border-top:1px solid var(--line2); }
   .prose-synth ul{ margin:.6rem 0 .8rem 1.15rem; list-style:disc; }
   .prose-synth li{ margin:.3rem 0; line-height:1.6; }
+  .chrono-scroll{ scrollbar-width:thin; scrollbar-color:var(--line) transparent; }
+  .chrono-scroll::-webkit-scrollbar{ width:6px; }
+  .chrono-scroll::-webkit-scrollbar-thumb{ background:var(--line); border-radius:9px; }
 </style>
 </head>
 
@@ -156,7 +159,7 @@ tailwind.config = {
 
   <!-- SIDEBAR -->
   <aside class="hidden lg:block">
-    <div class="sticky top-24 py-16">
+    <div class="sticky top-20 max-h-[calc(100dvh_-_5.5rem)] overflow-y-auto overscroll-contain chrono-scroll pr-3 py-10">
       <p class="eyebrow text-[10px] text-ink2 mb-7 pl-[1.4rem]">Chronologie du procès</p>
       <ol class="tl" style="border-left:1px solid var(--line); padding-left:0;">
         <li><a href="pieces/figaro_1995/" class="cursor-pointer"><div class="font-ui text-[10px] uppercase tracking-[.14em] text-ink2/65">1995</div><div class="t-title mt-0.5 text-[16.5px] leading-snug text-ink/85 transition-colors">McDonald's multiplie les restaurants</div></a></li>

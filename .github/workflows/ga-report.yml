@@ -1,0 +1,33 @@
+name: Rapport d'audience hebdomadaire
+
+on:
+  schedule:
+    - cron: "30 6 * * 1"        # tous les lundis, 06h30 UTC
+  workflow_dispatch:             # + bouton « Run workflow » pour tester tout de suite
+
+permissions:
+  contents: read
+  id-token: write                # indispensable : c'est ce qui permet l'auth Google sans clé
+
+jobs:
+  rapport:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ secrets.GCP_WIF_PROVIDER }}
+          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+          token_format: access_token
+          access_token_scopes: https://www.googleapis.com/auth/analytics.readonly
+
+      - name: Generer et envoyer le rapport
+        env:
+          GA_PROPERTY_ID: ${{ secrets.GA_PROPERTY_ID }}
+          GA_ACCESS_TOKEN: ${{ steps.auth.outputs.access_token }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: python3 tools/ga_report.py

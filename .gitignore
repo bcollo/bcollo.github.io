@@ -1,3 +1,4 @@
 .DS_Store
 _probe*.html
 *.tmp
+tools/__pycache__/

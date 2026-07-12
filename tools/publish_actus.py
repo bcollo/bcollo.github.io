@@ -6,6 +6,7 @@ publie les articles dont la date `publish_at` est atteinte :
   - copie queue/pages/<slug>/index.html vers actus/<slug>/index.html
   - inscrit l'article en tête de tools/actus_registry.json
   - régénère actus/index.html, le bloc Actus de la home, et sitemap.xml
+  - réinjecte l'article dans les fiches Repères qui le référencent (tools/reperes_links.json)
 
 Idempotent : un article déjà présent dans le registre est ignoré.
 Sort en code 0 sans rien modifier s'il n'y a rien à publier.
@@ -23,6 +24,12 @@ BASE = "https://bernardcollorafi.org"
 OUT = os.path.join(SITE, "actus")
 REGISTRY = os.path.join(SITE, "tools", "actus_registry.json")
 QUEUE = os.path.join(SITE, "queue")
+REPERES = os.path.join(SITE, "reperes")
+REPERES_LINKS = os.path.join(SITE, "tools", "reperes_links.json")
+
+# marqueurs posés par build_reperes.py autour de la section « Où cela intervient »
+MARK_OPEN = "<!-- ============ LIENS-DOSSIER ============ -->"
+MARK_CLOSE = "<!-- ============ /LIENS-DOSSIER ============ -->"
 
 GA = """<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-EMT2H8EP2G"></script>
@@ -117,6 +124,7 @@ def header(prefix):
     <nav class="flex items-center gap-6 eyebrow text-[10.5px] text-ink2">
       <a href="{prefix}#recit" class="hidden sm:inline hover:text-ox transition">Le récit</a>
       <a href="{prefix}#pieces" class="hover:text-ox transition">Les pièces</a>
+      <a href="{prefix}reperes/" class="hover:text-ox transition">Repères</a>
       <a href="{prefix}actus/" class="text-ox hover:text-oxdeep transition">Actus</a>
     </nav>
   </div>
@@ -310,6 +318,59 @@ def rebuild_home(articles):
     return True
 
 
+def rebuild_reperes(live):
+    """Régénère la section « Où cela intervient dans le dossier » de chaque fiche Repères.
+
+    Une fiche peut référencer un article encore en file d'attente : la carte n'est posée
+    que lorsque l'article est effectivement en ligne, sinon le lien serait mort.
+    Miroir exact de links_section() dans scratchpad/actus/build_reperes.py.
+    """
+    if not os.path.exists(REPERES_LINKS):
+        return
+    with open(REPERES_LINKS, encoding="utf-8") as f:
+        links = json.load(f)
+
+    for slug, entry in links.items():
+        path = os.path.join(REPERES, slug, "index.html")
+        if not os.path.exists(path):
+            continue
+        cards = []
+        for a in entry.get("articles", []):
+            if a["slug"] not in live:
+                continue
+            cards.append(
+                f'<a href="../../actus/{a["slug"]}/" class="card group block rounded-xl bg-panel border p-3" style="border-color:var(--line2)">'
+                f'<span class="block eyebrow text-[9px] text-ox">Article</span>'
+                f'<span class="block font-display font-semibold text-[14px] leading-tight text-ink mt-1 group-hover:text-ox transition">{esc(a["label"])}</span></a>'
+            )
+        for p in entry.get("pieces", []):
+            cards.append(
+                f'<a href="../../pieces/{p["slug"]}/" class="card group block rounded-xl bg-panel border p-3" style="border-color:var(--line2)">'
+                f'<span class="block eyebrow text-[9px] text-gold">Pièce du dossier</span>'
+                f'<span class="block font-display font-semibold text-[14px] leading-tight text-ink mt-1 group-hover:text-ox transition">{esc(p["label"])}</span></a>'
+            )
+        if cards:
+            section = f"""
+{MARK_OPEN}
+  <section class="mt-14 pt-8 border-t" style="border-color:var(--line)">
+    <h2 class="font-display text-[20px] font-bold mb-4">Où cela intervient dans le dossier</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">{''.join(cards)}</div>
+  </section>
+{MARK_CLOSE}"""
+        else:
+            section = f"\n{MARK_OPEN}\n{MARK_CLOSE}"
+
+        with open(path, encoding="utf-8") as f:
+            src = f.read()
+        i, j = src.find(MARK_OPEN), src.find(MARK_CLOSE)
+        if i == -1 or j == -1:
+            continue
+        new = src[:i].rstrip("\n") + section + src[j + len(MARK_CLOSE):]
+        if new != src:
+            with open(path, "w", encoding="utf-8") as f:
+                f.write(new)
+
+
 def rebuild_sitemap(articles, today):
     p = os.path.join(SITE, "sitemap.xml")
     with open(p, encoding="utf-8") as f:
@@ -364,6 +425,7 @@ def main():
     rebuild_index(articles)
     rebuild_home(articles)
     rebuild_sitemap(articles, today)
+    rebuild_reperes({a["slug"] for a in articles})
     print("regenere: actus/index.html, index.html (bloc Actus), sitemap.xml")
     return 0
 

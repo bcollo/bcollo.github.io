@@ -1,0 +1,673 @@
+{
+ "contrat-de-franchise": {
+  "articles": [
+   {
+    "slug": "loi-doubin-1989-information-precontractuelle-franchise-dip",
+    "label": "La loi Doubin"
+   },
+   {
+    "slug": "modele-economique-franchise-mcdonalds-redevance-loyer-immobilier",
+    "label": "Redevance, loyer, publicité"
+   }
+  ],
+  "pieces": [
+   {
+    "slug": "article-franchise-magazine-mcdonalds-contrat-20-ans-1996",
+    "label": "Franchise Magazine — le contrat de 20 ans"
+   },
+   {
+    "slug": "article-pme-affaires-franchise-independance-dependance-1996",
+    "label": "PME & Affaires — indépendance et dépendance"
+   }
+  ]
+ },
+ "location-gerance": {
+  "articles": [
+   {
+    "slug": "mcdonalds-saint-barthelemy-marseille-location-gerance-liquidation",
+    "label": "Marseille : la fin d'une location-gérance"
+   },
+   {
+    "slug": "modele-economique-franchise-mcdonalds-redevance-loyer-immobilier",
+    "label": "Redevance, loyer, publicité"
+   }
+  ],
+  "pieces": [
+   {
+    "slug": "arret-ca-paris-resiliation-abusive-franchise-mcdonalds-2000",
+    "label": "Arrêt du 8 mars 2000 — CA Paris"
+   },
+   {
+    "slug": "lettre-mcdonalds-collorafi-impayes-revue-location-gerance-1997",
+    "label": "LR McDonald's — revue de la location-gérance"
+   }
+  ]
+ },
+ "clause-resolutoire": {
+  "articles": [
+   {
+    "slug": "bonne-foi-clause-resolutoire-jurisprudence-franchise",
+    "label": "Bonne foi et clause résolutoire"
+   },
+   {
+    "slug": "rupture-brutale-relations-commerciales-etablies-franchise",
+    "label": "Rompre sans prévenir"
+   }
+  ],
+  "pieces": [
+   {
+    "slug": "arret-ca-paris-resiliation-abusive-franchise-mcdonalds-2000",
+    "label": "Arrêt du 8 mars 2000 — CA Paris"
+   },
+   {
+    "slug": "jugement-tc-paris-resiliation-expulsion-redevances-1998",
+    "label": "Jugement du TC Paris — 18 mai 1998"
+   }
+  ]
+ },
+ "bonne-foi-contractuelle": {
+  "articles": [
+   {
+    "slug": "bonne-foi-clause-resolutoire-jurisprudence-franchise",
+    "label": "Bonne foi et clause résolutoire"
+   },
+   {
+    "slug": "raymond-dayan-premier-mcdonalds-france-1972-proces-illinois",
+    "label": "Raymond Dayan"
+   }
+  ],
+  "pieces": [
+   {
+    "slug": "arret-ca-paris-resiliation-abusive-franchise-mcdonalds-2000",
+    "label": "Arrêt du 8 mars 2000 — CA Paris"
+   },
+   {
+    "slug": "conclusions-collorafi-mauvaise-foi-mcdonalds-tc-paris-p2-1998",
+    "label": "Conclusions Collorafi — la mauvaise foi"
+   }
+  ]
+ },
+ "mise-en-demeure-commandement-de-payer": {
+  "articles": [
+   {
+    "slug": "bonne-foi-clause-resolutoire-jurisprudence-franchise",
+    "label": "Bonne foi et clause résolutoire"
+   }
+  ],
+  "pieces": [
+   {
+    "slug": "lettre-mcdonalds-collorafi-mise-en-demeure-redevances-1997",
+    "label": "LR McDonald's — mise en demeure"
+   },
+   {
+    "slug": "arret-ca-paris-resiliation-abusive-franchise-mcdonalds-2000",
+    "label": "Arrêt du 8 mars 2000 — CA Paris"
+   }
+  ]
+ },
+ "expertise-judiciaire": {
+  "articles": [],
+  "pieces": [
+   {
+    "slug": "rapport-expertise-martin-dumont-ca-paris-redevances-1999",
+    "label": "Rapport d'expertise judiciaire (1999)"
+   },
+   {
+    "slug": "dire-n1-collorafi-experts-chute-ca-antibes-1999",
+    "label": "Dire n°1 — Collorafi"
+   },
+   {
+    "slug": "rapport-gandur-collorafi-mcdonalds-prejudice-franchise-1998",
+    "label": "Rapport Gandur (expertise privée)"
+   }
+  ]
+ },
+ "article-700-depens": {
+  "articles": [],
+  "pieces": [
+   {
+    "slug": "arret-ca-paris-resiliation-abusive-franchise-mcdonalds-2000",
+    "label": "Arrêt du 8 mars 2000 — CA Paris"
+   }
+  ]
+ },
+ "liquidation-judiciaire": {
+  "articles": [
+   {
+    "slug": "mcdonalds-saint-barthelemy-marseille-location-gerance-liquidation",
+    "label": "Marseille : la fin d'une location-gérance"
+   }
+  ],
+  "pieces": [
+   {
+    "slug": "jugement-tc-antibes-liquidation-sa-sebol-mcdonalds-2001",
+    "label": "Jugement TC Antibes — liquidation SEBOL"
+   },
+   {
+    "slug": "etat-creances-sebol-procedure-collective-antibes-2002",
+    "label": "État des créances — SA SEBOL"
+   },
+   {
+    "slug": "jugement-tc-antibes-liquidation-judiciaire-sarl-beto-2001",
+    "label": "Jugement TC Antibes — SARL B & O"
+   }
+  ]
+ },
+ "zone-de-chalandise": {
+  "articles": [
+   {
+    "slug": "droit-europeen-concurrence-franchise-pronuptia-reglement-2022-720",
+    "label": "Ce que le droit européen autorise"
+   },
+   {
+    "slug": "franchises-afro-americains-mcdonalds-proces-discrimination",
+    "label": "Les franchisés américains devant les tribunaux"
+   }
+  ],
+  "pieces": [
+   {
+    "slug": "lettre-collorafi-mcdonalds-vallauris-zone-chalandise-1997",
+    "label": "LR Collorafi — la zone de chalandise"
+   },
+   {
+    "slug": "lettre-mcdonalds-collorafi-non-exclusivite-territoriale-1997",
+    "label": "LR McDonald's — pas d'exclusivité territoriale"
+   }
+  ]
+ },
+ "savoir-faire-franchise": {
+  "articles": [
+   {
+    "slug": "droit-europeen-concurrence-franchise-pronuptia-reglement-2022-720",
+    "label": "Ce que le droit européen autorise"
+   },
+   {
+    "slug": "loi-doubin-1989-information-precontractuelle-franchise-dip",
+    "label": "La loi Doubin"
+   }
+  ],
+  "pieces": [
+   {
+    "slug": "article-franchise-magazine-mcdonalds-contrat-20-ans-1996",
+    "label": "Franchise Magazine — le contrat de 20 ans"
+   }
+  ]
+ },
+ "pourvoi-cassation-non-admission": {
+  "articles": [
+   {
+    "slug": "bonne-foi-clause-resolutoire-jurisprudence-franchise",
+    "label": "Bonne foi et clause résolutoire"
+   }
+  ],
+  "pieces": [
+   {
+    "slug": "arret-cassation-pourvoi-collorafi-non-admis-mcdonalds-2002",
+    "label": "Cour de cassation — 10 mai 2002"
+   },
+   {
+    "slug": "memoire-ampliatif-cassation-collorafi-pourvoi-2001",
+    "label": "Mémoire en cassation — Collorafi"
+   }
+  ]
+ },
+ "cedh": {
+  "articles": [
+   {
+    "slug": "mclibel-mcdonalds-steel-morris-proces-diffamation-cedh",
+    "label": "McLibel"
+   }
+  ],
+  "pieces": []
+ },
+ "article-6-cedh": {
+  "articles": [
+   {
+    "slug": "mclibel-mcdonalds-steel-morris-proces-diffamation-cedh",
+    "label": "McLibel"
+   }
+  ],
+  "pieces": []
+ },
+ "cour-de-cassation": {
+  "articles": [
+   {
+    "slug": "bonne-foi-clause-resolutoire-jurisprudence-franchise",
+    "label": "Bonne foi et clause résolutoire"
+   }
+  ],
+  "pieces": [
+   {
+    "slug": "arret-cassation-pourvoi-collorafi-non-admis-mcdonalds-2002",
+    "label": "Cour de cassation — 10 mai 2002"
+   },
+   {
+    "slug": "memoire-ampliatif-cassation-collorafi-pourvoi-2001",
+    "label": "Mémoire ampliatif — Collorafi"
+   }
+  ]
+ },
+ "cour-appel": {
+  "articles": [
+   {
+    "slug": "bonne-foi-clause-resolutoire-jurisprudence-franchise",
+    "label": "Bonne foi et clause résolutoire"
+   }
+  ],
+  "pieces": [
+   {
+    "slug": "arret-ca-paris-resiliation-abusive-franchise-mcdonalds-2000",
+    "label": "Arrêt du 8 mars 2000 — CA Paris"
+   }
+  ]
+ },
+ "tribunal-de-commerce": {
+  "articles": [
+   {
+    "slug": "mcdonalds-saint-barthelemy-marseille-location-gerance-liquidation",
+    "label": "Marseille : la fin d'une location-gérance"
+   }
+  ],
+  "pieces": [
+   {
+    "slug": "jugement-tc-paris-resiliation-expulsion-redevances-1998",
+    "label": "Jugement du TC Paris — 18 mai 1998"
+   },
+   {
+    "slug": "jugement-tc-antibes-liquidation-sa-sebol-mcdonalds-2001",
+    "label": "Jugement TC Antibes — liquidation SEBOL"
+   }
+  ]
+ },
+ "cjue": {
+  "articles": [
+   {
+    "slug": "droit-europeen-concurrence-franchise-pronuptia-reglement-2022-720",
+    "label": "Ce que le droit européen autorise"
+   },
+   {
+    "slug": "big-mac-supermacs-euipo-tribunal-union-europeenne-2024",
+    "label": "Big Mac contre Supermac's"
+   }
+  ],
+  "pieces": []
+ },
+ "euipo": {
+  "articles": [
+   {
+    "slug": "big-mac-supermacs-euipo-tribunal-union-europeenne-2024",
+    "label": "Big Mac contre Supermac's"
+   }
+  ],
+  "pieces": []
+ },
+ "decheance-de-marque": {
+  "articles": [
+   {
+    "slug": "big-mac-supermacs-euipo-tribunal-union-europeenne-2024",
+    "label": "Big Mac contre Supermac's"
+   },
+   {
+    "slug": "prefixe-mc-litiges-marques-mccurry-mcsleep-macjoy",
+    "label": "À qui appartient le préfixe « Mc » ?"
+   }
+  ],
+  "pieces": []
+ },
+ "article-101-tfue": {
+  "articles": [
+   {
+    "slug": "droit-europeen-concurrence-franchise-pronuptia-reglement-2022-720",
+    "label": "Ce que le droit européen autorise"
+   }
+  ],
+  "pieces": []
+ },
+ "pnf": {
+  "articles": [
+   {
+    "slug": "mcdonalds-france-cjip-2022-fraude-fiscale-redevances-luxembourg",
+    "label": "L'accord fiscal de 2022"
+   }
+  ],
+  "pieces": []
+ },
+ "cjip": {
+  "articles": [
+   {
+    "slug": "mcdonalds-france-cjip-2022-fraude-fiscale-redevances-luxembourg",
+    "label": "L'accord fiscal de 2022"
+   }
+  ],
+  "pieces": []
+ },
+ "dgfip": {
+  "articles": [
+   {
+    "slug": "mcdonalds-france-cjip-2022-fraude-fiscale-redevances-luxembourg",
+    "label": "L'accord fiscal de 2022"
+   }
+  ],
+  "pieces": []
+ },
+ "prix-de-transfert": {
+  "articles": [
+   {
+    "slug": "mcdonalds-france-cjip-2022-fraude-fiscale-redevances-luxembourg",
+    "label": "L'accord fiscal de 2022"
+   },
+   {
+    "slug": "modele-economique-franchise-mcdonalds-redevance-loyer-immobilier",
+    "label": "Redevance, loyer, publicité"
+   }
+  ],
+  "pieces": []
+ },
+ "sec": {
+  "articles": [
+   {
+    "slug": "modele-economique-franchise-mcdonalds-redevance-loyer-immobilier",
+    "label": "Redevance, loyer, publicité"
+   }
+  ],
+  "pieces": []
+ },
+ "formulaire-10-k": {
+  "articles": [
+   {
+    "slug": "modele-economique-franchise-mcdonalds-redevance-loyer-immobilier",
+    "label": "Redevance, loyer, publicité"
+   }
+  ],
+  "pieces": []
+ },
+ "nlrb": {
+  "articles": [
+   {
+    "slug": "joint-employer-mcdonalds-nlrb-coemploi-franchises",
+    "label": "Le franchiseur est-il l'employeur ?"
+   }
+  ],
+  "pieces": []
+ },
+ "sherman-act": {
+  "articles": [
+   {
+    "slug": "clauses-non-debauchage-no-poach-mcdonalds-deslandes",
+    "label": "Les clauses de non-débauchage"
+   },
+   {
+    "slug": "franchises-afro-americains-mcdonalds-proces-discrimination",
+    "label": "Les franchisés américains devant les tribunaux"
+   }
+  ],
+  "pieces": []
+ },
+ "per-se-rule-of-reason": {
+  "articles": [
+   {
+    "slug": "clauses-non-debauchage-no-poach-mcdonalds-deslandes",
+    "label": "Les clauses de non-débauchage"
+   }
+  ],
+  "pieces": []
+ },
+ "monopsone": {
+  "articles": [
+   {
+    "slug": "clauses-non-debauchage-no-poach-mcdonalds-deslandes",
+    "label": "Les clauses de non-débauchage"
+   }
+  ],
+  "pieces": []
+ },
+ "class-action": {
+  "articles": [
+   {
+    "slug": "clauses-non-debauchage-no-poach-mcdonalds-deslandes",
+    "label": "Les clauses de non-débauchage"
+   },
+   {
+    "slug": "franchises-afro-americains-mcdonalds-proces-discrimination",
+    "label": "Les franchisés américains devant les tribunaux"
+   },
+   {
+    "slug": "pelman-mcdonalds-proces-obesite-new-york-2003",
+    "label": "Pelman contre McDonald's"
+   }
+  ],
+  "pieces": []
+ },
+ "dommages-punitifs": {
+  "articles": [
+   {
+    "slug": "liebeck-mcdonalds-cafe-brulant-1994-franchiseur-franchise",
+    "label": "Le café brûlant de Stella Liebeck"
+   }
+  ],
+  "pieces": []
+ },
+ "certiorari": {
+  "articles": [
+   {
+    "slug": "pelman-mcdonalds-proces-obesite-new-york-2003",
+    "label": "Pelman contre McDonald's"
+   }
+  ],
+  "pieces": []
+ },
+ "uspto": {
+  "articles": [
+   {
+    "slug": "prefixe-mc-litiges-marques-mccurry-mcsleep-macjoy",
+    "label": "À qui appartient le préfixe « Mc » ?"
+   }
+  ],
+  "pieces": []
+ },
+ "passing-off": {
+  "articles": [
+   {
+    "slug": "prefixe-mc-litiges-marques-mccurry-mcsleep-macjoy",
+    "label": "À qui appartient le préfixe « Mc » ?"
+   }
+  ],
+  "pieces": []
+ },
+ "fed-saint-louis": {
+  "articles": [
+   {
+    "slug": "big-mac-index-economist-parite-pouvoir-achat",
+    "label": "Le Big Mac Index"
+   }
+  ],
+  "pieces": []
+ },
+ "ray-kroc": {
+  "articles": [
+   {
+    "slug": "ray-kroc-freres-mcdonald-rachat-1961-poignee-de-main",
+    "label": "Ray Kroc et les frères McDonald"
+   },
+   {
+    "slug": "modele-economique-franchise-mcdonalds-redevance-loyer-immobilier",
+    "label": "Redevance, loyer, publicité"
+   }
+  ],
+  "pieces": []
+ },
+ "harry-sonneborn": {
+  "articles": [
+   {
+    "slug": "modele-economique-franchise-mcdonalds-redevance-loyer-immobilier",
+    "label": "Redevance, loyer, publicité"
+   },
+   {
+    "slug": "ray-kroc-freres-mcdonald-rachat-1961-poignee-de-main",
+    "label": "Ray Kroc et les frères McDonald"
+   }
+  ],
+  "pieces": [
+   {
+    "slug": "article-franchise-magazine-mcdonalds-contrat-20-ans-1996",
+    "label": "Franchise Magazine — le contrat de 20 ans"
+   }
+  ]
+ },
+ "freres-mcdonald": {
+  "articles": [
+   {
+    "slug": "ray-kroc-freres-mcdonald-rachat-1961-poignee-de-main",
+    "label": "Ray Kroc et les frères McDonald"
+   }
+  ],
+  "pieces": []
+ },
+ "mcdonalds-corporation": {
+  "articles": [
+   {
+    "slug": "modele-economique-franchise-mcdonalds-redevance-loyer-immobilier",
+    "label": "Redevance, loyer, publicité"
+   },
+   {
+    "slug": "joint-employer-mcdonalds-nlrb-coemploi-franchises",
+    "label": "Le franchiseur est-il l'employeur ?"
+   }
+  ],
+  "pieces": []
+ },
+ "mcdonalds-france": {
+  "articles": [
+   {
+    "slug": "mcdonalds-france-cjip-2022-fraude-fiscale-redevances-luxembourg",
+    "label": "L'accord fiscal de 2022"
+   },
+   {
+    "slug": "raymond-dayan-premier-mcdonalds-france-1972-proces-illinois",
+    "label": "Raymond Dayan"
+   }
+  ],
+  "pieces": [
+   {
+    "slug": "lettre-mcdonalds-collorafi-mise-en-demeure-redevances-1997",
+    "label": "LR McDonald's — mise en demeure"
+   },
+   {
+    "slug": "arret-ca-paris-resiliation-abusive-franchise-mcdonalds-2000",
+    "label": "Arrêt du 8 mars 2000 — CA Paris"
+   }
+  ]
+ },
+ "raymond-dayan": {
+  "articles": [
+   {
+    "slug": "raymond-dayan-premier-mcdonalds-france-1972-proces-illinois",
+    "label": "Raymond Dayan"
+   },
+   {
+    "slug": "bonne-foi-clause-resolutoire-jurisprudence-franchise",
+    "label": "Bonne foi et clause résolutoire"
+   }
+  ],
+  "pieces": []
+ },
+ "qsc": {
+  "articles": [
+   {
+    "slug": "raymond-dayan-premier-mcdonalds-france-1972-proces-illinois",
+    "label": "Raymond Dayan"
+   }
+  ],
+  "pieces": [
+   {
+    "slug": "lettre-mcdonalds-hennequin-collorafi-redevances-audit-1997",
+    "label": "LR McDonald's — audit et redevances"
+   }
+  ]
+ },
+ "jim-cantalupo": {
+  "articles": [
+   {
+    "slug": "franchises-afro-americains-mcdonalds-proces-discrimination",
+    "label": "Les franchisés américains devant les tribunaux"
+   }
+  ],
+  "pieces": [
+   {
+    "slug": "lettre-collorafi-mcdonalds-vallauris-zone-chalandise-1997",
+    "label": "LR Collorafi — la zone de chalandise"
+   }
+  ]
+ },
+ "morgan-spurlock": {
+  "articles": [
+   {
+    "slug": "don-gorske-35000-big-mac-super-size-me",
+    "label": "Don Gorske, 35 000 Big Mac"
+   },
+   {
+    "slug": "pelman-mcdonalds-proces-obesite-new-york-2003",
+    "label": "Pelman contre McDonald's"
+   }
+  ],
+  "pieces": []
+ },
+ "don-gorske": {
+  "articles": [
+   {
+    "slug": "don-gorske-35000-big-mac-super-size-me",
+    "label": "Don Gorske, 35 000 Big Mac"
+   }
+  ],
+  "pieces": []
+ },
+ "pat-mcdonagh-supermacs": {
+  "articles": [
+   {
+    "slug": "big-mac-supermacs-euipo-tribunal-union-europeenne-2024",
+    "label": "Big Mac contre Supermac's"
+   },
+   {
+    "slug": "prefixe-mc-litiges-marques-mccurry-mcsleep-macjoy",
+    "label": "À qui appartient le préfixe « Mc » ?"
+   }
+  ],
+  "pieces": []
+ },
+ "the-economist": {
+  "articles": [
+   {
+    "slug": "big-mac-index-economist-parite-pouvoir-achat",
+    "label": "Le Big Mac Index"
+   }
+  ],
+  "pieces": []
+ },
+ "parite-de-pouvoir-achat": {
+  "articles": [
+   {
+    "slug": "big-mac-index-economist-parite-pouvoir-achat",
+    "label": "Le Big Mac Index"
+   }
+  ],
+  "pieces": []
+ },
+ "guinness-world-records": {
+  "articles": [
+   {
+    "slug": "don-gorske-35000-big-mac-super-size-me",
+    "label": "Don Gorske, 35 000 Big Mac"
+   }
+  ],
+  "pieces": []
+ },
+ "mcjob": {
+  "articles": [
+   {
+    "slug": "mcjob-dictionnaire-merriam-webster-oxford-campagne-mcdonalds",
+    "label": "« McJob » : la bataille perdue"
+   }
+  ],
+  "pieces": []
+ }
+}

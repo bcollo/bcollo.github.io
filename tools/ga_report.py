@@ -266,10 +266,13 @@ def build_html(prop, token, cur, prev):
 
 
 def send(sujet, corps, to, user, password):
+    dests = [a.strip() for a in to.replace(";", ",").split(",") if a.strip()]
+    if not dests:
+        sys.exit("MAIL_TO ne contient aucune adresse")
     msg = EmailMessage()
     msg["Subject"] = sujet
     msg["From"] = f"Dossier Collorafi <{user}>"
-    msg["To"] = to
+    msg["To"] = ", ".join(dests)
     msg.set_content("Ce rapport nécessite un client mail capable d'afficher le HTML.")
     msg.add_alternative(corps, subtype="html")
     with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=60) as s:

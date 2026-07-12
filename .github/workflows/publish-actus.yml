@@ -1,0 +1,60 @@
+name: Publier les actus programmees
+
+on:
+  schedule:
+    - cron: "17 7 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: publish-actus
+  cancel-in-progress: false
+
+jobs:
+  publier:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Recuperer main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Deposer la file d'attente dans l'arbre de travail
+        run: |
+          if git fetch origin queue:queue 2>/dev/null; then
+            git checkout queue -- queue/
+            echo "file d'attente recuperee"
+          else
+            echo "pas de branche queue : rien a publier"
+          fi
+
+      - name: Publier les articles dus
+        id: pub
+        run: |
+          python3 tools/publish_actus.py | tee /tmp/publish.log
+          if grep -q '^publie:' /tmp/publish.log; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commiter et pousser
+        if: steps.pub.outputs.changed == 'true'
+        run: |
+          rm -rf queue
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Actus : publication programmee du $(date -u +%Y-%m-%d)"
+          git push origin main
+
+      - name: Forcer un build GitHub Pages
+        if: steps.pub.outputs.changed == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh api -X POST "repos/${GITHUB_REPOSITORY}/pages/builds"

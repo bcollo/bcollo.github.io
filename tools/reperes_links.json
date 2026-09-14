@@ -8,6 +8,18 @@
    {
     "slug": "modele-economique-franchise-mcdonalds-redevance-loyer-immobilier",
     "label": "Redevance, loyer, publicité"
+   },
+   {
+    "slug": "encroachment-zone-de-chalandise-franchises-mcdonalds-etats-unis",
+    "label": "L'empiètement territorial"
+   },
+   {
+    "slug": "kytch-mcdonalds-taylor-machines-a-glace-secrets-affaires",
+    "label": "Le litige Kytch sur les équipements imposés"
+   },
+   {
+    "slug": "mcdonalds-inde-vikram-bakshi-coentreprise-connaught-plaza",
+    "label": "La coentreprise indienne Bakshi"
    }
   ],
   "pieces": [
@@ -162,6 +174,10 @@
    {
     "slug": "franchises-afro-americains-mcdonalds-proces-discrimination",
     "label": "Les franchisés américains devant les tribunaux"
+   },
+   {
+    "slug": "encroachment-zone-de-chalandise-franchises-mcdonalds-etats-unis",
+    "label": "Encroachment : l'empiètement territorial"
    }
   ],
   "pieces": [
@@ -532,6 +548,14 @@
    {
     "slug": "joint-employer-mcdonalds-nlrb-coemploi-franchises",
     "label": "Le franchiseur est-il l'employeur ?"
+   },
+   {
+    "slug": "kytch-mcdonalds-taylor-machines-a-glace-secrets-affaires",
+    "label": "Le litige Kytch sur les machines à glace"
+   },
+   {
+    "slug": "mcdonalds-inde-vikram-bakshi-coentreprise-connaught-plaza",
+    "label": "L'éviction de Vikram Bakshi en Inde"
    }
   ],
   "pieces": []

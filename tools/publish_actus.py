@@ -8,6 +8,12 @@ publie les articles dont la date `publish_at` est atteinte :
   - régénère actus/index.html, le bloc Actus de la home, et sitemap.xml
   - réinjecte l'article dans les fiches Repères qui le référencent (tools/reperes_links.json)
 
+Versions traduites (en, es, de, it — moteur dans tools/langues/) : chaque article est
+publié dans toutes les langues (queue/i18n/<lang>/<slug>/index.html), et les pages
+régénérées ci-dessus le sont aussi dans chaque langue, traduites à partir du FR grâce à
+tools/langues/runtime.json. Une chaîne absente de la mémoire de traduction reste en
+français et est signalée dans le journal.
+
 Idempotent : un article déjà présent dans le registre est ignoré.
 Sort en code 0 sans rien modifier s'il n'y a rien à publier.
 """
@@ -18,6 +24,8 @@ import os
 import re
 import shutil
 import sys
+
+from langues import core as i18n
 
 SITE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://bernardcollorafi.org"
@@ -171,8 +179,6 @@ def index_page(articles):
             )
     grid = "\n".join(cards)
 
-    import json
-
     ld = json.dumps(
         {
             "@context": "https://schema.org",
@@ -296,18 +302,34 @@ def load(p):
         return json.load(f)
 
 
+def load_runtime():
+    """Mémoire de traduction des versions en/es/de/it (None si absente : FR seul)."""
+    if not os.path.exists(i18n.RUNTIME):
+        return None
+    return i18n.Runtime.load()
+
+
+RT = load_runtime()
+
+
 def rebuild_index(articles):
+    page = index_page(articles)
+    fr = i18n.decorate(RT, "/actus/", "fr", page) if RT else page
     with open(os.path.join(OUT, "index.html"), "w", encoding="utf-8") as f:
-        f.write(index_page(articles))
+        f.write(fr)
+    for lang in i18n.TARGETS if RT else []:
+        dst = os.path.join(SITE, RT.page_path("/actus/", lang).strip("/"), "index.html")
+        os.makedirs(os.path.dirname(dst), exist_ok=True)
+        with open(dst, "w", encoding="utf-8") as f:
+            f.write(i18n.translate_page(RT, "/actus/", lang, page))
 
 
-def rebuild_home(articles):
-    p = os.path.join(SITE, "index.html")
+def splice_home(p, block):
     with open(p, encoding="utf-8") as f:
         s = f.read()
     new = re.sub(
         r"<!-- ============ ACTUS ============ -->.*?<!-- ============ /ACTUS ============ -->",
-        lambda _m: actus_section(articles),
+        lambda _m: block,
         s,
         flags=re.S,
     )
@@ -316,6 +338,16 @@ def rebuild_home(articles):
     with open(p, "w", encoding="utf-8") as f:
         f.write(new)
     return True
+
+
+def rebuild_home(articles):
+    block = actus_section(articles)
+    changed = splice_home(os.path.join(SITE, "index.html"), block)
+    for lang in i18n.TARGETS if RT else []:
+        p = os.path.join(SITE, RT.page_path("/", lang).strip("/"), "index.html")
+        if os.path.exists(p):
+            splice_home(p, i18n.translate_fragment(RT, "/", lang, block))
+    return changed
 
 
 def rebuild_reperes(live):
@@ -331,44 +363,54 @@ def rebuild_reperes(live):
         links = json.load(f)
 
     for slug, entry in links.items():
-        path = os.path.join(REPERES, slug, "index.html")
-        if not os.path.exists(path):
+        section = links_section(entry, live)
+        splice_reperes(os.path.join(REPERES, slug, "index.html"), section)
+        for lang in i18n.TARGETS if RT else []:
+            fr_path = "/reperes/%s/" % slug
+            dst = os.path.join(SITE, RT.page_path(fr_path, lang).strip("/"), "index.html")
+            splice_reperes(dst, i18n.translate_fragment(RT, fr_path, lang, section))
+
+
+def links_section(entry, live):
+    """Section « Où cela intervient dans le dossier » d'une fiche Repères (marqueurs compris)."""
+    cards = []
+    for a in entry.get("articles", []):
+        if a["slug"] not in live:
             continue
-        cards = []
-        for a in entry.get("articles", []):
-            if a["slug"] not in live:
-                continue
-            cards.append(
-                f'<a href="../../actus/{a["slug"]}/" class="card group block rounded-xl bg-panel border p-3" style="border-color:var(--line2)">'
-                f'<span class="block eyebrow text-[9px] text-ox">Article</span>'
-                f'<span class="block font-display font-semibold text-[14px] leading-tight text-ink mt-1 group-hover:text-ox transition">{esc(a["label"])}</span></a>'
-            )
-        for p in entry.get("pieces", []):
-            cards.append(
-                f'<a href="../../pieces/{p["slug"]}/" class="card group block rounded-xl bg-panel border p-3" style="border-color:var(--line2)">'
-                f'<span class="block eyebrow text-[9px] text-gold">Pièce du dossier</span>'
-                f'<span class="block font-display font-semibold text-[14px] leading-tight text-ink mt-1 group-hover:text-ox transition">{esc(p["label"])}</span></a>'
-            )
-        if cards:
-            section = f"""
+        cards.append(
+            f'<a href="../../actus/{a["slug"]}/" class="card group block rounded-xl bg-panel border p-3" style="border-color:var(--line2)">'
+            f'<span class="block eyebrow text-[9px] text-ox">Article</span>'
+            f'<span class="block font-display font-semibold text-[14px] leading-tight text-ink mt-1 group-hover:text-ox transition">{esc(a["label"])}</span></a>'
+        )
+    for p in entry.get("pieces", []):
+        cards.append(
+            f'<a href="../../pieces/{p["slug"]}/" class="card group block rounded-xl bg-panel border p-3" style="border-color:var(--line2)">'
+            f'<span class="block eyebrow text-[9px] text-gold">Pièce du dossier</span>'
+            f'<span class="block font-display font-semibold text-[14px] leading-tight text-ink mt-1 group-hover:text-ox transition">{esc(p["label"])}</span></a>'
+        )
+    if not cards:
+        return f"\n{MARK_OPEN}\n{MARK_CLOSE}"
+    return f"""
 {MARK_OPEN}
   <section class="mt-14 pt-8 border-t" style="border-color:var(--line)">
     <h2 class="font-display text-[20px] font-bold mb-4">Où cela intervient dans le dossier</h2>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">{''.join(cards)}</div>
   </section>
 {MARK_CLOSE}"""
-        else:
-            section = f"\n{MARK_OPEN}\n{MARK_CLOSE}"
 
-        with open(path, encoding="utf-8") as f:
-            src = f.read()
-        i, j = src.find(MARK_OPEN), src.find(MARK_CLOSE)
-        if i == -1 or j == -1:
-            continue
-        new = src[:i].rstrip("\n") + section + src[j + len(MARK_CLOSE):]
-        if new != src:
-            with open(path, "w", encoding="utf-8") as f:
-                f.write(new)
+
+def splice_reperes(path, section):
+    if not os.path.exists(path):
+        return
+    with open(path, encoding="utf-8") as f:
+        src = f.read()
+    i, j = src.find(MARK_OPEN), src.find(MARK_CLOSE)
+    if i == -1 or j == -1:
+        return
+    new = src[:i].rstrip("\n") + section + src[j + len(MARK_CLOSE):]
+    if new != src:
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(new)
 
 
 def rebuild_sitemap(articles, today):
@@ -382,6 +424,8 @@ def rebuild_sitemap(articles, today):
             f'  <url><loc>{BASE}/actus/{a["slug"]}/</loc><lastmod>{a["date_iso"]}</lastmod><priority>0.8</priority></url>'
         )
     sm = sm.replace("</urlset>", "\n".join(rows) + "\n</urlset>")
+    if RT:
+        sm = i18n.sitemap_i18n(RT, sm)
     with open(p, "w", encoding="utf-8") as f:
         f.write(sm)
 
@@ -414,6 +458,14 @@ def main():
         dst = os.path.join(OUT, slug)
         os.makedirs(dst, exist_ok=True)
         shutil.copyfile(src, os.path.join(dst, "index.html"))
+        for lang in i18n.TARGETS if RT else []:
+            tsrc = os.path.join(QUEUE, "i18n", lang, slug, "index.html")
+            if not os.path.exists(tsrc):
+                print("ATTENTION: pas de version %s pour %s" % (lang, slug), file=sys.stderr)
+                continue
+            tdst = os.path.join(SITE, RT.page_path("/actus/%s/" % slug, lang).strip("/"))
+            os.makedirs(tdst, exist_ok=True)
+            shutil.copyfile(tsrc, os.path.join(tdst, "index.html"))
         meta = {k: entry[k] for k in ("slug", "cat", "date_fr", "date_iso", "title", "dek")}
         articles.insert(0, meta)  # le plus recent en tete (article a la une)
         print("publie: %s (%s)" % (slug, entry["publish_at"]))
@@ -426,7 +478,10 @@ def main():
     rebuild_home(articles)
     rebuild_sitemap(articles, today)
     rebuild_reperes({a["slug"] for a in articles})
-    print("regenere: actus/index.html, index.html (bloc Actus), sitemap.xml")
+    print("regenere: actus/index.html, index.html (bloc Actus), sitemap.xml"
+          + (" + versions %s" % ", ".join(i18n.TARGETS) if RT else ""))
+    for w in RT.warnings if RT else []:
+        print("traduction: " + w, file=sys.stderr)
     return 0
 
 

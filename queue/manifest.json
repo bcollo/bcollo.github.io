@@ -1,137 +1,182 @@
 [
-  {
-    "slug": "clauses-non-debauchage-no-poach-mcdonalds-deslandes",
-    "cat": "Grands procès",
-    "date_fr": "15 juillet 2026",
-    "date_iso": "2026-07-15",
-    "title": "Les clauses qui empêchaient un employé de McDonald's d'aller travailler chez le McDonald's d'à côté",
-    "dek": "Jusqu'en 2017, tous les contrats de franchise McDonald's aux États-Unis interdisaient à un franchisé d'embaucher le salarié d'un autre. Une employée a attaqué. Huit ans de procédure plus tard, aucun juge n'a tranché le fond.",
-    "publish_at": "2026-07-15"
-  },
-  {
-    "slug": "franchises-afro-americains-mcdonalds-proces-discrimination",
-    "cat": "Grands procès",
-    "date_fr": "21 juillet 2026",
-    "date_iso": "2026-07-21",
-    "title": "Aux États-Unis, des franchisés attaquent McDonald's — et s'organisent",
-    "dek": "Depuis 2020, d'anciens franchisés afro-américains poursuivent la firme pour discrimination dans l'attribution des restaurants. Les procédures sont pendantes, les allégations non tranchées. En parallèle, les exploitants américains ont créé leur première association indépendante.",
-    "publish_at": "2026-07-21"
-  },
-  {
-    "slug": "prefixe-mc-litiges-marques-mccurry-mcsleep-macjoy",
-    "cat": "Marques",
-    "date_fr": "27 juillet 2026",
-    "date_iso": "2026-07-27",
-    "title": "À qui appartient le préfixe « Mc » ? Ce que les tribunaux ont répondu",
-    "dek": "Un hôtel « McSleep », un curry malaisien « McCurry », un traiteur chinois « McChina ». McDonald's a attaqué. Les décisions rendues à travers le monde ne vont pas toutes dans le même sens.",
-    "publish_at": "2026-07-27"
-  },
-  {
-    "slug": "joint-employer-mcdonalds-nlrb-coemploi-franchises",
-    "cat": "Droit du travail",
-    "date_fr": "2 août 2026",
-    "date_iso": "2026-08-02",
-    "title": "Le franchiseur est-il l'employeur des salariés de son franchisé ? Dix ans sans réponse",
-    "dek": "En 2014, l'autorité américaine du travail a voulu faire juger que McDonald's était co-employeur dans ses restaurants franchisés. Douze ans plus tard, la question n'a jamais été tranchée — et la règle applicable est revenue à son point de départ.",
-    "publish_at": "2026-08-02"
-  },
-  {
-    "slug": "rupture-brutale-relations-commerciales-etablies-franchise",
-    "cat": "Droit de la franchise",
-    "date_fr": "8 août 2026",
-    "date_iso": "2026-08-08",
-    "title": "Rompre sans prévenir : ce que le code de commerce interdit au franchiseur",
-    "dek": "Nul ne peut exiger le renouvellement de son contrat. Mais rompre une relation commerciale établie sans préavis suffisant engage la responsabilité de son auteur. Deux règles qui coexistent, et qu'on confond souvent.",
-    "publish_at": "2026-08-08"
-  },
-  {
-    "slug": "droit-europeen-concurrence-franchise-pronuptia-reglement-2022-720",
-    "cat": "Droit de la franchise",
-    "date_fr": "14 août 2026",
-    "date_iso": "2026-08-14",
-    "title": "Ce que le droit européen autorise un franchiseur à imposer",
-    "dek": "Depuis l'arrêt Pronuptia de 1986, le contrat de franchise n'est ni licite ni illicite en bloc : il s'apprécie clause par clause. Le règlement de 2022 chiffre les bornes — et, curieusement, ne prononce jamais le mot « franchise ».",
-    "publish_at": "2026-08-14"
-  },
-  {
-    "slug": "mcdonalds-saint-barthelemy-marseille-location-gerance-liquidation",
-    "cat": "Droit du travail",
-    "date_fr": "20 août 2026",
-    "date_iso": "2026-08-20",
-    "title": "Marseille : quand la fin d'une location-gérance transfère les salariés à McDonald's France",
-    "dek": "Le conflit du McDonald's de Saint-Barthélémy s'est terminé par une liquidation judiciaire. Un mécanisme juridique discret — la résiliation du contrat de location-gérance — a fait passer une soixantaine de salariés du franchisé à l'enseigne.",
-    "publish_at": "2026-08-20"
-  },
-  {
-    "slug": "big-mac-index-economist-parite-pouvoir-achat",
-    "cat": "Insolite",
-    "date_fr": "26 août 2026",
-    "date_iso": "2026-08-26",
-    "title": "Le Big Mac Index : une plaisanterie devenue un standard mondial",
-    "dek": "En 1986, The Economist invente un indice de change fondé sur le prix d'un hamburger. Le journal le présentait comme « un guide léger ». Il figure aujourd'hui dans les manuels d'économie et a fait l'objet d'une vingtaine d'études universitaires.",
-    "publish_at": "2026-08-26"
-  },
-  {
-    "slug": "ray-kroc-freres-mcdonald-rachat-1961-poignee-de-main",
-    "cat": "Histoire",
-    "date_fr": "1er septembre 2026",
-    "date_iso": "2026-09-01",
-    "title": "Ray Kroc et les frères McDonald : ce qui est établi, et ce qui vient du film",
-    "dek": "Le récit d'un vendeur de machines à milk-shake qui aurait floué deux frères naïfs est aujourd'hui célèbre. Il vient largement d'un film de 2016. Voici ce que les sources permettent réellement d'affirmer.",
-    "publish_at": "2026-09-01"
-  },
-  {
-    "slug": "mcjob-dictionnaire-merriam-webster-oxford-campagne-mcdonalds",
-    "cat": "Insolite",
-    "date_fr": "7 septembre 2026",
-    "date_iso": "2026-09-07",
-    "title": "« McJob » : la bataille perdue de McDonald's contre les dictionnaires",
-    "dek": "En 2003, le mot entre au Merriam-Webster. Le PDG de McDonald's parle d'une « gifle ». Quatre ans plus tard, la filiale britannique récolte 105 000 signatures pour faire changer la définition de l'Oxford English Dictionary. Les deux dictionnaires n'ont rien changé.",
-    "publish_at": "2026-09-07"
-  },
-  {
-    "slug": "jamie-oliver-mcdonalds-proces-pink-slime-intox",
-    "cat": "Insolite",
-    "date_fr": "19 septembre 2026",
-    "date_iso": "2026-09-19",
-    "title": "Le faux procès de Jamie Oliver contre McDonald's",
-    "dek": "Depuis 2018, une image circule sur les réseaux : le chef britannique aurait fait condamner McDonald's pour vente de nourriture « hautement toxique ». Aucun tribunal n'a jamais tranché cette affaire, pour une raison simple : elle n'a jamais existé.",
-    "publish_at": "2026-09-19"
-  },
-  {
-    "slug": "fraude-jeu-monopoly-mcdonalds-jerome-jacobson-fbi",
-    "cat": "Insolite",
-    "date_fr": "25 septembre 2026",
-    "date_iso": "2026-09-25",
-    "title": "Le jeu Monopoly de McDonald's a été truqué pendant douze ans — par l'homme chargé de le sécuriser",
-    "dek": "De 1989 à 2001, un ancien policier chargé de la sécurité du jeu promotionnel a détourné les tickets gagnants au profit d'un réseau de complices. McDonald's, elle, n'a jamais été soupçonnée : elle était la victime.",
-    "publish_at": "2026-09-25"
-  },
-  {
-    "slug": "kytch-mcdonalds-taylor-machines-a-glace-secrets-affaires",
-    "cat": "Grands procès",
-    "date_fr": "1er octobre 2026",
-    "date_iso": "2026-10-01",
-    "title": "Derrière les McDonald's aux machines à glace en panne, un procès à 900 millions de dollars",
-    "dek": "Une start-up avait conçu un boîtier pour diagnostiquer à distance les pannes des machines à glace Taylor. McDonald's a demandé à ses franchisés de cesser de l'utiliser, avant de lancer son propre appareil. Kytch l'accuse d'avoir copié sa technologie.",
-    "publish_at": "2026-10-01"
-  },
-  {
-    "slug": "encroachment-zone-de-chalandise-franchises-mcdonalds-etats-unis",
-    "cat": "Droit de la franchise",
-    "date_fr": "7 octobre 2026",
-    "date_iso": "2026-10-07",
-    "title": "Un McDonald's peut-il en ouvrir un autre à côté du vôtre ? Ce que le contrat ne garantit pas",
-    "dek": "Aux États-Unis, l'association des franchisés réclame depuis des années une protection contractuelle contre l'ouverture de nouveaux restaurants à proximité des leurs. Le contrat type ne la leur accorde pas.",
-    "publish_at": "2026-10-07"
-  },
-  {
-    "slug": "mcdonalds-inde-vikram-bakshi-coentreprise-connaught-plaza",
-    "cat": "Droit de la franchise",
-    "date_fr": "13 octobre 2026",
-    "date_iso": "2026-10-13",
-    "title": "Le partenaire indien de McDonald's, évincé de sa propre coentreprise",
-    "dek": "En 1995, McDonald's et l'entrepreneur Vikram Bakshi créent une coentreprise à parts égales pour développer l'enseigne en Inde du Nord. En 2013, Bakshi en est écarté. Six ans de procédure plus tard, McDonald's rachète sa part.",
-    "publish_at": "2026-10-13"
-  }
+ {
+  "slug": "clauses-non-debauchage-no-poach-mcdonalds-deslandes",
+  "cat": "Grands procès",
+  "date_fr": "15 juillet 2026",
+  "date_iso": "2026-07-15",
+  "title": "Les clauses qui empêchaient un employé de McDonald's d'aller travailler chez le McDonald's d'à côté",
+  "dek": "Jusqu'en 2017, tous les contrats de franchise McDonald's aux États-Unis interdisaient à un franchisé d'embaucher le salarié d'un autre. Une employée a attaqué. Huit ans de procédure plus tard, aucun juge n'a tranché le fond.",
+  "publish_at": "2026-07-15"
+ },
+ {
+  "slug": "franchises-afro-americains-mcdonalds-proces-discrimination",
+  "cat": "Grands procès",
+  "date_fr": "21 juillet 2026",
+  "date_iso": "2026-07-21",
+  "title": "Aux États-Unis, des franchisés attaquent McDonald's - et s'organisent",
+  "dek": "Depuis 2020, d'anciens franchisés afro-américains poursuivent la firme pour discrimination dans l'attribution des restaurants. Les procédures sont pendantes, les allégations non tranchées. En parallèle, les exploitants américains ont créé leur première association indépendante.",
+  "publish_at": "2026-07-21"
+ },
+ {
+  "slug": "prefixe-mc-litiges-marques-mccurry-mcsleep-macjoy",
+  "cat": "Marques",
+  "date_fr": "27 juillet 2026",
+  "date_iso": "2026-07-27",
+  "title": "À qui appartient le préfixe « Mc » ? Ce que les tribunaux ont répondu",
+  "dek": "Un hôtel « McSleep », un curry malaisien « McCurry », un traiteur chinois « McChina ». McDonald's a attaqué. Les décisions rendues à travers le monde ne vont pas toutes dans le même sens.",
+  "publish_at": "2026-07-27"
+ },
+ {
+  "slug": "joint-employer-mcdonalds-nlrb-coemploi-franchises",
+  "cat": "Droit du travail",
+  "date_fr": "2 août 2026",
+  "date_iso": "2026-08-02",
+  "title": "Le franchiseur est-il l'employeur des salariés de son franchisé ? Dix ans sans réponse",
+  "dek": "En 2014, l'autorité américaine du travail a voulu faire juger que McDonald's était co-employeur dans ses restaurants franchisés. Douze ans plus tard, la question n'a jamais été tranchée - et la règle applicable est revenue à son point de départ.",
+  "publish_at": "2026-08-02"
+ },
+ {
+  "slug": "rupture-brutale-relations-commerciales-etablies-franchise",
+  "cat": "Droit de la franchise",
+  "date_fr": "8 août 2026",
+  "date_iso": "2026-08-08",
+  "title": "Rompre sans prévenir : ce que le code de commerce interdit au franchiseur",
+  "dek": "Nul ne peut exiger le renouvellement de son contrat. Mais rompre une relation commerciale établie sans préavis suffisant engage la responsabilité de son auteur. Deux règles qui coexistent, et qu'on confond souvent.",
+  "publish_at": "2026-08-08"
+ },
+ {
+  "slug": "droit-europeen-concurrence-franchise-pronuptia-reglement-2022-720",
+  "cat": "Droit de la franchise",
+  "date_fr": "14 août 2026",
+  "date_iso": "2026-08-14",
+  "title": "Ce que le droit européen autorise un franchiseur à imposer",
+  "dek": "Depuis l'arrêt Pronuptia de 1986, le contrat de franchise n'est ni licite ni illicite en bloc : il s'apprécie clause par clause. Le règlement de 2022 chiffre les bornes - et, curieusement, ne prononce jamais le mot « franchise ».",
+  "publish_at": "2026-08-14"
+ },
+ {
+  "slug": "mcdonalds-saint-barthelemy-marseille-location-gerance-liquidation",
+  "cat": "Droit du travail",
+  "date_fr": "20 août 2026",
+  "date_iso": "2026-08-20",
+  "title": "Marseille : quand la fin d'une location-gérance transfère les salariés à McDonald's France",
+  "dek": "Le conflit du McDonald's de Saint-Barthélémy s'est terminé par une liquidation judiciaire. Un mécanisme juridique discret - la résiliation du contrat de location-gérance - a fait passer une soixantaine de salariés du franchisé à l'enseigne.",
+  "publish_at": "2026-08-20"
+ },
+ {
+  "slug": "big-mac-index-economist-parite-pouvoir-achat",
+  "cat": "Insolite",
+  "date_fr": "26 août 2026",
+  "date_iso": "2026-08-26",
+  "title": "Le Big Mac Index : une plaisanterie devenue un standard mondial",
+  "dek": "En 1986, The Economist invente un indice de change fondé sur le prix d'un hamburger. Le journal le présentait comme « un guide léger ». Il figure aujourd'hui dans les manuels d'économie et a fait l'objet d'une vingtaine d'études universitaires.",
+  "publish_at": "2026-08-26"
+ },
+ {
+  "slug": "ray-kroc-freres-mcdonald-rachat-1961-poignee-de-main",
+  "cat": "Histoire",
+  "date_fr": "1er septembre 2026",
+  "date_iso": "2026-09-01",
+  "title": "Ray Kroc et les frères McDonald : ce qui est établi, et ce qui vient du film",
+  "dek": "Le récit d'un vendeur de machines à milk-shake qui aurait floué deux frères naïfs est aujourd'hui célèbre. Il vient largement d'un film de 2016. Voici ce que les sources permettent réellement d'affirmer.",
+  "publish_at": "2026-09-01"
+ },
+ {
+  "slug": "mcjob-dictionnaire-merriam-webster-oxford-campagne-mcdonalds",
+  "cat": "Insolite",
+  "date_fr": "7 septembre 2026",
+  "date_iso": "2026-09-07",
+  "title": "« McJob » : la bataille perdue de McDonald's contre les dictionnaires",
+  "dek": "En 2003, le mot entre au Merriam-Webster. Le PDG de McDonald's parle d'une « gifle ». Quatre ans plus tard, la filiale britannique récolte 105 000 signatures pour faire changer la définition de l'Oxford English Dictionary. Les deux dictionnaires n'ont rien changé.",
+  "publish_at": "2026-09-07"
+ },
+ {
+  "slug": "jamie-oliver-mcdonalds-proces-pink-slime-intox",
+  "cat": "Insolite",
+  "date_fr": "19 septembre 2026",
+  "date_iso": "2026-09-19",
+  "title": "Le faux procès de Jamie Oliver contre McDonald's",
+  "dek": "Depuis 2018, une image circule sur les réseaux : le chef britannique aurait fait condamner McDonald's pour vente de nourriture « hautement toxique ». Aucun tribunal n'a jamais tranché cette affaire, pour une raison simple : elle n'a jamais existé.",
+  "publish_at": "2026-09-19"
+ },
+ {
+  "slug": "fraude-jeu-monopoly-mcdonalds-jerome-jacobson-fbi",
+  "cat": "Insolite",
+  "date_fr": "25 septembre 2026",
+  "date_iso": "2026-09-25",
+  "title": "Le jeu Monopoly de McDonald's a été truqué pendant douze ans - par l'homme chargé de le sécuriser",
+  "dek": "De 1989 à 2001, un ancien policier chargé de la sécurité du jeu promotionnel a détourné les tickets gagnants au profit d'un réseau de complices. McDonald's, elle, n'a jamais été soupçonnée : elle était la victime.",
+  "publish_at": "2026-09-25"
+ },
+ {
+  "slug": "kytch-mcdonalds-taylor-machines-a-glace-secrets-affaires",
+  "cat": "Grands procès",
+  "date_fr": "1er octobre 2026",
+  "date_iso": "2026-10-01",
+  "title": "Derrière les McDonald's aux machines à glace en panne, un procès à 900 millions de dollars",
+  "dek": "Une start-up avait conçu un boîtier pour diagnostiquer à distance les pannes des machines à glace Taylor. McDonald's a demandé à ses franchisés de cesser de l'utiliser, avant de lancer son propre appareil. Kytch l'accuse d'avoir copié sa technologie.",
+  "publish_at": "2026-10-01"
+ },
+ {
+  "slug": "encroachment-zone-de-chalandise-franchises-mcdonalds-etats-unis",
+  "cat": "Droit de la franchise",
+  "date_fr": "7 octobre 2026",
+  "date_iso": "2026-10-07",
+  "title": "Un McDonald's peut-il en ouvrir un autre à côté du vôtre ? Ce que le contrat ne garantit pas",
+  "dek": "Aux États-Unis, l'association des franchisés réclame depuis des années une protection contractuelle contre l'ouverture de nouveaux restaurants à proximité des leurs. Le contrat type ne la leur accorde pas.",
+  "publish_at": "2026-10-07"
+ },
+ {
+  "slug": "mcdonalds-inde-vikram-bakshi-coentreprise-connaught-plaza",
+  "cat": "Droit de la franchise",
+  "date_fr": "13 octobre 2026",
+  "date_iso": "2026-10-13",
+  "title": "Le partenaire indien de McDonald's, évincé de sa propre coentreprise",
+  "dek": "En 1995, McDonald's et l'entrepreneur Vikram Bakshi créent une coentreprise à parts égales pour développer l'enseigne en Inde du Nord. En 2013, Bakshi en est écarté. Six ans de procédure plus tard, McDonald's rachète sa part.",
+  "publish_at": "2026-10-13"
+ },
+ {
+  "slug": "steve-easterbrook-mcdonalds-pdg-renvoi-sec-delaware",
+  "cat": "Grands procès",
+  "date_fr": "19 octobre 2026",
+  "date_iso": "2026-10-19",
+  "title": "Renvoyé « sans motif » en 2019, l'ex-PDG de McDonald's a finalement restitué plus de 105 millions de dollars",
+  "dek": "En 2019, McDonald's a congédié son PDG Steve Easterbrook pour une relation avec un membre du personnel, tout en lui accordant des avantages de départ évalués à plus de 47 millions de dollars. Une plainte, une restitution, une sanction de la SEC et une décision de principe au Delaware ont suivi.",
+  "publish_at": "2026-10-19"
+ },
+ {
+  "slug": "big-mac-filet-o-fish-egg-mcmuffin-inventes-par-des-franchises",
+  "cat": "Histoire",
+  "date_fr": "25 octobre 2026",
+  "date_iso": "2026-10-25",
+  "title": "Big Mac, Filet-O-Fish, Egg McMuffin : les classiques de McDonald's sont nés chez des franchisés",
+  "dek": "Le Big Mac, le Filet-O-Fish, l'Egg McMuffin et même le clown Ronald McDonald ne sont pas sortis des bureaux du siège, mais de restaurants tenus par des franchisés. Ce que l'on sait de ces inventions, et ce que leurs auteurs en ont retiré.",
+  "publish_at": "2026-10-25"
+ },
+ {
+  "slug": "mcdonalds-millau-1999-jose-bove-proces-roquefort",
+  "cat": "Grands procès",
+  "date_fr": "31 octobre 2026",
+  "date_iso": "2026-10-31",
+  "title": "Le McDonald's de Millau démonté en 1999 : trois ans de procédure et trois mois de prison pour José Bové",
+  "dek": "Le 12 août 1999, des agriculteurs aveyronnais démontent un McDonald's en chantier à Millau pour protester contre les surtaxes américaines sur le roquefort. Leur porte-parole, José Bové, est condamné à trois mois de prison ferme, une peine confirmée jusqu'en cassation et purgée en 2002.",
+  "publish_at": "2026-10-31"
+ },
+ {
+  "slug": "mcdonalds-russie-2022-retrait-vente-govor-vkousno-i-totchka",
+  "cat": "Histoire",
+  "date_fr": "6 novembre 2026",
+  "date_iso": "2026-11-06",
+  "title": "Après plus de trente ans en Russie, McDonald's a cédé quelque 850 restaurants à un licencié sibérien",
+  "dek": "Ouvert place Pouchkine en janvier 1990, le réseau russe de McDonald's, détenu à 84 % par la maison mère, a fermé en mars 2022 avant d'être vendu à Alexandre Govor, qui exploitait 25 restaurants en Sibérie. Il a rouvert le 12 juin sous l'enseigne « Vkousno i totchka ».",
+  "publish_at": "2026-11-06"
+ },
+ {
+  "slug": "frites-mcdonalds-arome-boeuf-vegetariens-hindous-reglement-2002",
+  "cat": "Grands procès",
+  "date_fr": "12 novembre 2026",
+  "date_iso": "2026-11-12",
+  "title": "Frites aromatisées au bœuf : les excuses à 10 millions de dollars de McDonald's aux hindous et aux végétariens",
+  "dek": "En 2001, un avocat de Seattle attaque McDonald's : ses frites, cuites à l'huile végétale depuis 1990, contiennent un arôme d'origine bovine. L'affaire se conclut par des excuses publiques et un règlement de 10 millions de dollars, dont la répartition reste contestée jusqu'en 2005.",
+  "publish_at": "2026-11-12"
+ }
 ]

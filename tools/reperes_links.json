@@ -20,6 +20,18 @@
    {
     "slug": "mcdonalds-inde-vikram-bakshi-coentreprise-connaught-plaza",
     "label": "La coentreprise indienne Bakshi"
+   },
+   {
+    "slug": "big-mac-filet-o-fish-egg-mcmuffin-inventes-par-des-franchises",
+    "label": "Les produits inventés par des franchisés"
+   },
+   {
+    "slug": "mcdonalds-millau-1999-jose-bove-proces-roquefort",
+    "label": "Le McDonald's de Millau et son propriétaire local"
+   },
+   {
+    "slug": "mcdonalds-russie-2022-retrait-vente-govor-vkousno-i-totchka",
+    "label": "Un réseau détenu en propre : la sortie de Russie"
    }
   ],
   "pieces": [
@@ -200,6 +212,10 @@
    {
     "slug": "loi-doubin-1989-information-precontractuelle-franchise-dip",
     "label": "La loi Doubin"
+   },
+   {
+    "slug": "big-mac-filet-o-fish-egg-mcmuffin-inventes-par-des-franchises",
+    "label": "Big Mac, Filet-O-Fish : le savoir-faire venu des franchisés"
    }
   ],
   "pieces": [
@@ -250,6 +266,10 @@
    {
     "slug": "bonne-foi-clause-resolutoire-jurisprudence-franchise",
     "label": "Bonne foi et clause résolutoire"
+   },
+   {
+    "slug": "mcdonalds-millau-1999-jose-bove-proces-roquefort",
+    "label": "José Bové et le McDonald's de Millau"
    }
   ],
   "pieces": [
@@ -268,6 +288,10 @@
    {
     "slug": "bonne-foi-clause-resolutoire-jurisprudence-franchise",
     "label": "Bonne foi et clause résolutoire"
+   },
+   {
+    "slug": "mcdonalds-millau-1999-jose-bove-proces-roquefort",
+    "label": "José Bové et le McDonald's de Millau"
    }
   ],
   "pieces": [
@@ -384,6 +408,10 @@
    {
     "slug": "modele-economique-franchise-mcdonalds-redevance-loyer-immobilier",
     "label": "Redevance, loyer, publicité"
+   },
+   {
+    "slug": "steve-easterbrook-mcdonalds-pdg-renvoi-sec-delaware",
+    "label": "L'ex-PDG Steve Easterbrook sanctionné par la SEC"
    }
   ],
   "pieces": []
@@ -450,6 +478,10 @@
    {
     "slug": "pelman-mcdonalds-proces-obesite-new-york-2003",
     "label": "Pelman contre McDonald's"
+   },
+   {
+    "slug": "frites-mcdonalds-arome-boeuf-vegetariens-hindous-reglement-2002",
+    "label": "Les frites à l'arôme de bœuf"
    }
   ],
   "pieces": []
@@ -508,6 +540,10 @@
    {
     "slug": "modele-economique-franchise-mcdonalds-redevance-loyer-immobilier",
     "label": "Redevance, loyer, publicité"
+   },
+   {
+    "slug": "big-mac-filet-o-fish-egg-mcmuffin-inventes-par-des-franchises",
+    "label": "Kroc face aux inventions des franchisés"
    }
   ],
   "pieces": []
@@ -556,6 +592,14 @@
    {
     "slug": "mcdonalds-inde-vikram-bakshi-coentreprise-connaught-plaza",
     "label": "L'éviction de Vikram Bakshi en Inde"
+   },
+   {
+    "slug": "steve-easterbrook-mcdonalds-pdg-renvoi-sec-delaware",
+    "label": "Le renvoi du PDG Steve Easterbrook"
+   },
+   {
+    "slug": "mcdonalds-russie-2022-retrait-vente-govor-vkousno-i-totchka",
+    "label": "Le retrait de Russie en 2022"
    }
   ],
   "pieces": []
@@ -569,6 +613,10 @@
    {
     "slug": "raymond-dayan-premier-mcdonalds-france-1972-proces-illinois",
     "label": "Raymond Dayan"
+   },
+   {
+    "slug": "mcdonalds-millau-1999-jose-bove-proces-roquefort",
+    "label": "Le McDonald's de Millau démonté en 1999"
    }
   ],
   "pieces": [

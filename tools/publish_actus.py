@@ -22,7 +22,6 @@ import html
 import json
 import os
 import re
-import shutil
 import sys
 
 from langues import core as i18n
@@ -155,6 +154,12 @@ def esc(s):
     return html.escape(s, quote=True)
 
 
+def sans_tiret(s):
+    """Règle maison (5 septembre 2026) : aucun tiret cadratin dans les articles Actus.
+    Même règle côté Claude Code : .claude/hooks/sans_tiret_cadratin.py (hors dépôt)."""
+    return s.replace("\u2014", "-")
+
+
 def index_page(articles):
     cards = []
     for i, a in enumerate(articles):
@@ -201,7 +206,7 @@ def index_page(articles):
         ensure_ascii=False,
     )
 
-    return f"""<!doctype html>
+    return sans_tiret(f"""<!doctype html>
 <html lang="fr">
 <head>
 <meta charset="utf-8">
@@ -252,7 +257,7 @@ def index_page(articles):
 {footer("../")}
 </body>
 </html>
-"""
+""")
 
 
 def actus_section(articles):
@@ -266,7 +271,7 @@ def actus_section(articles):
           </a>'''
         for a in rest
     )
-    return f'''<!-- ============ ACTUS ============ -->
+    return sans_tiret(f'''<!-- ============ ACTUS ============ -->
 <section id="actus" class="mt-24 sm:mt-32">
   <div class="max-w-[1320px] mx-auto px-5 sm:px-8">
     <div class="h-px hair"></div>
@@ -292,9 +297,16 @@ def actus_section(articles):
     </div>
   </div>
 </section>
-<!-- ============ /ACTUS ============ -->'''
+<!-- ============ /ACTUS ============ -->''')
 
 
+
+
+def copy_sans_tiret(src, dst):
+    with open(src, encoding="utf-8") as f:
+        s = f.read()
+    with open(dst, "w", encoding="utf-8") as f:
+        f.write(sans_tiret(s))
 
 
 def load(p):
@@ -321,7 +333,7 @@ def rebuild_index(articles):
         dst = os.path.join(SITE, RT.page_path("/actus/", lang).strip("/"), "index.html")
         os.makedirs(os.path.dirname(dst), exist_ok=True)
         with open(dst, "w", encoding="utf-8") as f:
-            f.write(i18n.translate_page(RT, "/actus/", lang, page))
+            f.write(sans_tiret(i18n.translate_page(RT, "/actus/", lang, page)))
 
 
 def splice_home(p, block):
@@ -346,7 +358,7 @@ def rebuild_home(articles):
     for lang in i18n.TARGETS if RT else []:
         p = os.path.join(SITE, RT.page_path("/", lang).strip("/"), "index.html")
         if os.path.exists(p):
-            splice_home(p, i18n.translate_fragment(RT, "/", lang, block))
+            splice_home(p, sans_tiret(i18n.translate_fragment(RT, "/", lang, block)))
     return changed
 
 
@@ -457,7 +469,7 @@ def main():
             return 1
         dst = os.path.join(OUT, slug)
         os.makedirs(dst, exist_ok=True)
-        shutil.copyfile(src, os.path.join(dst, "index.html"))
+        copy_sans_tiret(src, os.path.join(dst, "index.html"))
         for lang in i18n.TARGETS if RT else []:
             tsrc = os.path.join(QUEUE, "i18n", lang, slug, "index.html")
             if not os.path.exists(tsrc):
@@ -465,7 +477,7 @@ def main():
                 continue
             tdst = os.path.join(SITE, RT.page_path("/actus/%s/" % slug, lang).strip("/"))
             os.makedirs(tdst, exist_ok=True)
-            shutil.copyfile(tsrc, os.path.join(tdst, "index.html"))
+            copy_sans_tiret(tsrc, os.path.join(tdst, "index.html"))
         meta = {k: entry[k] for k in ("slug", "cat", "date_fr", "date_iso", "title", "dek")}
         articles.insert(0, meta)  # le plus recent en tete (article a la une)
         print("publie: %s (%s)" % (slug, entry["publish_at"]))

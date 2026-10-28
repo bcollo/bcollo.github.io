@@ -32,6 +32,26 @@
    {
     "slug": "mcdonalds-russie-2022-retrait-vente-govor-vkousno-i-totchka",
     "label": "Un réseau détenu en propre : la sortie de Russie"
+   },
+   {
+    "slug": "e-coli-quarter-pounder-mcdonalds-oignons-taylor-farms-2024",
+    "label": "L'épidémie d'E. coli du Quarter Pounder"
+   },
+   {
+    "slug": "hamburger-university-mcdonalds-1961-fred-turner-formation",
+    "label": "La Hamburger University"
+   },
+   {
+    "slug": "happy-meal-jouet-san-francisco-santa-clara-ordonnance-2010",
+    "label": "Le jouet du Happy Meal à San Francisco"
+   },
+   {
+    "slug": "mcdonalds-luxembourg-commission-europeenne-aides-etat-redevances-2018",
+    "label": "L'enquête européenne sur McDonald's au Luxembourg"
+   },
+   {
+    "slug": "mcdonalds-royaume-uni-harcelement-ehrc-bbc-leigh-day",
+    "label": "Le harcèlement chez McDonald's au Royaume-Uni"
    }
   ],
   "pieces": [
@@ -216,6 +236,10 @@
    {
     "slug": "big-mac-filet-o-fish-egg-mcmuffin-inventes-par-des-franchises",
     "label": "Big Mac, Filet-O-Fish : le savoir-faire venu des franchisés"
+   },
+   {
+    "slug": "hamburger-university-mcdonalds-1961-fred-turner-formation",
+    "label": "La Hamburger University"
    }
   ],
   "pieces": [
@@ -482,6 +506,10 @@
    {
     "slug": "frites-mcdonalds-arome-boeuf-vegetariens-hindous-reglement-2002",
     "label": "Les frites à l'arôme de bœuf"
+   },
+   {
+    "slug": "happy-meal-jouet-san-francisco-santa-clara-ordonnance-2010",
+    "label": "Le jouet du Happy Meal à San Francisco"
    }
   ],
   "pieces": []
@@ -544,6 +572,10 @@
    {
     "slug": "big-mac-filet-o-fish-egg-mcmuffin-inventes-par-des-franchises",
     "label": "Kroc face aux inventions des franchisés"
+   },
+   {
+    "slug": "hamburger-university-mcdonalds-1961-fred-turner-formation",
+    "label": "La Hamburger University"
    }
   ],
   "pieces": []
@@ -648,6 +680,10 @@
    {
     "slug": "raymond-dayan-premier-mcdonalds-france-1972-proces-illinois",
     "label": "Raymond Dayan"
+   },
+   {
+    "slug": "hamburger-university-mcdonalds-1961-fred-turner-formation",
+    "label": "La Hamburger University"
    }
   ],
   "pieces": [
